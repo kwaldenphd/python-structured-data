@@ -398,12 +398,13 @@ outputFile.close()
 
 ## CSV Project Prompt
 
-Navigate to an open data portal and download a `.csv` or `.xlsx` file. OpenData.gov, city of Chicago, SB, SportsReference, other. 
+Navigate to an open data portal and download a `.csv` or `.xlsx` file. 
 
 A few places to start:
 - [Data.gov](https://www.data.gov/)
 - [City of Chicago Data Portal](https://data.cityofchicago.org/)
 - [City of South Bend Open Data](https://data-southbend.opendata.arcgis.com/)
+- [Sports Reference](https://www.sports-reference.com/)
 
 Open the data in a spreadsheet program and/or text editor
 - What do you see?
