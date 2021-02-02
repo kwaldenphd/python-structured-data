@@ -18,6 +18,8 @@ By the end of this lab, students will be able to:
 - Work with the results of an API call in Python
 - Write the results of an API call to a JSON file
 
+[Click here](PLACEHOLDER LINK) and select the "Save As" option to download this lab as a Jupyter Notebook.
+
 ## Acknowledgements
 
 Information and exercises in this lab are adapted from:
@@ -66,11 +68,9 @@ You'll need four data files for this lab.
 - `example.xlsx`
 - `exampleWithHeader.csv`
 
-They can all be downloaded from this GitHub repository as individual files or a zip folder.
+You can download the files from this GitHub repository as individual files or a zip folder.
 
 You can also access them [via Google Drive](https://drive.google.com/drive/folders/1Sp_N34753ONJRU2AFKcocQ2DhCEhyL-m?usp=sharing) (ND users only).
-
-[Click here](PLACEHOLDER LINK) and select the "Save As" option to download this lab as a Jupyter Notebook.
 
 # `.csv` data in Python
 
@@ -139,10 +139,6 @@ exampleData
 
 16. For example, `exampleData[0][0]` would give us the first string from the first list. `exampleData[0][1]` would give us the second string from the first list.
 
-<blockquote>Q4: Create a list of sublists and use the index positions to access specific values.</blockquote>
-
-<blockquote>Q5: Read in small CSV and access specific values. Include code + comments.</blockquote>
-
 ## Reading `.csv` data using a `for` loop
 
 17. The method we just used to read data from a `.csv` file into Python loads the entire file into memory at once.
@@ -179,8 +175,6 @@ for row in exampleReader:
 
 25. NOTE: The `reader` object can only be looped over once. If you need to re-read the same `.csv` file, you'll use `csv.reader` to create a new `reader` object.
 
-<blockquote>Q6: Read in a small CSV file using a <code>for</code> loop and access specific values. Include code + comments.</blockquote>
-
 ## Other delimiters
 
 26. But what happens if you need to load in structured data that uses another delimiter, not a comma? 
@@ -209,7 +203,7 @@ for row in read_tsv:
   print(row)
 ```
 
-<blockquote>Q7: Modify code to load in example.txt file.</blockquote>
+<blockquote>Q4: Modify the code provided above to load the example.txt file.</blockquote>
 
 ## Escape characters
 
@@ -282,7 +276,7 @@ with open('data.csv', 'rt') as f:
     print(line)
 ```
 
-<blockquote>Q8: Define escape characters in your own words. Describe a situation in which escape characters would be needed, and how you would address that challenge using Python syntax.</blockquote>
+<blockquote>Q5: Define escape characters in your own words. Describe a situation in which escape characters would be needed, and how you would address that challenge using Python syntax.</blockquote>
   
 # Reading in `.csv` files using dictionaries
 
@@ -314,8 +308,6 @@ for row in exampleDictReader:
 
 54. The `DictReader` object means we don't have to separate the header information from the rest of the data contained in the file, because the `DictReader` object does this for us.
 
-<blockquote>Q9: Load a small CSV file that includes header info. Include code + comments.</blockquote>
-
 55. But what can we do if we want to read to a dictionary a `.csv` file that doesn't incldue a header row?
 
 56. We can pass a second argument to the `DictReader()` function to manually set header names.
@@ -334,7 +326,7 @@ for row in exampleDictReader:
   print(row['Timestamp'], row['Fruit'], row['Quantity'])
 ```
 
-<blockquote>Q10: Load a small CSV that does include headers and manually set the headers. Include code + comments.</blockquote>
+<blockquote>Q6: Describe in your own words how csv_DictReader interacts with structured data.</blockquote>
 
 # Writing to a `.csv` file
 
@@ -366,7 +358,7 @@ outputFile.close()
 
 59. The `writerow()` method takes a list argument and writes that to a new row in the `writer` object, that is added to the `.csv` file.
 
-<blockquote>Q11: Create your own small data structure and write it to CSV file. Describe what you expect to see and what actually happens when you look at the output. Include code + comments.</blockquote>
+<blockquote>Q7: Create your own small data structure and write it to CSV file. Describe what you expect to see and what actually happens when you look at the output. Include code + comments.</blockquote>
 
 ## Writing from a dictionary to a `.csv` file
 
@@ -403,7 +395,22 @@ outputFile.close()
 
 63. Missing keys will be empty in the newly-created `.csv` file.
 
-<blockquote>Q12: Create a small dictionary and write it to a CSV file. Include code + comments.</blockquote>
+<blockquote>Q8: Create a small dictionary and write it to a CSV file. Include code + comments.</blockquote>
+
+## CSV Project Prompt
+
+Navigate to an open data portal and download a `.csv` or `.xlsx` file. OpenData.gov, city of Chicago, SB, SportsReference, other. 
+
+A few places to start:
+- [Data.gov](https://www.data.gov/)
+- [City of Chicago Data Portal](https://data.cityofchicago.org/)
+- [City of South Bend Open Data](https://data-southbend.opendata.arcgis.com/)
+
+Open the data in a spreadsheet program and/or text editor
+- What do you see?
+- How can we start to make sense of the data based on available documentation?
+
+Load the data in Python as list/sublists and as dictionary. What challenges did you encounter? How did you address or solve them? 
 
 # JSON
 
@@ -485,7 +492,7 @@ outputFile.close()
 }
 ```
 
-<blockquote>Q1: Decipher what we're seeing in the JSON here. What are the name/value pairs, and how are they organized in this object?</blockquote>
+<blockquote>Q9: Decipher what we're seeing in the JSON here. What are the name/value pairs, and how are they organized in this object?</blockquote>
 
 ## Reading JSON into Python
 
@@ -661,6 +668,23 @@ with open('output.json', 'w') as json_file:
 ```
 
 35. Later in the semester we will talk about how to read JSON data into Python and convert it to a tabular data structure (called a data frame in Python), using a library called `pandas`. Stay tuned!
+
+## JSON Project Prompt
+
+36. Navigate to an open data portal and download a JSON file. 
+
+37. Some options that can get you started:
+- [Data.gov](https://www.data.gov/)
+- [City of Chicago Data Portal](https://data.cityofchicago.org/)
+- [City of South Bend Open Data](https://data-southbend.opendata.arcgis.com/)
+
+38. Open the data in a spreadsheet program and/or text editor 
+
+39. Describe what are you seeing. How can we start to make senes of this data? What documentation is available?
+
+40. Read the JSON data into Python and convert to a Python value.
+
+41. Create your own small dictionary with data and convert to JSON string.
 
 # What are APIs and how do they work
 
@@ -1117,38 +1141,6 @@ with open('output.json', 'w') as json_file:
 
 <blockquote>OPTIONAL: Modify the API call to access another subset of data. Include code + comments.</blockquote>
 
-## JSON Project Prompt
-
-36. Navigate to an open data portal and download a JSON file. 
-
-37. Some options that can get you started:
-- [Data.gov](https://www.data.gov/)
-- [City of Chicago Data Portal](https://data.cityofchicago.org/)
-- [City of South Bend Open Data](https://data-southbend.opendata.arcgis.com/)
-
-38. Open the data in a spreadsheet program and/or text editor 
-
-39. Describe what are you seeing. How can we start to make senes of this data? What documentation is available?
-
-40. Read the JSON data into Python and convert to a Python value.
-
-41. Create your own small dictionary with data and convert to JSON string.
-
-
-## Project #2:
-
-Navigate to an open data portal and download a `.csv` or `.xlsx` file. OpenData.gov, city of Chicago, SB, SportsReference, other. 
-
-A few places to start:
-- [Data.gov](https://www.data.gov/)
-- [City of Chicago Data Portal](https://data.cityofchicago.org/)
-- [City of South Bend Open Data](https://data-southbend.opendata.arcgis.com/)
-
-Open the data in a spreadsheet program and/or text editor
-- What do you see?
-- How can we start to make sense of the data based on available documentation?
-
-Load the data in Python as list/sublists and as dictionary. What challenges did you encounter? How did you address or solve them? 
 
 # Project Prompt
 
