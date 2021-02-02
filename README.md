@@ -37,27 +37,28 @@ Information and exercises in this lab are adapted from:
 
 # Table of Contents
 - [Data](#data)
-- [`.csv` data in Python](#csv-data-in-python)
+- [CSV](#csv-data-in-python)
   * [What is a `.csv` file?](#what-is-a-csv-file)
   * [Reading a `.csv` file into Python](#reading-a-csv-file-into-Python)
     * [Reading `.csv` data using a `for` loop](#reading-csv-data-using-a-for-loop)
   * [Other delimiters](#other-delimiters)
   * [Escape characters](#escape-characters)
   * [Reading in `.csv` files using dictionaries](#reading-in-csv-files-using-dictionaries)
+  * [CSV Project Prompt](#csv-project-prompt)
 - [JSON](#json)
   * [What is JSON and why are we learning about it](#what-is-json-and-why-are-we-learning-about-it)
   * [Reading JSON into Python](#reading-json-into-python)
   * [Working with JSON in Python](#working-with-json-in-python)
   * [Writing to JSON from Python](#writing-to-json-from-python)
   * [JSON Project Prompt](#json-project-prompt)
-- [What are APIs and how do they work](#what-are-apis-and-how-do-they-work)
+- [APIs](#what-are-apis-and-how-do-they-work)
   * [API terminology](#api-terminology)
-- [What can data from an API look like](#what-can-data-from-an-api-look-like)
-- [Making an API call in Python](#making-an-api-call-in-python)
-- [Working with the API response in Python](#working-with-the-api-response-in-python)
-- [Writing an API response to a JSON file](#writing-an-api-response-to-a-json-file)
-- [Example: U.S. Census Bureau Data](#example-us-census-bureau-data)
-- [Project prompt](#project-prompt)
+  * [What can data from an API look like](#what-can-data-from-an-api-look-like)
+  * [Making an API call in Python](#making-an-api-call-in-python)
+  * [Working with the API response in Python](#working-with-the-api-response-in-python)
+  * [Writing an API response to a JSON file](#writing-an-api-response-to-a-json-file)
+  * [Example: U.S. Census Bureau Data](#example-us-census-bureau-data)
+  * [API Project Prompt](#api-project-prompt)
 - [Lab notebook questions](#lab-notebook-questions)
 
 # Data
@@ -358,8 +359,6 @@ outputFile.close()
 
 59. The `writerow()` method takes a list argument and writes that to a new row in the `writer` object, that is added to the `.csv` file.
 
-<blockquote>Q7: Create your own small data structure and write it to CSV file. Describe what you expect to see and what actually happens when you look at the output. Include code + comments.</blockquote>
-
 ## Writing from a dictionary to a `.csv` file
 
 60. We can use the `DictWriter` object to write data in a dictionary to a `.csv` file.
@@ -395,7 +394,7 @@ outputFile.close()
 
 63. Missing keys will be empty in the newly-created `.csv` file.
 
-<blockquote>Q8: Create a small dictionary and write it to a CSV file. Include code + comments.</blockquote>
+<blockquote>Q7: Create a small dictionary and write it to a CSV file. Include code + comments.</blockquote>
 
 ## CSV Project Prompt
 
@@ -416,31 +415,31 @@ Load the data in Python as list/sublists and as dictionary. What challenges did 
 
 ## What is JSON and why are we learning about it
 
-1. JavaScript Object Notation (JSON) is as popular way to format data as a single (purportedly human-readable) string. 
+64. JavaScript Object Notation (JSON) is as popular way to format data as a single (purportedly human-readable) string. 
 
-2. JavaScript programs use JSON data structures, but we can frequently encounter JSON data outside of a JavaScript environment.
+65. JavaScript programs use JSON data structures, but we can frequently encounter JSON data outside of a JavaScript environment.
 
-3. Websites that make machine-readable data available via an application programming interface (API- more on these in an upcoming lab) often provide that data in a JSON format. Examples include Twitter, Wikipedia, Data.gov, etc. Most live data connections available via an API are provided in a JSON format.
+66. Websites that make machine-readable data available via an application programming interface (API- more on these in an upcoming lab) often provide that data in a JSON format. Examples include Twitter, Wikipedia, Data.gov, etc. Most live data connections available via an API are provided in a JSON format.
 
-4. JSON structure can vary WIDELY depending on the specific data provider, but this lab will cover some basic elements of working with JSON in Python.
+67. JSON structure can vary WIDELY depending on the specific data provider, but this lab will cover some basic elements of working with JSON in Python.
 
-5. The easiest way to think of JSON data as a plain-text data format made up of something like key-value pairs, like we've encountered previously in working with dictionaries.
+68. The easiest way to think of JSON data as a plain-text data format made up of something like key-value pairs, like we've encountered previously in working with dictionaries.
 
-6. Example JSON string: `stringOfJsonData = '{"name": Zophie", "isCat": true, "miceCaught": 0, "felineIQ": null}'`
+69. Example JSON string: `stringOfJsonData = '{"name": Zophie", "isCat": true, "miceCaught": 0, "felineIQ": null}'`
 
-7. From looking at the example string, we can see field names or keys (`name`, `isCat`, `miceCaught`, `felineIQ`) and values for those fields.
+70. From looking at the example string, we can see field names or keys (`name`, `isCat`, `miceCaught`, `felineIQ`) and values for those fields.
 
-8. To use more precise terminology, JSON data has the following attributes:
+71. To use more precise terminology, JSON data has the following attributes:
 - uses name/value pairs
 - separates data using commas
 - holds objects using curly braces `{}`
 - holds arrays using square brackets `[]`
 
-9. In our example `stringOfJsonData`, we have an object contained in curly braces. 
+72. In our example `stringOfJsonData`, we have an object contained in curly braces. 
 
-10. An object can include multiple name/value pairs. Multiple objects together can form an array.
+73. An object can include multiple name/value pairs. Multiple objects together can form an array.
 
-11. Values stored in JSON format must be one of the following data types:
+74. Values stored in JSON format must be one of the following data types:
 - string
 - number
 - object (JSON object)
@@ -448,17 +447,17 @@ Load the data in Python as list/sublists and as dictionary. What challenges did 
 - boolean
 - null
 
-12. How is data stored in a JSON format different than a CSV? 
+75. How is data stored in a JSON format different than a CSV? 
 
-13. A `.csv` file uses characters as delimiters and has more of a tabular (table-like) structure.
+76. A `.csv` file uses characters as delimiters and has more of a tabular (table-like) structure.
 
-14. JSON data uses characters as part of the syntax, but not in the same way as delimited data files. 
+77. JSON data uses characters as part of the syntax, but not in the same way as delimited data files. 
 
-15. Additionally, the data stored in a JSON format has values that are attached to names (or keys).
+78. Additionally, the data stored in a JSON format has values that are attached to names (or keys).
 
-16. JSON can also have a hierarchical or nested structure, in that objects can be stored or nested inside other objects as part of the same array.
+79. JSON can also have a hierarchical or nested structure, in that objects can be stored or nested inside other objects as part of the same array.
 
-17. For example, take a look at sapmle JSON data from Twitter's API:
+80. For example, take a look at sapmle JSON data from Twitter's API:
 ```JSON
 {
   "created_at": "Thu Apr 06 15:24:15 +0000 2017",
@@ -492,17 +491,18 @@ Load the data in Python as list/sublists and as dictionary. What challenges did 
 }
 ```
 
-<blockquote>Q9: Decipher what we're seeing in the JSON here. What are the name/value pairs, and how are they organized in this object?</blockquote>
+<blockquote>Q8: Decipher what we're seeing in the JSON here. What are the name/value pairs, and how are they organized in this object?</blockquote>
 
 ## Reading JSON into Python
 
-18. We can read JSON into Python using the `json` module.
+81. We can read JSON into Python using the `json` module.
 
 <blockquote><a href="https://docs.python.org/3/library/json.html">Click here</a> to learn more about the <code>json</code> module.</blockquote>
 
-19. The `json.loads()` and `json.dumps()` functions translate JSON data and Python values.
+82. The `json.loads()` and `json.dumps()` functions translate JSON data and Python values.
 
-20. Translation table:
+83. Translation table:
+
 JSON | Python
 --- | ---
 object | dict
@@ -514,7 +514,7 @@ true | True
 false | False
 null | None
 
-21. To translate a string of JSON data into a Python value, we pass it to the `json.loads()` function.
+84. To translate a string of JSON data into a Python value, we pass it to the `json.loads()` function.
 ```Python
 # import json module
 import json
@@ -529,15 +529,15 @@ jsonDataAsPythonValue = json.loads(stringOfJsonData)
 jsonDataAsPythonValue
 ```
 
-22. This block of code imports the `json` module, calls the `loads()` function and passes a string of JSON data to the `loads()` function.
+85. This block of code imports the `json` module, calls the `loads()` function and passes a string of JSON data to the `loads()` function.
 
-23. NOTE: JSON strings always use double quotes, which is rendered in Python as a dictionary. Because Python dictionaries are not ordered, the order of the Python dictionary may not match the original JSON string order.
+86. NOTE: JSON strings always use double quotes, which is rendered in Python as a dictionary. Because Python dictionaries are not ordered, the order of the Python dictionary may not match the original JSON string order.
 
 ## Working with JSON in Python
 
-24. Now that the JSON data is stored as a dictionary in Python, we can interact with it via the functionality avaialble via Python dictionaries.
+87. Now that the JSON data is stored as a dictionary in Python, we can interact with it via the functionality avaialble via Python dictionaries.
 
-25. We could get all of the keys in the dictionary using the `keys()` method.
+88. We could get all of the keys in the dictionary using the `keys()` method.
 ```Python
 # import json module
 import json
@@ -552,7 +552,7 @@ jsonDataAsPythonValue = json.loads(stringOfJsonData)
 print jsonDataAsPython.keys()
 ```
 
-26. We could get all of the values in the dictionary using the `values()` method.
+89. We could get all of the values in the dictionary using the `values()` method.
 ```Python
 # import json module
 import json
@@ -567,7 +567,7 @@ jsonDataAsPythonValue = json.loads(stringOfJsonData)
 print jsonDataAsPython.values()
 ```
 
-27. We could iterate by keys over the items in the dictionary.
+90. We could iterate by keys over the items in the dictionary.
 ```Python
 # import json module
 import json
@@ -583,7 +583,7 @@ for key in jsonDataAsPython.keys():
   print key, jsonDataAsPython[key]
 ```
 
-28. We could also iterate over items in dictionary using key-value pairs.
+91. We could also iterate over items in dictionary using key-value pairs.
 ```Python
 # import json module
 import json
@@ -599,11 +599,11 @@ for key, value in jsonDataAsPythonValue.items():
   print key, value
 ```
 
-29. We can read the value for a particular key using the index operator. The command `jsonDataAsPythonValue['name']` will return `Zophie`.
+92. We can read the value for a particular key using the index operator. The command `jsonDataAsPythonValue['name']` will return `Zophie`.
 
-30. In situations where JSON data includes nested or hierarchical objects and arrays, we will end up with a list of dictionaries in Python.
+93. In situations where JSON data includes nested or hierarchical objects and arrays, we will end up with a list of dictionaries in Python.
 
-31. For example, let's say we have a different JSON example and want to use more complex expressions in Python.
+94. For example, let's say we have a different JSON example and want to use more complex expressions in Python.
 ```Python
 # import json module
 import json
@@ -634,13 +634,13 @@ for item in info:
   print('Attribute', item['x'])
 ```
 
-32. For more on working with dictionaries in Python:
+95. For more on working with dictionaries in Python:
 - [Elements of Computing I lab](https://github.com/kwaldenphd/python-lab6/blob/master/README.md#working-with-dictionaries)
 - [W3 Schools tutorial](https://www.w3schools.com/python/python_dictionaries.asp)
 
 ## Writing to JSON from Python
 
-33. The `json.dumps()` function will translate a Python dictionary into a string of JSON-formatted data.
+96. The `json.dumps()` function will translate a Python dictionary into a string of JSON-formatted data.
 ```Python
 # import json module
 import json
@@ -654,7 +654,7 @@ stringOfJsonData = json.dumps(pythonValue)
 stringOfJsonData
 ```
 
-34. We can also write data in a Python dictionary to a JSON file also using `json.dump()`.
+97. We can also write data in a Python dictionary to a JSON file also using `json.dump()`.
 ```Python
 # import json module
 import json
@@ -667,73 +667,73 @@ with open('output.json', 'w') as json_file:
 	json.dump(pythonValue, json_file)
 ```
 
-35. Later in the semester we will talk about how to read JSON data into Python and convert it to a tabular data structure (called a data frame in Python), using a library called `pandas`. Stay tuned!
+98. Later in the semester we will talk about how to read JSON data into Python and convert it to a tabular data structure (called a data frame in Python), using a library called `pandas`. Stay tuned!
 
 ## JSON Project Prompt
 
-36. Navigate to an open data portal and download a JSON file. 
+Navigate to an open data portal and download a JSON file. 
 
-37. Some options that can get you started:
+Some options that can get you started:
 - [Data.gov](https://www.data.gov/)
 - [City of Chicago Data Portal](https://data.cityofchicago.org/)
 - [City of South Bend Open Data](https://data-southbend.opendata.arcgis.com/)
 
-38. Open the data in a spreadsheet program and/or text editor 
+Open the data in a spreadsheet program and/or text editor 
 
-39. Describe what are you seeing. How can we start to make senes of this data? What documentation is available?
+Describe what are you seeing. How can we start to make senes of this data? What documentation is available?
 
-40. Read the JSON data into Python and convert to a Python value.
+Read the JSON data into Python and convert to a Python value.
 
-41. Create your own small dictionary with data and convert to JSON string.
+Create your own small dictionary with data and convert to JSON string.
 
 # What are APIs and how do they work
 
-1. For a brief introduction to APIS, view Danielle Thé, ["API's Explained (with LEGO)"](https://youtu.be/qW1qhb8r8xI), *YouTube Video* (1 November 2016).
+99. For a brief introduction to APIS, view Danielle Thé, ["API's Explained (with LEGO)"](https://youtu.be/qW1qhb8r8xI), *YouTube Video* (1 November 2016).
 
 <p align="center"><a href="https://github.com/kwaldenphd/apis-python/blob/main/Figure_1.jpg?raw=true"><img class="aligncenter" src="https://github.com/kwaldenphd/apis-python/blob/main/Figure_1.jpg?raw=true" /></a></p>
 
-2. There are many different kinds of Application Programming Interfaces (APIs). In general, an API is the part of a computer program designed to be used or manipulated by another computer program. 
+100. There are many different kinds of Application Programming Interfaces (APIs). In general, an API is the part of a computer program designed to be used or manipulated by another computer program. 
 
-3. We can contrast this with interacting with a computer program via the user interface, which most often is a type of graphical user interface (GUI).
+101. We can contrast this with interacting with a computer program via the user interface, which most often is a type of graphical user interface (GUI).
 
-5. We're focusing on web APIs, which allow for information or functionality to be manipulated by other programs via the internet. 
+102. We're focusing on web APIs, which allow for information or functionality to be manipulated by other programs via the internet. 
 
-5. For example, with Twitter’s web API, you can write a Python program to perform tasks such as favoriting tweets or collecting tweet metadata.
+103. For example, with Twitter’s web API, you can write a Python program to perform tasks such as favoriting tweets or collecting tweet metadata.
 
-6. Other large-scale data repositories tend to make data available via an API.
+104. Other large-scale data repositories tend to make data available via an API.
 
-7. For example, the U.S. National Archives and Records Administration (NARA) makes the National Archives catalog, Executive Orders, and photographic image content available [via an API](https://www.archives.gov/developer#toc--datasets).
+105. For example, the U.S. National Archives and Records Administration (NARA) makes the National Archives catalog, Executive Orders, and photographic image content available [via an API](https://www.archives.gov/developer#toc--datasets).
 
-8. The Smithsonian Institution allows open access to museum collection metadata [via an API](https://www.si.edu/openaccess/devtools).
+107. The Smithsonian Institution allows open access to museum collection metadata [via an API](https://www.si.edu/openaccess/devtools).
 
-9. The U.S. Library of Congress provides access to digital collection metadata, digitized historical newspaper images, public radio and television programs, and World Digital Library collections [via APIs](https://labs.loc.gov/lc-for-robots/). 
+108. The U.S. Library of Congress provides access to digital collection metadata, digitized historical newspaper images, public radio and television programs, and World Digital Library collections [via APIs](https://labs.loc.gov/lc-for-robots/). 
 
-10. The U.S. Census Bureau makes as wide range of public data available [via API](https://www.census.gov/data/developers/data-sets.html).
+109. The U.S. Census Bureau makes as wide range of public data available [via API](https://www.census.gov/data/developers/data-sets.html).
 
-11. APIs let us bring a live data connection into a programming environment and interact or work with it based on the format and protocols established as part of the API.
+110. APIs let us bring a live data connection into a programming environment and interact or work with it based on the format and protocols established as part of the API.
 
-12. So we can imagine a scenario in which you wanted to build an application or visualization based on the location of [Iowa Department of Transportation's nearly 901 snow plows](https://iowadot.gov/tap.html).
+111. So we can imagine a scenario in which you wanted to build an application or visualization based on the location of [Iowa Department of Transportation's nearly 901 snow plows](https://iowadot.gov/tap.html).
 
-13. Downloading a static dataset isn't going to work for this specific use case--you need a live data feed with up-to-date information.
+112. Downloading a static dataset isn't going to work for this specific use case--you need a live data feed with up-to-date information.
 
-14. Thus the beauty of APIs.
+113. Thus the beauty of APIs.
 - [Link to IDOT's plow truck data](https://data.iowadot.gov/datasets/20a0c10c06a54240b5f2893e0187e22c_0?orderBy=OBJECTID&orderByAsc=false&page=6)
 
 ## API terminology
 
-15. Some terminology that goes along with APIs.
+114. Some terminology that goes along with APIs.
 - ***HTTP (HyperText Transfer Protocol)***: primary means of communicating or transferring data on the world wide web. 
 - ***URL (Uniform Resource Locator)***: an address or location information for information on the web. A URL describes the location of a specific resource.
 - ***JSON (JavaScript Object Notation)***: plain-text data storage format
 - ***REST (REpresentational State Transfer)***: best practices for implementing APIs. APIs that follow these principles are called REST APIs.
 
-# What can data from an API look like?
+## What can data from an API look like?
 
-16. Navigate to https://api.github.com/search/repositories?q=language:python&sort=stars in a web browser.
+115. Navigate to https://api.github.com/search/repositories?q=language:python&sort=stars in a web browser.
 
-17. We're looking at public projects hosted on GitHub that are written in the Python programming language.
+116. We're looking at public projects hosted on GitHub that are written in the Python programming language.
 
-18. Select the option to Expand All items, or click on the drop-down arrows to expand the data at this URL.
+117. Select the option to Expand All items, or click on the drop-down arrows to expand the data at this URL.
 ```JSON
 {
   "total_count": 6343245,
@@ -836,18 +836,18 @@ with open('output.json', 'w') as json_file:
     }
  ```
 
-<blockquote>Q1: What are we seeing in the browser or in this sample JSON? Some of the specific fields? What do we think this might look like when we bring it into Python?</blockquote>
+<blockquote>Q9: What are we seeing in the browser or in this sample JSON? Some of the specific fields? What do we think this might look like when we bring it into Python?</blockquote>
 
-# Making an API call in Python
+## Making an API call in Python
 
-19. First we use the `requests` module to send HTTP requests (i.e. request data via the world wide web) using Python.
+118. First we use the `requests` module to send HTTP requests (i.e. request data via the world wide web) using Python.
 - [Requests: HTTP for Humans documentation](https://requests.readthedocs.io/en/master/)
 - [Python documentation on `requests` module](https://pypi.org/project/requests/)
 - [Python Requests Module, W3 Schools](https://www.w3schools.com/python/module_requests.asp)
 
-20. The HTTP request returns a response object that includes whatever data is returned as part of the API call.
+119. The HTTP request returns a response object that includes whatever data is returned as part of the API call.
 
-21. The `requests` module includes a range of methods that let us interact with elements of the API.
+120. The `requests` module includes a range of methods that let us interact with elements of the API.
 
 Method | Description
 --- | ---
@@ -859,7 +859,7 @@ Method | Description
 `put(url, data, args)` | Sends a PUT request to the specified URL
 `request(method, url, args)` | Sends a request of the specified method to the specified URL
 
-22. A very basic example of the `requests` module in action.
+121. A very basic example of the `requests` module in action.
 ```Python
 # import requests module
 import requests
@@ -871,7 +871,7 @@ x = requests.get('url')
 print(x.text)
 ```
 
-23. This basic syntax should look familiar for those who took Elements I in the Fall 2020 semester.
+122. This basic syntax should look familiar for those who took Elements I in the Fall 2020 semester.
 ```Python
 import urllib
 import urllib.request
@@ -886,7 +886,7 @@ f.write(webContent)
 f.close
 ```
 
-24. Let's look at how we would call the GitHub API in Python.
+123. Let's look at how we would call the GitHub API in Python.
 ```Python
 # import requests module
 import requests
@@ -910,23 +910,23 @@ response_dict = r.json()
 print(response_dict.keys())
 ```
 
-25. The first `print()` statement returns a status message for the `requests.get()` API call.
+124. The first `print()` statement returns a status message for the `requests.get()` API call.
 
-26. Once we know the API call is working, we can go ahead and request the JSON data available via the API.
+125. Once we know the API call is working, we can go ahead and request the JSON data available via the API.
 
-27. Then we can store that JSON data as a Python dictionary.
+126. Then we can store that JSON data as a Python dictionary.
 
-<blockquote>Q2: Describe how a web API works in your own words.</blockquote>
+<blockquote>Q10: Describe how a web API works in your own words.</blockquote>
 
-# Working With the API Response in Python
+## Working With the API Response in Python
 
-28. If our API call has been successful, we now have JSON or XML data in Python.
+127. If our API call has been successful, we now have JSON or XML data in Python.
 
-29. Now we can start to explore the data returned by the API in Python.
+128. Now we can start to explore the data returned by the API in Python.
 
-30. We can call this type of preliminary exploration and analysis EDA, or exploratory data analysis.</blockquote>
+129. We can call this type of preliminary exploration and analysis EDA, or exploratory data analysis.</blockquote>
 
-31. Let's say we wanted to know more about these Python repositories.
+130. Let's say we wanted to know more about these Python repositories.
 ```Python
 # import requests module
 import requests
@@ -966,7 +966,7 @@ for key in sorted(repo_dict.keys()):
   print(key)
 ```
 
-32. Now that we know what keys are in this dictionary, we can pull out the values for some of these keys.
+131. Now that we know what keys are in this dictionary, we can pull out the values for some of these keys.
 ```Python
 # import requests module
 import requests
@@ -1023,15 +1023,15 @@ print(f"Updated: {repo_dict['updated_at']}")
 print(f"Description: {repo_dict['description']}")
 ```
 
-33. Visit [GitHub's REST API documentation](https://docs.github.com/en/free-pro-team@latest/rest) to learn more about its API.
+132. Visit [GitHub's REST API documentation](https://docs.github.com/en/free-pro-team@latest/rest) to learn more about its API.
 
-# From API to JSON file
+## From API to JSON file
 
-34. In many situations, we would stay within a programming environment when working with the data returned by an API call.
+133. In many situations, we would stay within a programming environment when working with the data returned by an API call.
 
-35. But let's say you wanted to write the data returned by an API call to a JSON or XML file.
+134. But let's say you wanted to write the data returned by an API call to a JSON or XML file.
 
-36. We can write the JSON data loaded as a Python dictionary to a JSON file using `json.dump()`.
+135. We can write the JSON data loaded as a Python dictionary to a JSON file using `json.dump()`.
 ```Python
 # import json module
 import json
@@ -1071,48 +1071,46 @@ with open('output.json', 'w') as json_file:
   json.dump(repo_dict, json_file)
 ```
 
-<blockquote>Q3: Find another GitHub search result URL and write an API call from Python. Select a single repository from the API return. Write the API return to a JSON file. Incldue code + comments.</blockquote>
+## Example: U.S. Census Bureau Data
 
-# Example: U.S. Census Bureau Data
+136. Let's say we want to work with the U.S. Census Bureau's API.
 
-37. Let's say we want to work with the U.S. Census Bureau's API.
+137. First step is to navigate to the Census Bureau's ["About"](https://www.census.gov/data/developers/about.html) page for developers and click the "Request a Key" icon.
 
-38. First step is to navigate to the Census Bureau's ["About"](https://www.census.gov/data/developers/about.html) page for developers and click the "Request a Key" icon.
+138. Once you've completed the "Request a Key" form, you should receive an API key via email. This will look like a long string of letters and numbers.
 
-39. Once you've completed the "Request a Key" form, you should receive an API key via email. This will look like a long string of letters and numbers.
+139. Next step is to identify which Census Bureau dataset you want to work with.
 
-40. Next step is to identify which Census Bureau dataset you want to work with.
+140. Lots of options, ranging from the facets of data from the American Community Survey to data from the Decennial Census.
 
-41. Lots of options, ranging from the facets of data from the American Community Survey to data from the Decennial Census.
+141. Explore the list of options (["Available APIs"](https://www.census.gov/data/developers/data-sets.html)) and decide on a specific dataset.
 
-42. Explore the list of options (["Available APIs"](https://www.census.gov/data/developers/data-sets.html)) and decide on a specific dataset.
+142. For the purposes of this example, I'm going to work with [five-year data from the American Community survey](https://www.census.gov/data/developers/data-sets/acs-5year.html) to find a recent population count for `46556`, Notre Dame's zip code.
 
-43. For the purposes of this example, I'm going to work with [five-year data from the American Community survey](https://www.census.gov/data/developers/data-sets/acs-5year.html) to find a recent population count for `46556`, Notre Dame's zip code.
-
-44. First thing I want to do is explore the documentation available for this dataset so I know what might (or should) return from the API call.
+143. First thing I want to do is explore the documentation available for this dataset so I know what might (or should) return from the API call.
 - [Link to documentation for 2019 subset of this dataset](https://www.census.gov/data/developers/data-sets/acs-5year.html)
 
-45. As you can see from the documentation, there are MANY variables and data points contained in this dataset. 
+144. As you can see from the documentation, there are MANY variables and data points contained in this dataset. 
 
-46. For this example, I'm going to stick to the original question of wanting a recent population count for Notre Dame's zip code.
+145. For this example, I'm going to stick to the original question of wanting a recent population count for Notre Dame's zip code.
 
-47. From looking at the documentation, I know my API call will start with `https://api.census.gov/data/2017/acs/acs5?key=[YOUR_API_KEY]`
+146. From looking at the documentation, I know my API call will start with `https://api.census.gov/data/2017/acs/acs5?key=[YOUR_API_KEY]`
 
-48. And from looking at the full list of variables, I know my variable name for "Total Population is `B01003_001E`.
+147. And from looking at the full list of variables, I know my variable name for "Total Population is `B01003_001E`.
 
-49. So my API call for the "Total Population" variable will look like `https://api.census.gov/data/2017/acs/acs5?key=[YOUR_API_KEY]&get=B01003_001E`.
+148. So my API call for the "Total Population" variable will look like `https://api.census.gov/data/2017/acs/acs5?key=[YOUR_API_KEY]&get=B01003_001E`.
 
-50. Execept this API call will return total population for all geographies in the ACS dataset, which is much more than I actually want.
+149. Execept this API call will return total population for all geographies in the ACS dataset, which is much more than I actually want.
 
-51. I can modify the API call to only return "Total Population" for the zip code I am interested in.
+150. I can modify the API call to only return "Total Population" for the zip code I am interested in.
 
-52. The modified API call will look like `https://api.census.gov/data/2017/acs/acs5?key=[YOUR_API_KEY]&get=B01003_001E&for=zip%20code%20tabulation%20area:46556`.
+151. The modified API call will look like `https://api.census.gov/data/2017/acs/acs5?key=[YOUR_API_KEY]&get=B01003_001E&for=zip%20code%20tabulation%20area:46556`.
 
-53. You can paste this URL into your browser to check to make sure the API call is using the correct URL.
+152. You can paste this URL into your browser to check to make sure the API call is using the correct URL.
 
-54. Check out the [Census Bureau's API documentation and sample queries](https://www.census.gov/data/developers/guidance/api-user-guide/query-examples.html) to learn more about how to customize your API call.
+153. Check out the [Census Bureau's API documentation and sample queries](https://www.census.gov/data/developers/guidance/api-user-guide/query-examples.html) to learn more about how to customize your API call.
 
-55. Now to bring this into Python.
+154. Now to bring this into Python.
 ```Python
 # import requests module
 import requests
@@ -1137,16 +1135,15 @@ with open('output.json', 'w') as json_file:
   json.dump(formattedResponse, json_file)
 ```
 
-<blockquote>Q4: Describe your experience working with the Census Bureau API. What was rewarding? What was challenging? How did you solve those challenges?</blockquote>
+<blockquote>Q11: Describe your experience working with the Census Bureau API. What was rewarding? What was challenging? How did you solve those challenges?</blockquote>
 
 <blockquote>OPTIONAL: Modify the API call to access another subset of data. Include code + comments.</blockquote>
 
+## API Project Prompt
 
-# Project Prompt
+Navigate to an open data portal and construct an API call.
 
-56. Navigate to an open data portal and construct an API call.
-
-57. A few sources that might get you started:
+A few sources that might get you started:
 - [GitHub repository with extensive inventory of free public APIs](https://github.com/public-apis/public-apis)
 - [U.S. National Archives and Records Administration, NARA](https://www.archives.gov/developer#toc--datasets)
 - [Smithsonian Institution](https://www.si.edu/openaccess/devtools)
@@ -1154,51 +1151,38 @@ with open('output.json', 'w') as json_file:
 - [U.S. Census Bureau](https://www.census.gov/data/developers/data-sets.html)
 - [The Sports DB](https://www.thesportsdb.com/api.php]
 
-58. View the API source in a browser. What are you seeing? How can we start to make sense of this data using available documentation?
+View the API source in a browser. What are you seeing? How can we start to make sense of this data using available documentation?
 
-59. Construct an API call in Python.
+Construct an API call in Python.
 
-60. Interact with the data in Python to identify/pull out relevant key-value pairs
+Interact with the data in Python to identify/pull out relevant key-value pairs
 
-61. Take a subset of the data and write to a JSON file.
+Take a subset of the data and write to a JSON file.
 
-62. Include code + comments.
-
+Include code + comments.
 
 # Lab Notebook Questions
 
-Q1: Open the `example.xlsx` file in a text editor. Describe what you see.
+Q1: Open the <code>example.xlsx</code> file in a text editor. Describe what you see.
 
-Q2: How does your answer to Q1 compare to what you see when you open the `example.csv` file in a text editor?
+Q2: How does your answer to Q1 compare to what you see when you open the <code>example.csv</code> file in a text editor?
 
-Q3: Open the `example.xlsx` file in a spreadsheet program. Save the file as a `.csv` format. What happens? Or what happens when you open the newly-created `.csv` file in a spreadsheet program or text editor?
+Q3: Open the <code>example.xlsx</code> file in a spreadsheet program. Save the file as a <code>.csv</code> format. What happens? Or what happens when you open the newly-created <code>.csv</code> file in a spreadsheet program or text editor?
 
-Q4: Create a list of sublists and use the index positions to access specific values. Include code + comments.
+Q4: Modify the code provided above to load the example.txt file.
 
-Q5: Read in a small CSV file and access specific values. Include code + comments.
+Q5: Define escape characters in your own words. Describe a situation in which escape characters would be needed, and how you would address that challenge using Python syntax.
 
-Q6: Read in a small CSV file using a `for` loop and access specific values. Include code + comments.
+Q6: Describe in your own words how csv_DictReader interacts with structured data.
 
-Q8: Modify code to load in `example.txt` file.
+Q7: Create a small dictionary and write it to a CSV file. Include code + comments.
 
-Q8: Define escape characters in your own words. Describe a situation in which escape characters would be needed, and how you would address that challenge using Python syntax.
+Q8: Decipher what we're seeing in the JSON here. What are the name/value pairs, and how are they organized in this object?
 
-Q9: Load a small CSV file that includes header info. Include code + comments.
+Q9: What are we seeing in the browser or in this sample JSON? Some of the specific fields? What do we think this might look like when we bring it into Python?
 
-Q10: Load a small CSV that does include headers and manually set the headers. Include code + comments.
+Q10: Describe how a web API works in your own words.
 
-Q11: Create your own small data structure and write it to CSV file. Describe what you expect to see and what actually happens when you look at the output. Include code + comments.
-
-Q12: Create a small dictionary and write it to a CSV file. Include code + comments.
-
-Q1: Decipher what we're seeing in the JSON here. What are the name/value pairs, and how are they organized in this object?
-
-Q1: What are we seeing in the browser or in this sample JSON? Some of the specific fields? What do we think this might look like when we bring it into Python?
-
-Q2: Describe how a web API works in your own words.
-
-Q3: Find another GitHub search result URL and write an API call from Python. Select a single repository from the API return. Write the API return to a JSON file. Incldue code + comments.
-
-Q4: Describe your experience working with the Census Bureau API. What was rewarding? What was challenging? How did you solve those challenges?
+Q11: Describe your experience working with the Census Bureau API. What was rewarding? What was challenging? How did you solve those challenges?
 
 OPTIONAL: Modify the API call to access another subset of data. Include code + comments.
