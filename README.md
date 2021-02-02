@@ -5,29 +5,14 @@ This tutorial is licensed under a <a href="http://creativecommons.org/licenses/b
 
 ## Lab Goals
 
-This lab covers various methods for reading structured data into Python using `csv` and `openpyxl`. It also covers other types of delimiters and escape characters. The lab also overs writing data from Python to a structured data file.
+This lab covers various methods for reading structured data into Python, focusing on `csv` and `json`. It covers other types of delimiters and escape characters. It also provides an overview of web APIs and how to construct an API call in Python. 
 
 By the end of this lab, students will be able to:
 - Describe the structure and components of a `.csv` file
 - Read a `.csv` file into Python using the `csv` module and a `for` loop
 - Understand how to approach other types of delimited files
 - Understand how to work with escape characters when loading structured data
-- Understand how Python dictionaries work as a type of structured data
-- Write data from Python to a `.csv` file
-- Understand the basic of working with `.xlsx` files in Python
-
-This lab covers the basic components and structure for JSON and XML data files. This lab covers various methods for reading JSON and XML data into Python using `json` and `ElementTree`. The lab also overs writing data from Python to JSON or XML.
-
-By the end of this lab, students will be able to:
-- Describe the structure and components of JSON and XML  files
 - Read a JSON file file into Python using the `json` module
-- Understand how Python dictionaries work as a type of structured data
-- Understand how to generate an XML structure from within Python
-- Write data from Python to JSON and XML files
-
-This lab provides an overview of web APIs and how to construct an API call in Python. It also covers how to work with the results of an API call in the Python programming environment, and write that data to a JSON file.
-
-By the end of this lab, students will be able to:
 - Describe the basic components and functionality of a web API
 - Write a basic API call in Python
 - Work with the results of an API call in Python
@@ -35,19 +20,12 @@ By the end of this lab, students will be able to:
 
 ## Acknowledgements
 
-Information and exercises in this lab are adapted from Al Sweigart's [*Automate the Boring Stuff With Python*](https://nostarch.com/automatestuff2) (No Starch Press, 2020).
-- Chapter 13, "Working With Excel Spreadsheets" (302-328)
-- Chapter 16 "Working With CSV Files and JSON Data" (371-388)
-
 Information and exercises in this lab are adapted from:
-- Al Sweigart, "Chapter 16, Working with CSV Files and JSON Data" in [*Automate the Boring Stuff With Python*](https://nostarch.com/automatestuff2) (No Starch Press, 2020): 371-388.
+- Al Sweigart [*Automate the Boring Stuff With Python*](https://nostarch.com/automatestuff2) (No Starch Press, 2020).
+  * Chapter 13, "Working With Excel Spreadsheets" (302-328)
+  * Chapter 16 "Working With CSV Files and JSON Data" (371-388)
 - Wes McKinney, "Chapter 6.1, Reading and Writing Data in Text Format" in [*Python for Data Analysis*](https://www.oreilly.com/library/view/python-for-data/9781491957653/) (O'Reilly, 2017): 169-184.
 - Charles Severance, "Chapter 13, Using Web Services" in [*Python for Everybody*](https://www.py4e.com/book.php) (Charles Severance, 2009): 155-170.
-
-The XML portions of this lab are adapted from the "Project 4: XML and XSLT" project materials developed by [Lindsay K. Mattock](http://lindsaymattock.net/) for the the [SLIS 5020 Computing Foundations course](http://lindsaymattock.net/computingfoundations.html). 
-
-Elements of this lab procedure are adapted from:
-
 - Eric Matthes, Chapter 17 "Working With APIs" from [*Python Crash Course*](https://nostarch.com/pythoncrashcourse2e) (No Starch Press, 2019): 359-375
 - Charles Severance, Chapter 13 "Using Web Services" from [*Python for Informatics*](https://www.py4e.com/book.php) (2009): 155-168
 - Wes McKinney, Chapter 6 "Data Loading, Storage, and File Formats" from [*Python for Data Analysis*](https://www.oreilly.com/library/view/python-for-data/9781491957653/) (O'Reilly, 2018): 169-193
@@ -63,35 +41,13 @@ Elements of this lab procedure are adapted from:
     * [Reading `.csv` data using a `for` loop](#reading-csv-data-using-a-for-loop)
   * [Other delimiters](#other-delimiters)
   * [Escape characters](#escape-characters)
-- [Reading in `.csv` files using dictionaries](#reading-in-csv-files-using-dictionaries)
-- [Writing to a `.csv` file](#writing-to-a-csv-file)
-  * [Writing from a dictionary to a `.csv` file](#writing-from-a-dictionary-to-a-csv-file)
-- [Working with `.xlsx` files](#working-with-xlsx-files)
-- [Project Prompts](#project-prompts)
-  * [Project #1](#project-1)
-  * [Project #2](#project-2)
-  * [Project #3](#project-3)
-- [Lab notebook questions](#lab-notebook-questions)
-
-- [Data](#data)
+  * [Reading in `.csv` files using dictionaries](#reading-in-csv-files-using-dictionaries)
 - [JSON](#json)
   * [What is JSON and why are we learning about it](#what-is-json-and-why-are-we-learning-about-it)
   * [Reading JSON into Python](#reading-json-into-python)
   * [Working with JSON in Python](#working-with-json-in-python)
   * [Writing to JSON from Python](#writing-to-json-from-python)
   * [JSON Project Prompt](#json-project-prompt)
-- [XML](#xml)
-  * [What is XML and why are we learning about it](#what-is-xml-and-why-are-we-learning-about-it)
-    * [XML Versus HTML](#xml-versus-html)
-    * [XML Example 1](#xml-example-1)
-    * [XML Example 2](#xml-example-2)
-  * [Reading XML Into Python](#reading-xml-into-Python)
-    * [Parsing XML in Python](#parsing-xml-in-python)
-  * [Working With XML in Python](#working-with-xml-in-python)
-  * [Writing to XML from Python](#writing-to-xml-from-python)
-  * [XML Project Prompt](#xml-project-prompt)
-- [Lab Notebook Questions](#lab-notebook-questions)
-
 - [What are APIs and how do they work](#what-are-apis-and-how-do-they-work)
   * [API terminology](#api-terminology)
 - [What can data from an API look like](#what-can-data-from-an-api-look-like)
@@ -114,7 +70,7 @@ They can all be downloaded from this GitHub repository as individual files or a 
 
 You can also access them [via Google Drive](https://drive.google.com/drive/folders/1Sp_N34753ONJRU2AFKcocQ2DhCEhyL-m?usp=sharing) (ND users only).
 
-[Click here](https://raw.githubusercontent.com/kwaldenphd/tabular-data-python/main/tabular_data_python.ipynb) and select the "Save As" option to download this lab as a Jupyter Notebook.
+[Click here](PLACEHOLDER LINK) and select the "Save As" option to download this lab as a Jupyter Notebook.
 
 # `.csv` data in Python
 
@@ -706,43 +662,6 @@ with open('output.json', 'w') as json_file:
 
 35. Later in the semester we will talk about how to read JSON data into Python and convert it to a tabular data structure (called a data frame in Python), using a library called `pandas`. Stay tuned!
 
-## JSON Project Prompt
-
-36. Navigate to an open data portal and download a JSON file. 
-
-37. Some options that can get you started:
-- [Data.gov](https://www.data.gov/)
-- [City of Chicago Data Portal](https://data.cityofchicago.org/)
-- [City of South Bend Open Data](https://data-southbend.opendata.arcgis.com/)
-
-38. Open the data in a spreadsheet program and/or text editor 
-
-39. Describe what are you seeing. How can we start to make senes of this data? What documentation is available?
-
-40. Read the JSON data into Python and convert to a Python value.
-
-41. Create your own small dictionary with data and convert to JSON string.
-
-
-## Project #2:
-
-Navigate to an open data portal and download a `.csv` or `.xlsx` file. OpenData.gov, city of Chicago, SB, SportsReference, other. 
-
-A few places to start:
-- [Data.gov](https://www.data.gov/)
-- [City of Chicago Data Portal](https://data.cityofchicago.org/)
-- [City of South Bend Open Data](https://data-southbend.opendata.arcgis.com/)
-
-Open the data in a spreadsheet program and/or text editor
-- What do you see?
-- How can we start to make sense of the data based on available documentation?
-
-Load the data in Python as list/sublists and as dictionary. What challenges did you encounter? How did you address or solve them? 
-
-### Project #3
-
-Manually create a small dataset and write to a CSV file.
-
 # What are APIs and how do they work
 
 1. For a brief introduction to APIS, view Danielle Thé, ["API's Explained (with LEGO)"](https://youtu.be/qW1qhb8r8xI), *YouTube Video* (1 November 2016).
@@ -1197,6 +1116,39 @@ with open('output.json', 'w') as json_file:
 <blockquote>Q4: Describe your experience working with the Census Bureau API. What was rewarding? What was challenging? How did you solve those challenges?</blockquote>
 
 <blockquote>OPTIONAL: Modify the API call to access another subset of data. Include code + comments.</blockquote>
+
+## JSON Project Prompt
+
+36. Navigate to an open data portal and download a JSON file. 
+
+37. Some options that can get you started:
+- [Data.gov](https://www.data.gov/)
+- [City of Chicago Data Portal](https://data.cityofchicago.org/)
+- [City of South Bend Open Data](https://data-southbend.opendata.arcgis.com/)
+
+38. Open the data in a spreadsheet program and/or text editor 
+
+39. Describe what are you seeing. How can we start to make senes of this data? What documentation is available?
+
+40. Read the JSON data into Python and convert to a Python value.
+
+41. Create your own small dictionary with data and convert to JSON string.
+
+
+## Project #2:
+
+Navigate to an open data portal and download a `.csv` or `.xlsx` file. OpenData.gov, city of Chicago, SB, SportsReference, other. 
+
+A few places to start:
+- [Data.gov](https://www.data.gov/)
+- [City of Chicago Data Portal](https://data.cityofchicago.org/)
+- [City of South Bend Open Data](https://data-southbend.opendata.arcgis.com/)
+
+Open the data in a spreadsheet program and/or text editor
+- What do you see?
+- How can we start to make sense of the data based on available documentation?
+
+Load the data in Python as list/sublists and as dictionary. What challenges did you encounter? How did you address or solve them? 
 
 # Project Prompt
 
