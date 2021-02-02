@@ -18,7 +18,7 @@ By the end of this lab, students will be able to:
 - Work with the results of an API call in Python
 - Write the results of an API call to a JSON file
 
-[Click here](PLACEHOLDER LINK) and select the "Save As" option to download this lab as a Jupyter Notebook.
+[Click here](https://raw.githubusercontent.com/kwaldenphd/python-structured-data/main/structured-data-python.ipynb) and select the "Save As" option to download this lab as a Jupyter Notebook.
 
 ## Acknowledgements
 
