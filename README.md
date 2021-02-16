@@ -685,8 +685,6 @@ Describe what are you seeing. How can we start to make senes of this data? What 
 
 Read the JSON data into Python and convert to a Python value.
 
-Create your own small dictionary with data and convert to JSON string.
-
 # What are APIs and how do they work
 
 99. For a brief introduction to APIS, view Danielle Thé, ["API's Explained (with LEGO)"](https://youtu.be/qW1qhb8r8xI), *YouTube Video* (1 November 2016).
