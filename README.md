@@ -20,6 +20,8 @@ By the end of this lab, students will be able to:
 
 [Click here](https://raw.githubusercontent.com/kwaldenphd/python-structured-data/main/structured-data-python.ipynb) and select the "Save As" option to download this lab as a Jupyter Notebook.
 
+[Link to lab overview video](https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=9833ffdf-c071-4aab-9ecc-acd1004ed991) (Panopto, ND Users)
+
 ## Acknowledgements
 
 Information and exercises in this lab are adapted from:
