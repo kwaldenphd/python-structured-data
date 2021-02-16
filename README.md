@@ -1099,7 +1099,7 @@ with open('output.json', 'w') as json_file:
 
 148. So my API call for the "Total Population" variable will look like `https://api.census.gov/data/2017/acs/acs5?key=[YOUR_API_KEY]&get=B01003_001E`.
 
-149. Execept this API call will return total population for all geographies in the ACS dataset, which is much more than I actually want.
+149. This API call will return total population for all geographies in the ACS dataset.
 
 150. I can modify the API call to only return "Total Population" for the zip code I am interested in.
 
