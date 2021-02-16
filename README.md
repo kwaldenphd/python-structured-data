@@ -521,7 +521,7 @@ null | None
 import json
 
 # string of JSON data
-stringOfJsonData = '{"name": Zophie", "isCat": true, "miceCaught": 0, "felineIQ": null}'
+stringOfJsonData = '{"name": "Zophie", "isCat": true, "miceCaught": 0, "felineIQ": null}'
 
 # load JSON data as Python value 
 jsonDataAsPythonValue = json.loads(stringOfJsonData)
@@ -544,13 +544,13 @@ jsonDataAsPythonValue
 import json
 
 # string of JSON data
-stringOfJsonData = '{"name": Zophie", "isCat": true, "miceCaught": 0, "felineIQ": null}'
+stringOfJsonData = '{"name": "Zophie", "isCat": true, "miceCaught": 0, "felineIQ": null}'
 
 # load JSON data as Python value 
 jsonDataAsPythonValue = json.loads(stringOfJsonData)
 
 # print list of keys
-print jsonDataAsPython.keys()
+print(jsonDataAsPython.keys())
 ```
 
 89. We could get all of the values in the dictionary using the `values()` method.
@@ -559,13 +559,13 @@ print jsonDataAsPython.keys()
 import json
 
 # string of JSON data
-stringOfJsonData = '{"name": Zophie", "isCat": true, "miceCaught": 0, "felineIQ": null}'
+stringOfJsonData = '{"name": "Zophie", "isCat": true, "miceCaught": 0, "felineIQ": null}'
 
 # load JSON data as Python value 
 jsonDataAsPythonValue = json.loads(stringOfJsonData)
 
 # print list of values
-print jsonDataAsPython.values()
+print(jsonDataAsPython.values())
 ```
 
 90. We could iterate by keys over the items in the dictionary.
@@ -574,14 +574,14 @@ print jsonDataAsPython.values()
 import json
 
 # string of JSON data
-stringOfJsonData = '{"name": Zophie", "isCat": true, "miceCaught": 0, "felineIQ": null}'
+stringOfJsonData = '{"name": "Zophie", "isCat": true, "miceCaught": 0, "felineIQ": null}'
 
 # load JSON data as Python value 
 jsonDataAsPythonValue = json.loads(stringOfJsonData)
 
 # iterate by keys using for loop
 for key in jsonDataAsPython.keys():
-  print key, jsonDataAsPython[key]
+  print(key, jsonDataAsPython[key])
 ```
 
 91. We could also iterate over items in dictionary using key-value pairs.
@@ -590,14 +590,14 @@ for key in jsonDataAsPython.keys():
 import json
 
 # string of JSON data
-stringOfJsonData = '{"name": Zophie", "isCat": true, "miceCaught": 0, "felineIQ": null}'
+stringOfJsonData = '{"name": "Zophie", "isCat": true, "miceCaught": 0, "felineIQ": null}'
 
 # load JSON data as Python value 
 jsonDataAsPythonValue = json.loads(stringOfJsonData)
 
 # iterate by key value pairs using for loop
 for key, value in jsonDataAsPythonValue.items():
-  print key, value
+  print(key, value)
 ```
 
 92. We can read the value for a particular key using the index operator. The command `jsonDataAsPythonValue['name']` will return `Zophie`.
@@ -870,7 +870,7 @@ x = requests.get('url')
 print(x.text)
 ```
 
-122. This basic syntax should look familiar for those who took Elements I in the Fall 2020 semester.
+122. This basic syntax might look familiar for those who took Elements of Computing I in the Fall 2020 semester.
 ```Python
 import urllib
 import urllib.request
@@ -1084,14 +1084,14 @@ with open('output.json', 'w') as json_file:
 
 141. Explore the list of options (["Available APIs"](https://www.census.gov/data/developers/data-sets.html)) and decide on a specific dataset.
 
-142. For the purposes of this example, I'm going to work with [five-year data from the American Community survey](https://www.census.gov/data/developers/data-sets/acs-5year.html) to find a recent population count for `46556`, Notre Dame's zip code.
+142. For the purposes of this example, I'm going to work with [five-year data from the American Community survey](https://www.census.gov/data/developers/data-sets/acs-5year.html) to find a recent population count for all US states.
 
 143. First thing I want to do is explore the documentation available for this dataset so I know what might (or should) return from the API call.
 - [Link to documentation for 2019 subset of this dataset](https://www.census.gov/data/developers/data-sets/acs-5year.html)
 
 144. As you can see from the documentation, there are MANY variables and data points contained in this dataset. 
 
-145. For this example, I'm going to stick to the original question of wanting a recent population count for Notre Dame's zip code.
+145. For this example, I'm going to stick to the original question of wanting a recent population count for all states.
 
 146. From looking at the documentation, I know my API call will start with `https://api.census.gov/data/2017/acs/acs5?key=[YOUR_API_KEY]`
 
@@ -1103,7 +1103,7 @@ with open('output.json', 'w') as json_file:
 
 150. I can modify the API call to only return "Total Population" for the zip code I am interested in.
 
-151. The modified API call will look like `https://api.census.gov/data/2017/acs/acs5?key=[YOUR_API_KEY]&get=B01003_001E&for=zip%20code%20tabulation%20area:46556`.
+151. The modified API call will look like `https://api.census.gov/data/2017/acs/acs5?key=[YOUR_API_KEY]&get=B01003_001E&for=state:*`.
 
 152. You can paste this URL into your browser to check to make sure the API call is using the correct URL.
 
@@ -1121,7 +1121,7 @@ import json
 apiKey = "YOUR_API_KEY"
 
 # construct API
-calledAPI = "https://api.census.gov/data/2017/acs/acs5?key=[YOUR_API_KEY]&get=B01003_001E&for=zip%20code%20tabulation%20area:46556"
+calledAPI = "https://api.census.gov/data/2017/acs/acs5?key=[YOUR_API_KEY]&get=B01003_001E&for=state:*`.
 
 # call the API and collect the response
 response = requests.get(calledAPI)
@@ -1148,7 +1148,7 @@ A few sources that might get you started:
 - [Smithsonian Institution](https://www.si.edu/openaccess/devtools)
 - [Library of Congress](https://labs.loc.gov/lc-for-robots/)
 - [U.S. Census Bureau](https://www.census.gov/data/developers/data-sets.html)
-- [The Sports DB](https://www.thesportsdb.com/api.php]
+- [The Sports DB](https://www.thesportsdb.com/api.php)
 
 View the API source in a browser. What are you seeing? How can we start to make sense of this data using available documentation?
 
