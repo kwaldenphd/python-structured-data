@@ -38,13 +38,13 @@ Information and exercises in this lab are adapted from:
   * [Other delimiters](#other-delimiters)
   * [Escape characters](#escape-characters)
   * [Reading in `.csv` files using dictionaries](#reading-in-csv-files-using-dictionaries)
-  * [CSV Project Prompt](#csv-project-prompt)
+  * [Additional CSV Lab Notebook Questions](#additional-csv-lab-notebook-questions)
 - [JSON](#json)
   * [What is JSON and why are we learning about it](#what-is-json-and-why-are-we-learning-about-it)
   * [Reading JSON into Python](#reading-json-into-python)
   * [Working with JSON in Python](#working-with-json-in-python)
   * [Writing to JSON from Python](#writing-to-json-from-python)
-  * [Additional JSON Lab Notebook Question](#additional-json-lab-notebook-question)
+  * [Additional JSON Lab Notebook Questions](#additional-json-lab-notebook-questions)
 - [Lab Notebook Questions](#lab-notebook-questions)
 
 # Data
@@ -384,7 +384,7 @@ outputFile.close()
 
 <blockquote>Q7: Create a small dictionary and write it to a CSV file. Include code + comments.</blockquote>
 
-## Additional CSV Lab Notebook Question
+## Additional CSV Lab Notebook Questions
 
 Q8: Navigate to an open data portal and download a `.csv` or `.xlsx` file. 
 
