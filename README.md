@@ -14,8 +14,6 @@ By the end of this lab, students will be able to:
 - Understand how to work with escape characters when loading structured data
 - Read a JSON file file into Python using the `json` module
 
-[Link to lab overview video](https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=9833ffdf-c071-4aab-9ecc-acd1004ed991) (Panopto, ND Users)
-
 ## Acknowledgements
 
 Peer review and editing on the CSV and XLSX portions of this lab was provided by Spring 2021 graduate teaching assistant [Aidan Draper](https://github.com/adraper2).
