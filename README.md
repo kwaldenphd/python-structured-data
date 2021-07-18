@@ -5,14 +5,14 @@ This tutorial is licensed under a <a href="http://creativecommons.org/licenses/b
 
 ## Lab Goals
 
-This lab covers various methods for reading structured data into Python, focusing on `csv` and `json`. It covers other types of delimiters and escape characters. It also provides an overview of web APIs and how to construct an API call in Python. 
+This lab covers various methods for reading structured data into Python, focusing on `csv` and `json`. It covers other types of delimiters and escape characters. 
 
 By the end of this lab, students will be able to:
 - Describe the structure and components of a `.csv` file
 - Read a `.csv` file into Python using the `csv` module and a `for` loop
 - Understand how to approach other types of delimited files
 - Understand how to work with escape characters when loading structured data
-- Read a JSON file file into Python using the `json` module
+- Read JSON data into Python using the `json` module
 
 ## Acknowledgements
 
