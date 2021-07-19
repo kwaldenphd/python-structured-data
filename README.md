@@ -324,14 +324,14 @@ for line in exampleDictReader:
 import csv
 
 # open csv file
-exampleFile = open('example.csv')
+exampleFile2 = open('example.csv')
 
 # reading exampleFile to a dictionary with added field names
-exampleDictReader = csv.DictReader(exampleFile, ['time', 'name', 'amount'])
+exampleDictReader2 = csv.DictReader(exampleFile, ['time', 'name', 'amount'])
 
 # set keys for key-value pairs
-for row in exampleDictReader:
-  print(row['Timestamp'], row['Fruit'], row['Quantity'])
+for row in exampleDictReader2:
+  print(row)
 ```
 
 <blockquote>Q6: Describe in your own words how csv_DictReader interacts with structured data.</blockquote>
