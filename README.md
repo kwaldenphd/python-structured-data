@@ -406,7 +406,7 @@ outputFile.close()
 
 ## Additional CSV Lab Notebook Questions
 
-Q8: Navigate to an open data portal and download a `.csv` or `.xlsx` file. 
+Q8: Navigate to an open data portal and download a `.csv` file. 
 
 A few places to start:
 - [Data.gov](https://www.data.gov/)
@@ -732,7 +732,7 @@ Q6: Describe in your own words how `csv_DictReader` interacts with structured da
 
 Q7: Create a small dictionary and write it to a CSV file. Include code + comments.
 
-Q8: Navigate to an open data portal and download a `.csv` or `.xlsx` file. 
+Q8: Navigate to an open data portal and download a `.csv` file. 
 
 A few places to start:
 - [Data.gov](https://www.data.gov/)
