@@ -22,7 +22,6 @@ Peer review and editing on the JSON and XML portions of this lab was provided by
 
 Information and exercises in this lab are adapted from:
 - Al Sweigart [*Automate the Boring Stuff With Python*](https://nostarch.com/automatestuff2) (No Starch Press, 2020).
-  * Chapter 13, "Working With Excel Spreadsheets" (302-328)
   * Chapter 16 "Working With CSV Files and JSON Data" (371-388)
 - Wes McKinney, "Chapter 6.1, Reading and Writing Data in Text Format" in [*Python for Data Analysis*](https://www.oreilly.com/library/view/python-for-data/9781491957653/) (O'Reilly, 2017): 169-184.
 - Wes McKinney, Chapter 6 "Data Loading, Storage, and File Formats" from [*Python for Data Analysis*](https://www.oreilly.com/library/view/python-for-data/9781491957653/) (O'Reilly, 2018): 169-193
