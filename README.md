@@ -692,7 +692,7 @@ Some options that can get you started:
 
 Open the data in a spreadsheet program and/or text editor 
 
-Describe what are you seeing. How can we start to make senes of this data? What documentation is available?
+Describe what are you seeing. How can we start to make sense of this data? What documentation is available?
 
 Q13: Write code + comments that accomplish the following tasks:
 - Load the JSON data into Python
@@ -760,7 +760,7 @@ Some options that can get you started:
 
 Open the data in a spreadsheet program and/or text editor 
 
-Describe what are you seeing. How can we start to make senes of this data? What documentation is available?
+Describe what are you seeing. How can we start to make sense of this data? What documentation is available?
 
 Q13: Write code + comments that accomplish the following tasks:
 - Load the JSON data into Python
