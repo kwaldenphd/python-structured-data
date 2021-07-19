@@ -241,12 +241,33 @@ Id | User | Comment
 
 46. Modified data structure:
 
-Id | User | Comment
---- | --- | ---
-1 | Bob | "John said \"Hello World\""
-2 | Tom | "\"The Magician\""
-3 | Harry | "\"walk around the corner\" she explained to the child"
-4 | Louis | "He said, \"stop pulling the dog's tail\""
+<table>
+	<tr>
+		<th>Id</th>
+		<th>User</th>
+		<th>Comment</th>
+	</tr>
+	<tr>
+		<td>1</td>
+		<td>Bob</td>
+		<td>"John said \"Hello World\""</td>
+	</tr>
+	<tr>
+		<td>2</td>
+		<td>Tom</td>
+		<td>"\"The Magician\""</td>
+	</tr>
+	<tr>
+		<td>3</td>
+		<td>Harry</td>
+		<td>"\"walk around the corner\" she explained to the child"</td>
+	</tr>
+	<tr>
+		<td>4</td>
+		<td>Louis</td>
+		<td>"He said, \"stop pulling the dog's tail\""</td>
+	</tr>
+	</table>
 
 47. Since the default for `quotechar` is `"`, we need to modify that default to reflect the new data structure.
 ```Python
