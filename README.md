@@ -561,7 +561,7 @@ stringOfJsonData = '{"name": "Zophie", "isCat": true, "miceCaught": 0, "felineIQ
 jsonDataAsPythonValue = json.loads(stringOfJsonData)
 
 # print list of keys
-print(jsonDataAsPython.keys())
+print(jsonDataAsPythonValue.keys())
 ```
 
 89. We could get all of the values in the dictionary using the `values()` method.
@@ -576,7 +576,7 @@ stringOfJsonData = '{"name": "Zophie", "isCat": true, "miceCaught": 0, "felineIQ
 jsonDataAsPythonValue = json.loads(stringOfJsonData)
 
 # print list of values
-print(jsonDataAsPython.values())
+print(jsonDataAsPythonValue.values())
 ```
 
 90. We could iterate by keys over the items in the dictionary.
@@ -591,8 +591,8 @@ stringOfJsonData = '{"name": "Zophie", "isCat": true, "miceCaught": 0, "felineIQ
 jsonDataAsPythonValue = json.loads(stringOfJsonData)
 
 # iterate by keys using for loop
-for key in jsonDataAsPython.keys():
-  print(key, jsonDataAsPython[key])
+for key in jsonDataAsPythonValue.keys():
+  print(key, jsonDataAsPythonValue[key])
 ```
 
 91. We could also iterate over items in dictionary using key-value pairs.
