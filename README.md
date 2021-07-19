@@ -36,6 +36,7 @@ Information and exercises in this lab are adapted from:
   * [Other delimiters](#other-delimiters)
   * [Escape characters](#escape-characters)
   * [Reading in `.csv` files using dictionaries](#reading-in-csv-files-using-dictionaries)
+  * [Writing to a `.csv` file](#writing-to-a-csv-file)
   * [Additional CSV Lab Notebook Questions](#additional-csv-lab-notebook-questions)
 - [JSON](#json)
   * [What is JSON and why are we learning about it](#what-is-json-and-why-are-we-learning-about-it)
