@@ -347,7 +347,7 @@ for row in exampleDictReader2:
 import csv
 
 # create and open output.csv file in write mode
-outputFile = open('output.csv', 'w', newline='')
+outputFile = open('output.csv', 'w')
 
 # create writer object
 outputWriter = csv.writer(outputFile)
@@ -375,7 +375,7 @@ outputFile.close()
 import csv
 
 # create and open output.csv file in write mode
-outputFile = open('output.csv', 'w', newline='')
+outputFile = open('output.csv', 'w')
 
 # create writer object
 outputDictWriter = csv.Dictwriter(outputFile, ['Name', 'Pet', 'Phone'])
