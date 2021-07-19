@@ -308,7 +308,7 @@ exampleFile = open('exampleWithHeader.csv')
 # reading exampleFile to a DictReader object
 exampleDictReader = csv.DictReader(exampleFile)
 
-# creates dictionary from DictReader object
+# outputs DictReader object as a dictionary
 for line in exampleDictReader:
 	print(line)
 ```
