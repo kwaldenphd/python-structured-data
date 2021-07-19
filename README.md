@@ -304,12 +304,12 @@ import csv
 # open csv file
 exampleFile = open('exampleWithHeader.csv')
 
-# reading exampleFile to a dictionary
+# reading exampleFile to a DictReader object
 exampleDictReader = csv.DictReader(exampleFile)
 
-# set keys for key-value pairs
-for row in exampleDictReader:
-  print(row['Timestamp'], row['Fruit'], row['Quantity'])
+# creates dictionary from DictReader object
+for line in exampleDictReader:
+	print(line)
 ```
 
 53. Within the `for` loop, the `DictReader` object sets `row` to a dictionary object with keys derived from the headers in the first row.
