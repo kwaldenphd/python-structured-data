@@ -284,7 +284,7 @@ with open('MY-FILE-NAME.csv', 'rt') as f:
     print(line)
 ```
 
-<blockquote>Q5: Define escape characters in your own words. Describe a situation in which escape characters would be needed, and how you would address that challenge using Python syntax.</blockquote>
+<blockquote>Q5: Describe the concept of escape characters in your own words. Describe a situation in which escape characters would be needed, and how you would address that challenge using Python syntax.</blockquote>
   
 # Reading in `.csv` files using dictionaries
 
@@ -413,13 +413,15 @@ A few places to start:
 - [City of South Bend Open Data](https://data-southbend.opendata.arcgis.com/)
 - [Sports Reference](https://www.sports-reference.com/)
 
+These open data portals are catalogs of datasets- you will need to explore the websites to identify and then download a specific dataset.
+
 Open the data in a spreadsheet program and/or text editor. 
 - What do you see?
 - How can we start to make sense of the data based on available documentation?
 
 Q9: Write code + comments that load the data in Python using the two different approaches highlighted in this lab:
-- Lists and sublists
-- Dictionaries
+- Lists and sublists (steps 10-17, or steps 17-24 for loading the file using a for loop)
+- Dictionaries (steps 48-54, and steps 55-56 cover how to deal with a file that does not include a header row)
 
 Q10: What challenges did you encounter for Q8 and Q9? How did you address or solve them? 
 
@@ -511,7 +513,10 @@ Q10: What challenges did you encounter for Q8 and Q9? How did you address or sol
 
 <blockquote><a href="https://docs.python.org/3/library/json.html">Click here</a> to learn more about the <code>json</code> module.</blockquote>
 
-82. The `json.loads()` and `json.dumps()` functions translate JSON data and Python values.
+82. The JSON module includes a few key functions for loading JSON data into Python:
+- `json.loads()` takes a single string of JSON and loads it as a Python value
+- `json.load()` takes a JSON file (or file-like object) and loads it as a Python value
+- `json.dumps()` takes a Python value and transforms it to a JSON object.
 
 83. Translation table:
 
@@ -543,7 +548,9 @@ jsonDataAsPythonValue
 
 85. This block of code imports the `json` module, calls the `loads()` function and passes a string of JSON data to the `loads()` function.
 
-86. NOTE: JSON strings always use double quotes, which is rendered in Python as a dictionary. Because Python dictionaries are not ordered, the order of the Python dictionary may not match the original JSON string order.
+86. A few notes on this workflow:
+- JSON strings always use double quotes, which is rendered in Python as a dictionary. Because Python dictionaries are not ordered, the order of the Python dictionary may not match the original JSON string order.
+- In this example, we are loading a single string of JSON, which means we use the `json.loads()` function. When loading a JSON file (or file-like object), we would need to use the `json.load()` argument.
 
 ## Working with JSON in Python
 
@@ -690,13 +697,17 @@ Some options that can get you started:
 - [City of Chicago Data Portal](https://data.cityofchicago.org/)
 - [City of South Bend Open Data](https://data-southbend.opendata.arcgis.com/)
 
-Open the data in a spreadsheet program and/or text editor 
+These open data portals are catalogs of datasets- you will need to explore the websites to identify and then download a specific dataset.
+
+Open the data in a spreadsheet program and/or text editor.
 
 Describe what are you seeing. How can we start to make sense of this data? What documentation is available?
 
 Q13: Write code + comments that accomplish the following tasks:
 - Load the JSON data into Python
 - Convert to a Python value
+
+Steps 84-86 in the lab procedure provide sample code and additional considerations for loading a JSON file in Python.
 
 Q14: What challenges did you encounter for Q12 and Q13? How did you address or solve them? 
 
