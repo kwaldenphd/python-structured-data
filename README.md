@@ -377,7 +377,7 @@ import csv
 outputFile = open('output.csv', 'w')
 
 # create writer object
-outputDictWriter = csv.Dictwriter(outputFile, ['Name', 'Pet', 'Phone'])
+outputDictWriter = csv.DictWriter(outputFile, ['Name', 'Pet', 'Phone'])
 
 # create header row
 outputDictWriter.writeheader()
