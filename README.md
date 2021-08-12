@@ -178,10 +178,10 @@ for row in exampleReader:
 import csv
 
 # load tab-separated value file
-tsv_file = open('example.txt')
+tsv_file = open(FILE NAME)
 
 # create a reader object and specify the new delimiter
-read_tsv = csv.reader(tsv_file, delimiter="\t")
+read_tsv = csv.reader(tsv_file, delimiter=SPECIFY DELIMITER HERE)
 
 # use a for loop to read in the data
 for row in read_tsv:
@@ -726,10 +726,10 @@ Q4: Modify the code provided to load the `example.txt` file.
 import csv
 
 # load tab-separated value file
-tsv_file = open('example.txt')
+tsv_file = open(FILE NAME)
 
 # create a reader object and specify the new delimiter
-read_tsv = csv.reader(tsv_file, delimiter="\t")
+read_tsv = csv.reader(tsv_file, delimiter=SPECIFY DELIMITER HERE)
 
 # use a for loop to read in the data
 for row in read_tsv:
