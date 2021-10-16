@@ -181,7 +181,7 @@ import csv
 tsv_file = open('example.txt')
 
 # create a reader object and specify the new delimiter
-read_tsv = csv.reader(tsv_file, delimiter="\t")
+read_tsv = csv.reader(tsv_file, delimiter=SPECIFY DELIMITER HERE)
 
 # use a for loop to read in the data
 for row in read_tsv:
@@ -284,7 +284,7 @@ with open('MY-FILE-NAME.csv', 'rt') as f:
     print(line)
 ```
 
-<blockquote>Q5: Describe the concept of escape characters in your own words. Describe a situation in which escape characters would be needed, and how you would address that challenge using Python syntax.</blockquote>
+<blockquote>Q5: Describe the concept of escape characters or quote characters in your own words. Describe a situation in which escape characters would be needed, and how you would address that challenge using Python syntax.</blockquote>
   
 # Reading in `.csv` files using dictionaries
 
@@ -709,7 +709,12 @@ Q13: Write code + comments that accomplish the following tasks:
 
 Steps 84-86 in the lab procedure provide sample code and additional considerations for loading a JSON file in Python.
 
+- In the JSON example in the lab, we loaded a single string of JSON, which means we use the `json.loads()` function. 
+- When loading a JSON file (or file-like object), we would need to use the `json.load()` argument.
+
 Q14: What challenges did you encounter for Q12 and Q13? How did you address or solve them? 
+
+Q15: Include a link to your Replit project.
 
 # Lab Notebook Questions
 
@@ -729,14 +734,14 @@ import csv
 tsv_file = open('example.txt')
 
 # create a reader object and specify the new delimiter
-read_tsv = csv.reader(tsv_file, delimiter="\t")
+read_tsv = csv.reader(tsv_file, delimiter=SPECIFY DELIMITER HERE)
 
 # use a for loop to read in the data
 for row in read_tsv:
   print(row)
 ```
 
-Q5: Define escape characters in your own words. Describe a situation in which escape characters would be needed, and how you would address that challenge using Python syntax.
+Q5: Define escape characters or quote characters in your own words. Describe a situation in which escape characters would be needed, and how you would address that challenge using Python syntax.
 
 Q6: Describe in your own words how `csv_DictReader` interacts with structured data.
 
@@ -777,4 +782,11 @@ Q13: Write code + comments that accomplish the following tasks:
 - Load the JSON data into Python
 - Convert to a Python value
 
+Steps 84-86 in the lab procedure provide sample code and additional considerations for loading a JSON file in Python.
+
+- In the JSON example in the lab, we loaded a single string of JSON, which means we use the `json.loads()` function. 
+- When loading a JSON file (or file-like object), we would need to use the `json.load()` argument.
+
 Q14: What challenges did you encounter for Q12 and Q13? How did you address or solve them? 
+
+Q15: Include a link to your Replit project.
