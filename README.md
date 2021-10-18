@@ -60,6 +60,290 @@ You can download the files from this GitHub repository as individual files or a 
 
 You can also access them [via Google Drive](https://drive.google.com/drive/folders/1Sp_N34753ONJRU2AFKcocQ2DhCEhyL-m?usp=sharing) (ND users only).
 
+ File Methods in Python
+
+33. One of the final steps in the DigitalOcean tutorial is saving the extracted or scraped content to a CSV file.
+
+34. Before you work with BeautifulSoup on your own, let's talk more about how Python handles creating, reading, and writing files.
+
+35. Specifically, we will be focusing on a few key Python functions for working with files.
+- `open()`
+- `write()`
+
+## `open()`
+
+36. The `open()` function lets us open an existing file or create a new file in Python.
+
+37. For either version of `open()` (new file or existing file), we need to specify the file name (with the file type extension) and access mode.
+
+38. Core syntax for opening an existing file:
+
+```Python
+open(file_name.extension, access_mode)
+```
+
+39. The file type extension is the string of characters that follows the period after the file name.
+
+40. Examples include `.py`, `.csv`, `.txt`, etc.
+
+41. The types of file handling functions we are covering in this lab will generally only support reading and writing plain-text (or machine-readable) files.
+
+## Access Modes
+
+42. The access mode parameter specifies the types of modifications that can be made to the file. It can also specify the type of data or information contained in the file.
+
+43. Possible access mode parameters:
+
+<table>
+ <tr>
+  <th>Parameter</th>
+  <th>Name</th>
+  <th>Description</th>
+ </tr>
+ <tr>
+  <td><code>"r"</code></td>
+  <td>Read</td>
+  <td>Opens a file for reading; also the default value</td>
+ </tr>
+ <tr>
+  <td><code>"a"</code></td>
+  <td>Append</td>
+  <td>Opens the file for appending new or additional information; Creates the file if it does not already exist</td>
+ </tr>
+ <tr>
+  <td><code>"w"</code></td>
+  <td>Write</td>
+  <td>Opens the file for writing new information; Creates the file if it does not already exist</td>
+ </tr>
+ <tr>
+  <td><code>"x"</code></td>
+  <td>Create</td>
+  <td>Creates the file if it does not already exist</td>
+ </tr>
+ </table>
+
+44. Additionally, we can specify the type of data contained in the file, or how Python should handle the information in the file.
+
+<table>
+ <tr>
+  <th>Parameter</th>
+  <th>Name</th>
+  <th>Description</th>
+ </tr>
+ <tr>
+  <td><code>"t"</code></td>
+  <td>Text</td>
+  <td>Treats file as text data; also the default value</td>
+ </tr>
+ <tr>
+  <td><code>"b"</code></td>
+  <td>Binary</td>
+  <td>Treats the file as binary data</td>
+ </tr>
+ </table>
+ 
+ ### `open()` examples
+ 
+ ```Python
+ # opens an existing text (TXT) file with overwrite permission
+ f = open("existing_file.txt", "w")
+ ```
+ 
+ ```Python
+ # opens an existing CSV file and reads the content
+ f = open("existing_file.csv", "r")
+ ```
+ 
+ ```Python
+ # creates new txt file with write permission
+ f = open("new_file.txt", "w")
+ ```
+ 
+ ```Python
+ # creates new CSV file without write privileges
+ f = open("new_file.csv", "x")
+ ```
+ 
+45. If you these examples, you will see a newly-created file appear in your environment or project workspace. 
+
+## `write()`
+
+46. Now that we have a newly-created file in Python, we can use the `write()` function to ***write*** content to that file.
+
+47. Let's say we want to create a `.txt` (plain text) file and write a string to that file.
+
+48. We can do that using `write()`.
+
+49. An example:
+
+```Python
+# creates new txt file with write permission
+f = open("new_file.txt", "w")
+
+# writes string to new file
+f.write("Hello world!")
+
+# closes file
+f.close()
+```
+
+50. NOTE: It is ***very important*** to `close()` the file once you are done writing content or making modifications.
+
+51. Another example where we have assigned a string to a variable and write the variable to the `.txt` file:
+
+```Python
+# creates new txt file with write permission
+f = open("new_file.txt", "w")
+
+# assigns string to variable
+hello_world = "Hello world!"
+
+# writes string variable to new file
+f.write(hello_world)
+
+# closes file
+f.close()
+```
+
+52. Open the `new_file.txt` file to see the newly-added content.
+
+53. For more on file handling methods in Python:
+- [Python File Handling, W3Schools](https://www.w3schools.com/python/python_file_handling.asp)
+- [Python File Write, W3Schools](https://www.w3schools.com/python/python_file_write.asp)
+- [Python open() Function](https://www.w3schools.com/python/ref_func_open.asp)
+
+## `open()`, `write()`, and `CSV` files
+
+54. In the Digital Ocean tutorial, we are taking artist names and biographical information and writing that to a `CSV` file.
+
+55. `CSV` stands for comma-separated values.
+
+56. `CSV` files are the plain-text, machine-readable file type for tabular data (table data, or data in a spreadsheet structure)
+
+57. For example, a table that looks like this in a spreadsheet program like Excel or Google Sheets:
+<table>
+ <tr>
+  <th>Parameter</th>
+  <th>Name</th>
+  <th>Description</th>
+ </tr>
+ <tr>
+  <td><code>"t"</code></td>
+  <td>Text</td>
+  <td>Treats file as text data; also the default value</td>
+ </tr>
+ <tr>
+  <td><code>"b"</code></td>
+  <td>Binary</td>
+  <td>Treats the file as binary data</td>
+ </tr>
+ </table>
+
+58. Would look like this as a CSV:
+
+```CSV
+Parameter, Name, Description
+"t", Text, Treats file as text data; also the default value
+"b", Binary, Treats the file as binary data
+```
+
+59. So when writing data to a `CSV` file, we need Python to understand the row structure and comma-separated syntax for the file type.
+
+60. Specifically, we need Python to understand we are writing individual rows of data to the file, and we need Python to understand that those rows consist of columns of data separated by columns.
+
+### The CSV Module
+
+61. Thankfully, Python has a built-in [`CSV` module](https://docs.python.org/3/library/csv.html) with specialized functions designed to help with writing `CSV` files.
+
+#### A Quick Detour Into Packages, Modules, and Libraries
+
+62. We're now starting to encounter language like `package`, `module`, and `library` when working in Python.
+
+63. All of these terms refer to external Python programs that we can use in our program without having to recreate the entire original code.
+
+64. We can think of these resources as "expansion packs" for Python that expand or extend the programming language's built-in functionality.
+
+65. A few preliminary definitions...
+
+66. A ***module*** is a Python file that typically includes specialized functions and variables. 
+- Modules typically have `.py` file extensions.
+
+67. A single or simple directory of modules is called a ***package***. 
+- Packages are typically a simple directory with multiple modules.
+- They include an `__init__.py` file that provides additional details on how to initialize the package and access its modules.
+- Packages can also contain sub-packages
+
+68. A ***library*** includes blocks of code that can be reused within a program. Libraries are a collection of modules.
+- Libraries can include methods we call using period-method name (`.method_name()`)
+- They have a much more complex directory/sub-directory/etc structure than packages
+
+69. Some modules, packages, and libraries are built-in to Python and require no additional installation.
+
+70. Others have to be installed (typically at the command line, or in the terminal) before you can import and use them in a program.
+
+#### Back to the `CSV` Module
+
+71. We'll spend a lot more time with the `CSV` module in a future lab.
+
+72. For now, we'll focus on how we can use the module to create and write `CSV` files.
+
+73. We can create a file using the `open()` function covered in a previous section of the lab.
+
+```Python
+ # create new CSV file with write privileges
+ f = open("new_file.csv", "w")
+ ```
+ 
+74. The next step is to create the `writer` object using the `csv.writer()` function.
+
+```Python
+# create writer object
+outputWriter = csv.writer(f)
+```
+
+75. Next, we can use the `.writerow()` method to write individual lists as rows in our `CSV` file.
+
+```Python
+# write first row
+outputWriter.writerow(['Parameter', 'Name', 'Description')]
+
+# write second row
+outputWriter.writerow(['t', 'Text', 'Treats file as text data; also the default value'])
+
+# write third row
+outputWriter.writerow(['b', 'Binary', 'Treats the file as binary data')]
+```
+
+76. After we have finished writing new rows of data, we can close the file.
+
+```Python
+f.close()
+```
+
+77. Putting that all together:
+
+```Python
+ # create new CSV file with write privileges
+ f = open("new_file.csv", "w")
+ 
+ # create writer object
+outputWriter = csv.writer(f)
+
+# write first row
+outputWriter.writerow(['Parameter', 'Name', 'Description')]
+
+# write second row
+outputWriter.writerow(['t', 'Text', 'Treats file as text data; also the default value'])
+
+# write third row
+outputWriter.writerow(['b', 'Binary', 'Treats the file as binary data')]
+
+# close file
+f.close()
+```
+
+78. Check out `new_file.csv` to see the newly-created file with rows of data.
+
 # `.csv` data in Python
 
 ## What is a `.csv` file? 
