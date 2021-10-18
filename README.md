@@ -463,6 +463,12 @@ for row in exampleReader:
 
 72. But commas are not the only possible delimiter. Tabs, spaces, pipes, or other characters can be used to separate or delimit fields in a dataset.
 
+Delimiter Name | Symbol | Python Expression
+--- | --- | ---
+Tab | `\t` | `delimiter="\t"`
+Space | ` ` | `delimiter=" "`
+Pipe | `|` | `delimiter="|"`
+
 73. The `csv` module includes a range of formatting parameters, known as a `Dialect` class. 
 
 74. The `Dialect` class includes a range of methods you can use to specify alternate delimiters and (as we'll discover shortly), handle situations like special characters, line breaks, etc.
