@@ -721,8 +721,8 @@ Open the data in a spreadsheet program and/or text editor.
 - How can we start to make sense of the data based on available documentation?
 
 Q10: Write code + comments that load the data in Python using the two different approaches highlighted in this lab:
-- Lists and sublists (steps 10-17, or steps 17-24 for loading the file using a for loop)
-- Dictionaries (steps 48-54, and steps 55-56 cover how to deal with a file that does not include a header row)
+- Lists and sublists (steps 51-60, or steps 61-69 for loading the file using a for loop)
+- Dictionaries (steps 92-98, and steps 99-100 cover how to deal with a file that does not include a header row)
 
 Q11: What challenges did you encounter for Q9 and Q10? How did you address or solve them? 
 
@@ -1019,7 +1019,7 @@ Q15: Write code + comments that accomplish the following tasks:
 - Load the JSON data into Python
 - Convert to a Python value
 
-LAB STEPS in the lab procedure provide sample code and additional considerations for loading a JSON file in Python.
+Steps 124-129 in the lab procedure provide sample code and additional considerations for loading a JSON file in Python.
 
 - In the JSON example in the lab, we loaded a single string of JSON, which means we use the `json.loads()` function. 
 - When loading a JSON file (or file-like object), we would need to use the `json.load()` argument.
@@ -1074,8 +1074,8 @@ Open the data in a spreadsheet program and/or text editor.
 - How can we start to make sense of the data based on available documentation?
 
 Q10: Write code + comments that load the data in Python using the two different approaches highlighted in this lab:
-- Lists and sublists
-- Dictionaries
+- Lists and sublists (steps 51-60, or steps 61-69 for loading the file using a for loop)
+- Dictionaries (steps 92-98, and steps 99-100 cover how to deal with a file that does not include a header row)
 
 Q11: What challenges did you encounter for Q9 and Q10? How did you address or solve them? 
 
