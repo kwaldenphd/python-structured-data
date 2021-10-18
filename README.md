@@ -15,6 +15,7 @@ By the end of this lab, students will be able to:
 - Write data from Python to a .csv file
 - Read a .csv file into Python using the csv module and a for loop
 - Describe JSON data structure/components
+- Write data from Python to a JSON file
 - Read a JSON file into Python using the JSON module
 
 ## Acknowledgements
