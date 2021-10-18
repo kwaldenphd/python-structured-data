@@ -65,9 +65,15 @@ You'll need four data files for this lab.
 - `example.xlsx`
 - `exampleWithHeader.csv`
 
-You can download the files from this GitHub repository as individual files or a zip folder.
+These files are already loaded in the Replit project template for this lab.
 
 You can also access them [via Google Drive](https://drive.google.com/drive/folders/1Sp_N34753ONJRU2AFKcocQ2DhCEhyL-m?usp=sharing) (ND users only).
+
+And as we'll talk about later in this lab, you can load the files directly from the GitHub URLs.
+- `example.csv` (https://raw.githubusercontent.com/kwaldenphd/python-structured-data/main/data/example.csv)
+- `example.txt` (https://raw.githubusercontent.com/kwaldenphd/python-structured-data/main/data/example.txt)
+- `example.xlsx` (https://github.com/kwaldenphd/python-structured-data/blob/main/data/example.xlsx)
+- `exampleWithHeader.csv` (https://raw.githubusercontent.com/kwaldenphd/python-structured-data/main/data/exampleWithHeader.csv)
 
 # `.csv` data in Python
 
@@ -633,7 +639,7 @@ for line in exampleDictReader:
 99. But what can we do if we want to read to a dictionary a `.csv` file that doesn't incldue a header row?
 
 100. We can pass a second argument to the `DictReader()` function to manually set header names.
-101. 
+ 
 ```Python
 # import csv module
 import csv
@@ -740,7 +746,7 @@ Q10: Write code + comments that load the data in Python using the two different 
 - Lists and sublists (steps 10-17, or steps 17-24 for loading the file using a for loop)
 - Dictionaries (steps 48-54, and steps 55-56 cover how to deal with a file that does not include a header row)
 
-Q11: What challenges did you encounter for Q8 and Q9? How did you address or solve them? 
+Q11: What challenges did you encounter for Q9 and Q10? How did you address or solve them? 
 
 # JSON
 
@@ -1040,7 +1046,7 @@ LAB STEPS in the lab procedure provide sample code and additional considerations
 - In the JSON example in the lab, we loaded a single string of JSON, which means we use the `json.loads()` function. 
 - When loading a JSON file (or file-like object), we would need to use the `json.load()` argument.
 
-Q16: What challenges did you encounter for Q12 and Q13? How did you address or solve them? 
+Q16: What challenges did you encounter for Q14 and Q15? How did you address or solve them? 
 
 Q17: Include a link to your Replit project.
 
@@ -1073,9 +1079,11 @@ Q5: Define escape characters or quote characters in your own words. Describe a s
 
 Q6: Describe in your own words how `csv_DictReader` interacts with structured data.
 
-Q7: Create a small dictionary and write it to a CSV file. Include code + comments.
+Q7: Create a small data structure and write it to a CSV file. Include code + comments.
 
-Q8: Navigate to an open data portal and download a `.csv` file. 
+Q8: Create a small dictionary and write it to a CSV file. Include code + comments.
+
+Q9: Navigate to an open data portal and download a `.csv` file. 
 
 A few places to start:
 - [Data.gov](https://www.data.gov/)
@@ -1087,15 +1095,17 @@ Open the data in a spreadsheet program and/or text editor.
 - What do you see?
 - How can we start to make sense of the data based on available documentation?
 
-Q9: Write code + comments that load the data in Python using the two different approaches highlighted in this lab:
+Q10: Write code + comments that load the data in Python using the two different approaches highlighted in this lab:
 - Lists and sublists
 - Dictionaries
 
-Q10: What challenges did you encounter for Q8 and Q9? How did you address or solve them? 
+Q11: What challenges did you encounter for Q9 and Q10? How did you address or solve them? 
 
-Q11: Decipher what we're seeing in the JSON here. What are some of the name/value pairs, and how are they organized in this data object?
+Q12: Decipher what we're seeing in the JSON here. What are some of the name/value pairs, and how are they organized in this data object?
 
-Q12: Navigate to an open data portal and download a JSON file. 
+Q13: Create a string of JSON data and write it to a CSV file. Include code + comments.
+
+Q14: Navigate to an open data portal and download a JSON file. 
 
 Some options that can get you started:
 - [Data.gov](https://www.data.gov/)
@@ -1106,7 +1116,7 @@ Open the data in a spreadsheet program and/or text editor
 
 Describe what are you seeing. How can we start to make sense of this data? What documentation is available?
 
-Q13: Write code + comments that accomplish the following tasks:
+Q15: Write code + comments that accomplish the following tasks:
 - Load the JSON data into Python
 - Convert to a Python value
 
@@ -1115,6 +1125,6 @@ LAB STEPS in the lab procedure provide sample code and additional considerations
 - In the JSON example in the lab, we loaded a single string of JSON, which means we use the `json.loads()` function. 
 - When loading a JSON file (or file-like object), we would need to use the `json.load()` argument.
 
-Q14: What challenges did you encounter for Q12 and Q13? How did you address or solve them? 
+Q16: What challenges did you encounter for Q14 and Q15? How did you address or solve them? 
 
-Q15: Include a link to your Replit project.
+Q17: Include a link to your Replit project.
