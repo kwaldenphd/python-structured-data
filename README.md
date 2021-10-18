@@ -8,11 +8,14 @@ This tutorial is licensed under a <a href="http://creativecommons.org/licenses/b
 This lab covers various methods for reading structured data into Python, focusing on `csv` and `json`. It covers other types of delimiters and escape characters. 
 
 By the end of this lab, students will be able to:
-- Describe the structure and components of a `.csv` file
-- Read a `.csv` file into Python using the `csv` module and a `for` loop
+- Describe the structure and components of a .csv file
 - Understand how to approach other types of delimited files
 - Understand how to work with escape characters when loading structured data
-- Read JSON data into Python using the `json` module
+- Understand how Python dictionaries work as a type of structured data
+- Write data from Python to a .csv file
+- Read a .csv file into Python using the csv module and a for loop
+- Describe JSON data structure/components
+- Read a JSON file into Python using the JSON module
 
 ## Acknowledgements
 
