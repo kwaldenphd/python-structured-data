@@ -69,12 +69,6 @@ These files are already loaded in the Replit project template for this lab.
 
 You can also access them [via Google Drive](https://drive.google.com/drive/folders/1Sp_N34753ONJRU2AFKcocQ2DhCEhyL-m?usp=sharing) (ND users only).
 
-And as we'll talk about later in this lab, you can load the files directly from the GitHub URLs.
-- `example.csv` (https://raw.githubusercontent.com/kwaldenphd/python-structured-data/main/data/example.csv)
-- `example.txt` (https://raw.githubusercontent.com/kwaldenphd/python-structured-data/main/data/example.txt)
-- `example.xlsx` (https://github.com/kwaldenphd/python-structured-data/blob/main/data/example.xlsx)
-- `exampleWithHeader.csv` (https://raw.githubusercontent.com/kwaldenphd/python-structured-data/main/data/exampleWithHeader.csv)
-
 # `.csv` data in Python
 
 ## What is a `.csv` file? 
@@ -414,32 +408,15 @@ exampleData
 
 55. Each row of data from the original `example.csv` file is a sub-list (with field values separated by commas) within the `exampleData` list.
 
-56. Now we can access the value at a particular row and column using the expression `exampleData[row][col]`, where `row` is the index position of one of the lists in `exampleData`, and `col` is the index position of the item located in that list.
+56. Now we can access the value at a particular row and column using the expression `exampleData[row][col]`.
+ 
+57. `row` is the index position of one of the lists in `exampleData`. 
 
-57. For example, `exampleData[0][0]` would give us the first string from the first list. `exampleData[0][1]` would give us the second string from the first list.
+58. `col` is the index position of the item located in that list.
 
-58. We can also load `.csv` file that is online using a URL.
+59. For example, `exampleData[0][0]` would give us the first string from the first list. 
 
-59. As an example, head to https://raw.githubusercontent.com/kwaldenphd/python-structured-data/main/data/example.csv in a web browser.
-
-60. The URL points directly to a CSV file we can load in Python using the GitHub url.
-
-```Python
-# import csv module
-import csv
-
-# open file from url
-exampleFile = open("https://raw.githubusercontent.com/kwaldenphd/python-structured-data/main/data/example.csv")
-
-# create reader object from lines of data in example.csv file using csv.reader function
-exampleReader = csv.reader(exampleFile)
-
-# create list with rows of data from example.csv file
-exampleData = list(exampleReader)
-
-# output list rows
-exampleData
-```
+60. `exampleData[0][1]` would give us the second string from the first list.
 
 ## Reading `.csv` data using a `for` loop
 
