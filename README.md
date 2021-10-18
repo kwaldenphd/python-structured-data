@@ -33,6 +33,15 @@ Information and exercises in this lab are adapted from:
 - [Data](#data)
 - [CSV](#csv-data-in-python)
   * [What is a `.csv` file?](#what-is-a-csv-file)
+  * [File Methods in Python](#file-methods-in-python)
+    * [`open()`](#open)
+    * [Access Modes](#access-modes)
+    * [`open()` examples](#open-examples)
+    * [`write()`](#write)
+    * [`open()`, `write()`, and `CSV` files](#open-write-and-csv-files)
+    * [The CSV Module](#the-csv-module)
+      * [A Quick Detour Into Packages, Modules, and Libraries](#a-quick-detour-into-packages-modules-and-libraries)
+      * [Back to the CSV Module](#back-to-the-csv-module)
   * [Reading a `.csv` file into Python](#reading-a-csv-file-into-Python)
     * [Reading `.csv` data using a `for` loop](#reading-csv-data-using-a-for-loop)
   * [Other delimiters](#other-delimiters)
@@ -59,290 +68,6 @@ You'll need four data files for this lab.
 You can download the files from this GitHub repository as individual files or a zip folder.
 
 You can also access them [via Google Drive](https://drive.google.com/drive/folders/1Sp_N34753ONJRU2AFKcocQ2DhCEhyL-m?usp=sharing) (ND users only).
-
- File Methods in Python
-
-33. One of the final steps in the DigitalOcean tutorial is saving the extracted or scraped content to a CSV file.
-
-34. Before you work with BeautifulSoup on your own, let's talk more about how Python handles creating, reading, and writing files.
-
-35. Specifically, we will be focusing on a few key Python functions for working with files.
-- `open()`
-- `write()`
-
-## `open()`
-
-36. The `open()` function lets us open an existing file or create a new file in Python.
-
-37. For either version of `open()` (new file or existing file), we need to specify the file name (with the file type extension) and access mode.
-
-38. Core syntax for opening an existing file:
-
-```Python
-open(file_name.extension, access_mode)
-```
-
-39. The file type extension is the string of characters that follows the period after the file name.
-
-40. Examples include `.py`, `.csv`, `.txt`, etc.
-
-41. The types of file handling functions we are covering in this lab will generally only support reading and writing plain-text (or machine-readable) files.
-
-## Access Modes
-
-42. The access mode parameter specifies the types of modifications that can be made to the file. It can also specify the type of data or information contained in the file.
-
-43. Possible access mode parameters:
-
-<table>
- <tr>
-  <th>Parameter</th>
-  <th>Name</th>
-  <th>Description</th>
- </tr>
- <tr>
-  <td><code>"r"</code></td>
-  <td>Read</td>
-  <td>Opens a file for reading; also the default value</td>
- </tr>
- <tr>
-  <td><code>"a"</code></td>
-  <td>Append</td>
-  <td>Opens the file for appending new or additional information; Creates the file if it does not already exist</td>
- </tr>
- <tr>
-  <td><code>"w"</code></td>
-  <td>Write</td>
-  <td>Opens the file for writing new information; Creates the file if it does not already exist</td>
- </tr>
- <tr>
-  <td><code>"x"</code></td>
-  <td>Create</td>
-  <td>Creates the file if it does not already exist</td>
- </tr>
- </table>
-
-44. Additionally, we can specify the type of data contained in the file, or how Python should handle the information in the file.
-
-<table>
- <tr>
-  <th>Parameter</th>
-  <th>Name</th>
-  <th>Description</th>
- </tr>
- <tr>
-  <td><code>"t"</code></td>
-  <td>Text</td>
-  <td>Treats file as text data; also the default value</td>
- </tr>
- <tr>
-  <td><code>"b"</code></td>
-  <td>Binary</td>
-  <td>Treats the file as binary data</td>
- </tr>
- </table>
- 
- ### `open()` examples
- 
- ```Python
- # opens an existing text (TXT) file with overwrite permission
- f = open("existing_file.txt", "w")
- ```
- 
- ```Python
- # opens an existing CSV file and reads the content
- f = open("existing_file.csv", "r")
- ```
- 
- ```Python
- # creates new txt file with write permission
- f = open("new_file.txt", "w")
- ```
- 
- ```Python
- # creates new CSV file without write privileges
- f = open("new_file.csv", "x")
- ```
- 
-45. If you these examples, you will see a newly-created file appear in your environment or project workspace. 
-
-## `write()`
-
-46. Now that we have a newly-created file in Python, we can use the `write()` function to ***write*** content to that file.
-
-47. Let's say we want to create a `.txt` (plain text) file and write a string to that file.
-
-48. We can do that using `write()`.
-
-49. An example:
-
-```Python
-# creates new txt file with write permission
-f = open("new_file.txt", "w")
-
-# writes string to new file
-f.write("Hello world!")
-
-# closes file
-f.close()
-```
-
-50. NOTE: It is ***very important*** to `close()` the file once you are done writing content or making modifications.
-
-51. Another example where we have assigned a string to a variable and write the variable to the `.txt` file:
-
-```Python
-# creates new txt file with write permission
-f = open("new_file.txt", "w")
-
-# assigns string to variable
-hello_world = "Hello world!"
-
-# writes string variable to new file
-f.write(hello_world)
-
-# closes file
-f.close()
-```
-
-52. Open the `new_file.txt` file to see the newly-added content.
-
-53. For more on file handling methods in Python:
-- [Python File Handling, W3Schools](https://www.w3schools.com/python/python_file_handling.asp)
-- [Python File Write, W3Schools](https://www.w3schools.com/python/python_file_write.asp)
-- [Python open() Function](https://www.w3schools.com/python/ref_func_open.asp)
-
-## `open()`, `write()`, and `CSV` files
-
-54. In the Digital Ocean tutorial, we are taking artist names and biographical information and writing that to a `CSV` file.
-
-55. `CSV` stands for comma-separated values.
-
-56. `CSV` files are the plain-text, machine-readable file type for tabular data (table data, or data in a spreadsheet structure)
-
-57. For example, a table that looks like this in a spreadsheet program like Excel or Google Sheets:
-<table>
- <tr>
-  <th>Parameter</th>
-  <th>Name</th>
-  <th>Description</th>
- </tr>
- <tr>
-  <td><code>"t"</code></td>
-  <td>Text</td>
-  <td>Treats file as text data; also the default value</td>
- </tr>
- <tr>
-  <td><code>"b"</code></td>
-  <td>Binary</td>
-  <td>Treats the file as binary data</td>
- </tr>
- </table>
-
-58. Would look like this as a CSV:
-
-```CSV
-Parameter, Name, Description
-"t", Text, Treats file as text data; also the default value
-"b", Binary, Treats the file as binary data
-```
-
-59. So when writing data to a `CSV` file, we need Python to understand the row structure and comma-separated syntax for the file type.
-
-60. Specifically, we need Python to understand we are writing individual rows of data to the file, and we need Python to understand that those rows consist of columns of data separated by columns.
-
-### The CSV Module
-
-61. Thankfully, Python has a built-in [`CSV` module](https://docs.python.org/3/library/csv.html) with specialized functions designed to help with writing `CSV` files.
-
-#### A Quick Detour Into Packages, Modules, and Libraries
-
-62. We're now starting to encounter language like `package`, `module`, and `library` when working in Python.
-
-63. All of these terms refer to external Python programs that we can use in our program without having to recreate the entire original code.
-
-64. We can think of these resources as "expansion packs" for Python that expand or extend the programming language's built-in functionality.
-
-65. A few preliminary definitions...
-
-66. A ***module*** is a Python file that typically includes specialized functions and variables. 
-- Modules typically have `.py` file extensions.
-
-67. A single or simple directory of modules is called a ***package***. 
-- Packages are typically a simple directory with multiple modules.
-- They include an `__init__.py` file that provides additional details on how to initialize the package and access its modules.
-- Packages can also contain sub-packages
-
-68. A ***library*** includes blocks of code that can be reused within a program. Libraries are a collection of modules.
-- Libraries can include methods we call using period-method name (`.method_name()`)
-- They have a much more complex directory/sub-directory/etc structure than packages
-
-69. Some modules, packages, and libraries are built-in to Python and require no additional installation.
-
-70. Others have to be installed (typically at the command line, or in the terminal) before you can import and use them in a program.
-
-#### Back to the `CSV` Module
-
-71. We'll spend a lot more time with the `CSV` module in a future lab.
-
-72. For now, we'll focus on how we can use the module to create and write `CSV` files.
-
-73. We can create a file using the `open()` function covered in a previous section of the lab.
-
-```Python
- # create new CSV file with write privileges
- f = open("new_file.csv", "w")
- ```
- 
-74. The next step is to create the `writer` object using the `csv.writer()` function.
-
-```Python
-# create writer object
-outputWriter = csv.writer(f)
-```
-
-75. Next, we can use the `.writerow()` method to write individual lists as rows in our `CSV` file.
-
-```Python
-# write first row
-outputWriter.writerow(['Parameter', 'Name', 'Description')]
-
-# write second row
-outputWriter.writerow(['t', 'Text', 'Treats file as text data; also the default value'])
-
-# write third row
-outputWriter.writerow(['b', 'Binary', 'Treats the file as binary data')]
-```
-
-76. After we have finished writing new rows of data, we can close the file.
-
-```Python
-f.close()
-```
-
-77. Putting that all together:
-
-```Python
- # create new CSV file with write privileges
- f = open("new_file.csv", "w")
- 
- # create writer object
-outputWriter = csv.writer(f)
-
-# write first row
-outputWriter.writerow(['Parameter', 'Name', 'Description')]
-
-# write second row
-outputWriter.writerow(['t', 'Text', 'Treats file as text data; also the default value'])
-
-# write third row
-outputWriter.writerow(['b', 'Binary', 'Treats the file as binary data')]
-
-# close file
-f.close()
-```
-
-78. Check out `new_file.csv` to see the newly-created file with rows of data.
 
 # `.csv` data in Python
 
@@ -377,15 +102,291 @@ f.close()
 
 <blockquote>Q3: Open the <code>example.xlsx</code> file in a spreadsheet program. Save the file as a <code>.csv</code> format. What happens? Or what happens when you open the newly-created <code>.csv</code> file in a spreadsheet program or text editor?</blockquote>
 
+
+## File Methods in Python
+
+10. Before we start loading data files in Python, let's talk more about how Python handles creating, reading, and writing files.
+
+11. Specifically, we will be focusing on a few key Python functions for working with files.
+- `open()`
+- `write()`
+
+### `open()`
+
+12. The `open()` function lets us open an existing file or create a new file in Python.
+
+13. For either version of `open()` (new file or existing file), we need to specify the file name (with the file type extension) and access mode.
+
+14. Core syntax for opening an existing file:
+
+```Python
+open(file_name.extension, access_mode)
+```
+
+15. The file type extension is the string of characters that follows the period after the file name.
+
+16. Examples include `.py`, `.csv`, `.txt`, etc.
+
+17. The types of file handling functions we are covering in this lab will generally only support reading and writing plain-text (or machine-readable) files.
+
+### Access Modes
+
+18. The access mode parameter specifies the types of modifications that can be made to the file. It can also specify the type of data or information contained in the file.
+
+19. Possible access mode parameters:
+
+<table>
+ <tr>
+  <th>Parameter</th>
+  <th>Name</th>
+  <th>Description</th>
+ </tr>
+ <tr>
+  <td><code>"r"</code></td>
+  <td>Read</td>
+  <td>Opens a file for reading; also the default value</td>
+ </tr>
+ <tr>
+  <td><code>"a"</code></td>
+  <td>Append</td>
+  <td>Opens the file for appending new or additional information; Creates the file if it does not already exist</td>
+ </tr>
+ <tr>
+  <td><code>"w"</code></td>
+  <td>Write</td>
+  <td>Opens the file for writing new information; Creates the file if it does not already exist</td>
+ </tr>
+ <tr>
+  <td><code>"x"</code></td>
+  <td>Create</td>
+  <td>Creates the file if it does not already exist</td>
+ </tr>
+ </table>
+
+20. Additionally, we can specify the type of data contained in the file, or how Python should handle the information in the file.
+
+<table>
+ <tr>
+  <th>Parameter</th>
+  <th>Name</th>
+  <th>Description</th>
+ </tr>
+ <tr>
+  <td><code>"t"</code></td>
+  <td>Text</td>
+  <td>Treats file as text data; also the default value</td>
+ </tr>
+ <tr>
+  <td><code>"b"</code></td>
+  <td>Binary</td>
+  <td>Treats the file as binary data</td>
+ </tr>
+ </table>
+ 
+ #### `open()` examples
+ 
+ ```Python
+ # opens an existing text (TXT) file with overwrite permission
+ f = open("existing_file.txt", "w")
+ ```
+ 
+ ```Python
+ # opens an existing CSV file and reads the content
+ f = open("existing_file.csv", "r")
+ ```
+ 
+ ```Python
+ # creates new txt file with write permission
+ f = open("new_file.txt", "w")
+ ```
+ 
+ ```Python
+ # creates new CSV file without write privileges
+ f = open("new_file.csv", "x")
+ ```
+ 
+21. If you these examples, you will see a newly-created file appear in your environment or project workspace. 
+
+### `write()`
+
+22. Now that we have a newly-created file in Python, we can use the `write()` function to ***write*** content to that file.
+
+23. Let's say we want to create a `.txt` (plain text) file and write a string to that file.
+
+24. We can do that using `write()`.
+
+25. An example:
+
+```Python
+# creates new txt file with write permission
+f = open("new_file.txt", "w")
+
+# writes string to new file
+f.write("Hello world!")
+
+# closes file
+f.close()
+```
+
+26. NOTE: It is ***very important*** to `close()` the file once you are done writing content or making modifications.
+
+27. Another example where we have assigned a string to a variable and write the variable to the `.txt` file:
+
+```Python
+# creates new txt file with write permission
+f = open("new_file.txt", "w")
+
+# assigns string to variable
+hello_world = "Hello world!"
+
+# writes string variable to new file
+f.write(hello_world)
+
+# closes file
+f.close()
+```
+
+28. Open the `new_file.txt` file to see the newly-added content.
+
+29. For more on file handling methods in Python:
+- [Python File Handling, W3Schools](https://www.w3schools.com/python/python_file_handling.asp)
+- [Python File Write, W3Schools](https://www.w3schools.com/python/python_file_write.asp)
+- [Python open() Function](https://www.w3schools.com/python/ref_func_open.asp)
+
+### `open()`, `write()`, and `CSV` files
+
+30. A couple quick reminders: `CSV` stands for comma-separated values, and `CSV` files are the plain-text, machine-readable file type for tabular data (table data, or data in a spreadsheet structure)
+
+31. For example, a table that looks like this in a spreadsheet program like Excel or Google Sheets:
+
+<table>
+ <tr>
+  <th>Parameter</th>
+  <th>Name</th>
+  <th>Description</th>
+ </tr>
+ <tr>
+  <td><code>"t"</code></td>
+  <td>Text</td>
+  <td>Treats file as text data; also the default value</td>
+ </tr>
+ <tr>
+  <td><code>"b"</code></td>
+  <td>Binary</td>
+  <td>Treats the file as binary data</td>
+ </tr>
+ </table>
+
+32. Would look like this as a CSV:
+
+```CSV
+Parameter, Name, Description
+"t", Text, Treats file as text data; also the default value
+"b", Binary, Treats the file as binary data
+```
+
+33. So when writing data to a `CSV` file, we need Python to understand the row structure and comma-separated syntax for the file type.
+
+34. Specifically, we need Python to understand we are writing individual rows of data to the file, and we need Python to understand that those rows consist of columns of data separated by columns.
+
+### The CSV Module
+
+35. Thankfully, Python has a built-in [`CSV` module](https://docs.python.org/3/library/csv.html) with specialized functions designed to help with writing `CSV` files.
+
+#### A Quick Detour Into Packages, Modules, and Libraries
+
+36. We're now starting to encounter language like `package`, `module`, and `library` when working in Python.
+
+37. All of these terms refer to external Python programs that we can use in our program without having to recreate the entire original code.
+
+38. We can think of these resources as "expansion packs" for Python that expand or extend the programming language's built-in functionality.
+
+39. A few preliminary definitions...
+
+40. A ***module*** is a Python file that typically includes specialized functions and variables. 
+- Modules typically have `.py` file extensions.
+
+41. A single or simple directory of modules is called a ***package***. 
+- Packages are typically a simple directory with multiple modules.
+- They include an `__init__.py` file that provides additional details on how to initialize the package and access its modules.
+- Packages can also contain sub-packages
+
+42. A ***library*** includes blocks of code that can be reused within a program. Libraries are a collection of modules.
+- Libraries can include methods we call using period-method name (`.method_name()`)
+- They have a much more complex directory/sub-directory/etc structure than packages
+
+43. Some modules, packages, and libraries are built-in to Python and require no additional installation.
+
+44. Others have to be installed (typically at the command line, or in the terminal) before you can import and use them in a program.
+
+#### Back to the `CSV` Module
+
+45. We can create a file using the `open()` function covered in a previous section of the lab.
+
+```Python
+ # create new CSV file with write privileges
+ f = open("new_file.csv", "w")
+ ```
+ 
+46. The next step is to create the `writer` object using the `csv.writer()` function.
+
+```Python
+# create writer object
+outputWriter = csv.writer(f)
+```
+
+47. Next, we can use the `.writerow()` method to write individual lists as rows in our `CSV` file.
+
+```Python
+# write first row
+outputWriter.writerow(['Parameter', 'Name', 'Description')]
+
+# write second row
+outputWriter.writerow(['t', 'Text', 'Treats file as text data; also the default value'])
+
+# write third row
+outputWriter.writerow(['b', 'Binary', 'Treats the file as binary data')]
+```
+
+48. After we have finished writing new rows of data, we can close the file.
+
+```Python
+f.close()
+```
+
+49. Putting that all together:
+
+```Python
+ # create new CSV file with write privileges
+ f = open("new_file.csv", "w")
+ 
+ # create writer object
+outputWriter = csv.writer(f)
+
+# write first row
+outputWriter.writerow(['Parameter', 'Name', 'Description')]
+
+# write second row
+outputWriter.writerow(['t', 'Text', 'Treats file as text data; also the default value'])
+
+# write third row
+outputWriter.writerow(['b', 'Binary', 'Treats the file as binary data')]
+
+# close file
+f.close()
+```
+
+50. Check out `new_file.csv` to see the newly-created file with rows of data.
+
 ## Reading a `.csv` file into Python
 
-10. To read data from a `.csv` file into Python, we will use the `csv` module.
+51. To read data from a `.csv` file into Python, we will use the `csv` module.
 
 <blockquote>Check out <a href = "https://docs.python.org/3/library/csv.html#module-csv">Python's documentation</a> to learn more about the <code>csv</code> module.</blockquote>
 
-11. The `csv` module allows us to create a `reader` object that iterates over lines in a `.csv` file.
+52. The `csv` module allows us to create a `reader` object that iterates over lines in a `.csv` file.
 
-12. What does this workflow look like? 
+53. What does this workflow look like? 
 ```python
 # import csv module
 import csv
@@ -403,25 +404,48 @@ exampleData = list(exampleReader)
 exampleData
 ```
 
-13. You'll notice that the `exampleData` output is a list of lists, or a list that contains sub-lists. 
+54. You'll notice that the `exampleData` output is a list of lists, or a list that contains sub-lists. 
 
-14. Each row of data from the original `example.csv` file is a sub-list (with field values separated by commas) within the `exampleData` list.
+55. Each row of data from the original `example.csv` file is a sub-list (with field values separated by commas) within the `exampleData` list.
 
-15. Now we can access the value at a particular row and column using the expression `exampleData[row][col]`, where `row` is the index position of one of the lists in `exampleData`, and `col` is the index position of the item located in that list.
+56. Now we can access the value at a particular row and column using the expression `exampleData[row][col]`, where `row` is the index position of one of the lists in `exampleData`, and `col` is the index position of the item located in that list.
 
-16. For example, `exampleData[0][0]` would give us the first string from the first list. `exampleData[0][1]` would give us the second string from the first list.
+57. For example, `exampleData[0][0]` would give us the first string from the first list. `exampleData[0][1]` would give us the second string from the first list.
+
+58. We can also load `.csv` file that is online using a URL.
+
+59. As an example, head to https://raw.githubusercontent.com/kwaldenphd/python-structured-data/main/data/example.csv in a web browser.
+
+60. The URL points directly to a CSV file we can load in Python using the GitHub url.
+
+```Python
+# import csv module
+import csv
+
+# open file from url
+exampleFile = open("https://raw.githubusercontent.com/kwaldenphd/python-structured-data/main/data/example.csv")
+
+# create reader object from lines of data in example.csv file using csv.reader function
+exampleReader = csv.reader(exampleFile)
+
+# create list with rows of data from example.csv file
+exampleData = list(exampleReader)
+
+# output list rows
+exampleData
+```
 
 ## Reading `.csv` data using a `for` loop
 
-17. The method we just used to read data from a `.csv` file into Python loads the entire file into memory at once.
+61. The method we just used to read data from a `.csv` file into Python loads the entire file into memory at once.
 
-18. If we use this method on a large `.csv` file, Python is going to try to load the entire file into memory at once. Which does not bode well for Python or your computer's performance.
+62. If we use this method on a large `.csv` file, Python is going to try to load the entire file into memory at once. Which does not bode well for Python or your computer's performance.
 
-19. We can use a `reader` object as part of a `for` loop to iterate through the lines in a `.csv` file and load the file line-by-line.
+63. We can use a `reader` object as part of a `for` loop to iterate through the lines in a `.csv` file and load the file line-by-line.
 
 <blockquote>Remember <code>for</code> loops iterate through each item in a series or list of items and performs the content of the loop on each item.</blockquote>
 
-20. What does this workflow look like?
+64. What does this workflow look like?
 ```python
 # import csv module
 import csv
@@ -437,29 +461,30 @@ for row in exampleReader:
   print('Row #' + str(exampleReader.line_num) + ' ' + str(row))
 ```
 
-21. This program imports the `csv` module, makes a `reader` object from the `example.csv` file, and loops through each of the rows in the `reader` object.
+65. This program imports the `csv` module, makes a `reader` object from the `example.csv` file, and loops through each of the rows in the `reader` object.
 
-22. Each row is a list of values, and each value represents a cell.
+66. Each row is a list of values, and each value represents a cell.
 
-23. The `print()` function prints the current row number and that row's contents. 
+67. The `print()` function prints the current row number and that row's contents. 
 
-24. The `reader` object includes a `line_num` variable, which contains the number of the current line.
+68. The `reader` object includes a `line_num` variable, which contains the number of the current line.
 
-25. NOTE: The `reader` object can only be looped over once. If you need to re-read the same `.csv` file, you'll use `csv.reader` to create a new `reader` object.
+69. NOTE: The `reader` object can only be looped over once. If you need to re-read the same `.csv` file, you'll use `csv.reader` to create a new `reader` object.
 
 ## Other delimiters
 
-26. But what happens if you need to load in structured data that uses another delimiter, not a comma? 
+70. But what happens if you need to load in structured data that uses another delimiter, not a comma? 
 
-27. Remember when we opened a `.csv` file in a plain-text editor, the value fields are separated by a comma.
+71. Remember when we opened a `.csv` file in a plain-text editor, the value fields are separated by a comma.
 
-28. But commas are not the only possible delimiter. Tabs, spaces, pipes, or other characters can be used to separate or delimit fields in a dataset.
+72. But commas are not the only possible delimiter. Tabs, spaces, pipes, or other characters can be used to separate or delimit fields in a dataset.
 
-29. The `csv` module includes a range of formatting parameters, known as a `Dialect` class. 
+73. The `csv` module includes a range of formatting parameters, known as a `Dialect` class. 
 
-30. The `Dialect` class includes a range of methods you can use to specify alternate delimiters and (as we'll discover shortly), handle situations like special characters, line breaks, etc.
+74. The `Dialect` class includes a range of methods you can use to specify alternate delimiters and (as we'll discover shortly), handle situations like special characters, line breaks, etc.
 
-31. The `delimiter` attribute in the `Dialect` class lets us specify what delimiter is being used in the data we want to load.
+75. The `delimiter` attribute in the `Dialect` class lets us specify what delimiter is being used in the data we want to load.
+
 ```Python
 # import csv module
 import csv
@@ -479,9 +504,9 @@ for row in read_tsv:
 
 ## Escape characters
 
-32. But what happens if the values in your dataset include the same character that's being used as a delimiter?
+76. But what happens if the values in your dataset include the same character that's being used as a delimiter?
 
-33. For example, let's say you have address data in the following structure:
+77. For example, let's say you have address data in the following structure:
 
 Name | Age | Address
 --- | --- | ---
@@ -489,17 +514,17 @@ Jerry | 10 | 2776 McDowell Street, Nashville, Tennessee
 Tom | 20 | 3171 Jessie Street, Westerville, Ohio
 Mike | 30 | 1818 Sherman Street, Hope, Kansas
 
-34. In this example, we want to keep `Address` as an intact field and not separate based on the commas located within the address.
+78. In this example, we want to keep `Address` as an intact field and not separate based on the commas located within the address.
 
-35. In order to do this, we need to specify how Python parses fields that include the delimiter character.
+79. In order to do this, we need to specify how Python parses fields that include the delimiter character.
 
-36. The `quotechar` attribute in the `Dialect` class specifies what character will be used to enclose fields that should be treated as distinct entities and not be split into columns or fields based on the presence of the delimiter character within the field.
+80. The `quotechar` attribute in the `Dialect` class specifies what character will be used to enclose fields that should be treated as distinct entities and not be split into columns or fields based on the presence of the delimiter character within the field.
 
-37. The default for `quotechar` is `"` (double quotation marks).
+81. The default for `quotechar` is `"` (double quotation marks).
 
-38. So what does that mean? We put double quotation marks around the field that includes the delimiter character.
+82. So what does that mean? We put double quotation marks around the field that includes the delimiter character.
 
-39. Modified data structure:
+83. Modified data structure:
 
 Name | Age | Address
 --- | --- | ---
@@ -507,11 +532,11 @@ Jerry | 10 | "2776 McDowell Street, Nashville, Tennessee"
 Tom | 20 | "3171 Jessie Street, Westerville, Ohio"
 Mike | 30 | "1818 Sherman Street, Hope, Kansas"
 
-40. Then we can read the modified data into Python.
+84. Then we can read the modified data into Python.
 
-41. But what happens if we have quotation marks within a field that needs to be treated as a distinct entity?
+85. But what happens if we have quotation marks within a field that needs to be treated as a distinct entity?
 
-42. For example, the following data structure would run into problems when read into Python.
+86. For example, the following data structure would run into problems when read into Python.
 
 Id | User | Comment
 --- | --- | ---
@@ -520,13 +545,13 @@ Id | User | Comment
 3 | Harry | ""walk around the corner" she explained to the child"
 4 | Louis | "He said, "stop pulling the dog's tail""
 
-43. See our problem? The `Comment` field is enclosed with double quotation marks but also includes quotation marks in the field. 
+87. See our problem? The `Comment` field is enclosed with double quotation marks but also includes quotation marks in the field. 
 
-44. We need Python to understand the enclosing double quotation marks serve a different purpose than the double quotation marks contained within the `Comment` field.
+88. We need Python to understand the enclosing double quotation marks serve a different purpose than the double quotation marks contained within the `Comment` field.
 
-45. We can use a blackslash `\` character to escape the embedded double quotes.
+89. We can use a blackslash `\` character to escape the embedded double quotes.
 
-46. Modified data structure:
+90. Modified data structure:
 
 <table>
 	<tr>
@@ -556,7 +581,8 @@ Id | User | Comment
 	</tr>
 	</table>
 
-47. Since the default for `quotechar` is `"`, we need to modify that default to reflect the new data structure.
+91. Since the default for `quotechar` is `"`, we need to modify that default to reflect the new data structure.
+
 ```Python
 # import csv module
 import csv
@@ -575,15 +601,16 @@ with open('MY-FILE-NAME.csv', 'rt') as f:
   
 # Reading in `.csv` files using dictionaries
 
-48. For `.csv` files that contain header rows, we might want to connect the header row values with subsequent row values.
+92. For `.csv` files that contain header rows, we might want to connect the header row values with subsequent row values.
 
-49. We can do this by reading the `.csv` file as a dictionary, rather than a list containing row sub-lists.
+93. We can do this by reading the `.csv` file as a dictionary, rather than a list containing row sub-lists.
 
-50. Remember dictionaries have key-value pairs, where we can access a value by using its key name.
+94. Remember dictionaries have key-value pairs, where we can access a value by using its key name.
 
-51. For tabular data, we can think of the key as the field name contained in the header row and the value as column or field values.
+95. For tabular data, we can think of the key as the field name contained in the header row and the value as column or field values.
 
-52. We read a `.csv` file to a dictionary using a `DictReader` object (versus the `csv.reader` object).
+96. We read a `.csv` file to a dictionary using a `DictReader` object (versus the `csv.reader` object).
+
 ```Python
 # import csv module
 import csv
@@ -599,13 +626,14 @@ for line in exampleDictReader:
 	print(line)
 ```
 
-53. Within the `for` loop, the `DictReader` object sets `row` to a dictionary object with keys derived from the headers in the first row.
+97. Within the `for` loop, the `DictReader` object sets `row` to a dictionary object with keys derived from the headers in the first row.
 
-54. The `DictReader` object means we don't have to separate the header information from the rest of the data contained in the file, because the `DictReader` object does this for us.
+98. The `DictReader` object means we don't have to separate the header information from the rest of the data contained in the file, because the `DictReader` object does this for us.
 
-55. But what can we do if we want to read to a dictionary a `.csv` file that doesn't incldue a header row?
+99. But what can we do if we want to read to a dictionary a `.csv` file that doesn't incldue a header row?
 
-56. We can pass a second argument to the `DictReader()` function to manually set header names.
+100. We can pass a second argument to the `DictReader()` function to manually set header names.
+101. 
 ```Python
 # import csv module
 import csv
@@ -625,9 +653,8 @@ for row in exampleDictReader2:
 
 # Writing to a `.csv` file
 
-57. We'll do more with writing to a `.csv` file later in the semester.
+101. We can create a `writer` object using the `csv.writer()` function to write data to a `.csv` file.
 
-58. But for now, we can create a `writer` object using the `csv.writer()` function to write data to a `.csv` file.
 ```Python
 # import csv module
 import csv
@@ -651,11 +678,14 @@ outputWriter.writerow(['1, 2, 3.141592, 4])
 outputFile.close()
 ```
 
-59. The `writerow()` method takes a list argument and writes that to a new row in the `writer` object, that is added to the `.csv` file.
+102. The `writerow()` method takes a list argument and writes that to a new row in the `writer` object, that is added to the `.csv` file.
+
+<blockquote>Q7: Create a small data structure and write it to a CSV file. Include code + comments.</blockquote>
 
 ## Writing from a dictionary to a `.csv` file
 
-60. We can use the `DictWriter` object to write data in a dictionary to a `.csv` file.
+103. We can use the `DictWriter` object to write data in a dictionary to a `.csv` file.
+
 ```Python
 # import csv module
 import csv
@@ -682,17 +712,17 @@ outputDictWriter.writerow({'Phone': '555-5555', 'Name': 'Carol', 'Pet': 'dog'})
 outputFile.close()
 ```
 
-61. Note that the order of the key-value pairs in the dictionaries created manually using `writerow()` doesn't matter.
+104. Note that the order of the key-value pairs in the dictionaries created manually using `writerow()` doesn't matter.
 
-62. Python writes the dictionaries to the `.csv` file using the order of the keys given to `DictWriter()`.
+105. Python writes the dictionaries to the `.csv` file using the order of the keys given to `DictWriter()`.
 
-63. Missing keys will be empty in the newly-created `.csv` file.
+106. Missing keys will be empty in the newly-created `.csv` file.
 
-<blockquote>Q7: Create a small dictionary and write it to a CSV file. Include code + comments.</blockquote>
+<blockquote>Q8: Create a small dictionary and write it to a CSV file. Include code + comments.</blockquote>
 
 ## Additional CSV Lab Notebook Questions
 
-Q8: Navigate to an open data portal and download a `.csv` file. 
+Q9: Navigate to an open data portal and download a `.csv` file. 
 
 A few places to start:
 - [Data.gov](https://www.data.gov/)
@@ -706,41 +736,41 @@ Open the data in a spreadsheet program and/or text editor.
 - What do you see?
 - How can we start to make sense of the data based on available documentation?
 
-Q9: Write code + comments that load the data in Python using the two different approaches highlighted in this lab:
+Q10: Write code + comments that load the data in Python using the two different approaches highlighted in this lab:
 - Lists and sublists (steps 10-17, or steps 17-24 for loading the file using a for loop)
 - Dictionaries (steps 48-54, and steps 55-56 cover how to deal with a file that does not include a header row)
 
-Q10: What challenges did you encounter for Q8 and Q9? How did you address or solve them? 
+Q11: What challenges did you encounter for Q8 and Q9? How did you address or solve them? 
 
 # JSON
 
 ## What is JSON and why are we learning about it
 
-64. JavaScript Object Notation (JSON) is as popular way to format data as a single (purportedly human-readable) string. 
+107. JavaScript Object Notation (JSON) is as popular way to format data as a single (purportedly human-readable) string. 
 
-65. JavaScript programs use JSON data structures, but we can frequently encounter JSON data outside of a JavaScript environment.
+108. JavaScript programs use JSON data structures, but we can frequently encounter JSON data outside of a JavaScript environment.
 
-66. Websites that make machine-readable data available via an application programming interface (API- more on these in an upcoming lab) often provide that data in a JSON format. Examples include Twitter, Wikipedia, Data.gov, etc. Most live data connections available via an API are provided in a JSON format.
+109. Websites that make machine-readable data available via an application programming interface (API- more on these in an upcoming lab) often provide that data in a JSON format. Examples include Twitter, Wikipedia, Data.gov, etc. Most live data connections available via an API are provided in a JSON format.
 
-67. JSON structure can vary WIDELY depending on the specific data provider, but this lab will cover some basic elements of working with JSON in Python.
+110. JSON structure can vary WIDELY depending on the specific data provider, but this lab will cover some basic elements of working with JSON in Python.
 
-68. The easiest way to think of JSON data as a plain-text data format made up of something like key-value pairs, like we've encountered previously in working with dictionaries.
+111. The easiest way to think of JSON data as a plain-text data format made up of something like key-value pairs, like we've encountered previously in working with dictionaries.
 
-69. Example JSON string: `stringOfJsonData = '{"name": Zophie", "isCat": true, "miceCaught": 0, "felineIQ": null}'`
+112. Example JSON string: `stringOfJsonData = '{"name": Zophie", "isCat": true, "miceCaught": 0, "felineIQ": null}'`
 
-70. From looking at the example string, we can see field names or keys (`name`, `isCat`, `miceCaught`, `felineIQ`) and values for those fields.
+113. From looking at the example string, we can see field names or keys (`name`, `isCat`, `miceCaught`, `felineIQ`) and values for those fields.
 
-71. To use more precise terminology, JSON data has the following attributes:
+114. To use more precise terminology, JSON data has the following attributes:
 - uses name/value pairs
 - separates data using commas
 - holds objects using curly braces `{}`
 - holds arrays using square brackets `[]`
 
-72. In our example `stringOfJsonData`, we have an object contained in curly braces. 
+115. In our example `stringOfJsonData`, we have an object contained in curly braces. 
 
-73. An object can include multiple name/value pairs. Multiple objects together can form an array.
+116. An object can include multiple name/value pairs. Multiple objects together can form an array.
 
-74. Values stored in JSON format must be one of the following data types:
+117. Values stored in JSON format must be one of the following data types:
 - string
 - number
 - object (JSON object)
@@ -748,17 +778,18 @@ Q10: What challenges did you encounter for Q8 and Q9? How did you address or sol
 - boolean
 - null
 
-75. How is data stored in a JSON format different than a CSV? 
+118. How is data stored in a JSON format different than a CSV? 
 
-76. A `.csv` file uses characters as delimiters and has more of a tabular (table-like) structure.
+119. A `.csv` file uses characters as delimiters and has more of a tabular (table-like) structure.
 
-77. JSON data uses characters as part of the syntax, but not in the same way as delimited data files. 
+120. JSON data uses characters as part of the syntax, but not in the same way as delimited data files. 
 
-78. Additionally, the data stored in a JSON format has values that are attached to names (or keys).
+121. Additionally, the data stored in a JSON format has values that are attached to names (or keys).
 
-79. JSON can also have a hierarchical or nested structure, in that objects can be stored or nested inside other objects as part of the same array.
+122. JSON can also have a hierarchical or nested structure, in that objects can be stored or nested inside other objects as part of the same array.
 
-80. For example, take a look at sapmle JSON data from Twitter's API:
+123. For example, take a look at sapmle JSON data from Twitter's API:
+
 ```JSON
 {
   "created_at": "Thu Apr 06 15:24:15 +0000 2017",
@@ -792,20 +823,20 @@ Q10: What challenges did you encounter for Q8 and Q9? How did you address or sol
 }
 ```
 
-<blockquote>Q11: Decipher what we're seeing in the JSON here. What are the name/value pairs, and how are they organized in this object?</blockquote>
+<blockquote>Q12: Decipher what we're seeing in the JSON here. What are some of the name/value pairs, and how are they organized in this object?</blockquote>
 
 ## Reading JSON into Python
 
-81. We can read JSON into Python using the `json` module.
+124. We can read JSON into Python using the `json` module.
 
 <blockquote><a href="https://docs.python.org/3/library/json.html">Click here</a> to learn more about the <code>json</code> module.</blockquote>
 
-82. The JSON module includes a few key functions for loading JSON data into Python:
+125. The JSON module includes a few key functions for loading JSON data into Python:
 - `json.loads()` takes a single string of JSON and loads it as a Python value
 - `json.load()` takes a JSON file (or file-like object) and loads it as a Python value
 - `json.dumps()` takes a Python value and transforms it to a JSON object.
 
-83. Translation table:
+126. Translation table:
 
 JSON | Python
 --- | ---
@@ -818,7 +849,8 @@ true | True
 false | False
 null | None
 
-84. To translate a string of JSON data into a Python value, we pass it to the `json.loads()` function.
+127. To translate a string of JSON data into a Python value, we pass it to the `json.loads()` function.
+
 ```Python
 # import json module
 import json
@@ -833,17 +865,18 @@ jsonDataAsPythonValue = json.loads(stringOfJsonData)
 jsonDataAsPythonValue
 ```
 
-85. This block of code imports the `json` module, calls the `loads()` function and passes a string of JSON data to the `loads()` function.
+128. This block of code imports the `json` module, calls the `loads()` function and passes a string of JSON data to the `loads()` function.
 
-86. A few notes on this workflow:
+129. A few notes on this workflow:
 - JSON strings always use double quotes, which is rendered in Python as a dictionary. Because Python dictionaries are not ordered, the order of the Python dictionary may not match the original JSON string order.
 - In this example, we are loading a single string of JSON, which means we use the `json.loads()` function. When loading a JSON file (or file-like object), we would need to use the `json.load()` argument.
 
 ## Working with JSON in Python
 
-87. Now that the JSON data is stored as a dictionary in Python, we can interact with it via the functionality avaialble via Python dictionaries.
+130. Now that the JSON data is stored as a dictionary in Python, we can interact with it via the functionality avaialble via Python dictionaries.
 
-88. We could get all of the keys in the dictionary using the `keys()` method.
+131. We could get all of the keys in the dictionary using the `keys()` method.
+
 ```Python
 # import json module
 import json
@@ -858,7 +891,8 @@ jsonDataAsPythonValue = json.loads(stringOfJsonData)
 print(jsonDataAsPythonValue.keys())
 ```
 
-89. We could get all of the values in the dictionary using the `values()` method.
+132. We could get all of the values in the dictionary using the `values()` method.
+
 ```Python
 # import json module
 import json
@@ -873,7 +907,8 @@ jsonDataAsPythonValue = json.loads(stringOfJsonData)
 print(jsonDataAsPythonValue.values())
 ```
 
-90. We could iterate by keys over the items in the dictionary.
+133. We could iterate by keys over the items in the dictionary.
+
 ```Python
 # import json module
 import json
@@ -889,7 +924,8 @@ for key in jsonDataAsPythonValue.keys():
   print(key, jsonDataAsPythonValue[key])
 ```
 
-91. We could also iterate over items in dictionary using key-value pairs.
+134. We could also iterate over items in dictionary using key-value pairs.
+
 ```Python
 # import json module
 import json
@@ -905,11 +941,12 @@ for key, value in jsonDataAsPythonValue.items():
   print(key, value)
 ```
 
-92. We can read the value for a particular key using the index operator. The command `jsonDataAsPythonValue['name']` will return `Zophie`.
+135. We can read the value for a particular key using the index operator. The command `jsonDataAsPythonValue['name']` will return `Zophie`.
 
-93. In situations where JSON data includes nested or hierarchical objects and arrays, we will end up with a list of dictionaries in Python.
+136. In situations where JSON data includes nested or hierarchical objects and arrays, we will end up with a list of dictionaries in Python.
 
-94. For example, let's say we have a different JSON example and want to use more complex expressions in Python.
+137. For example, let's say we have a different JSON example and want to use more complex expressions in Python.
+
 ```Python
 # import json module
 import json
@@ -940,13 +977,14 @@ for item in info:
   print('Attribute', item['x'])
 ```
 
-95. For more on working with dictionaries in Python:
+138. For more on working with dictionaries in Python:
 - [Elements of Computing I lab](https://github.com/kwaldenphd/python-lab6/blob/master/README.md#working-with-dictionaries)
 - [W3 Schools tutorial](https://www.w3schools.com/python/python_dictionaries.asp)
 
 ## Writing to JSON from Python
 
-96. The `json.dumps()` function will translate a Python dictionary into a string of JSON-formatted data.
+139. The `json.dumps()` function will translate a Python dictionary into a string of JSON-formatted data.
+
 ```Python
 # import json module
 import json
@@ -960,7 +998,8 @@ stringOfJsonData = json.dumps(pythonValue)
 stringOfJsonData
 ```
 
-97. We can also write data in a Python dictionary to a JSON file also using `json.dump()`.
+140. We can also write data in a Python dictionary to a JSON file also using `json.dump()`.
+
 ```Python
 # import json module
 import json
@@ -973,11 +1012,13 @@ with open('output.json', 'w') as json_file:
 	json.dump(pythonValue, json_file)
 ```
 
-98. Later in the semester we will talk about how to read JSON data into Python and convert it to a tabular data structure (called a data frame in Python), using a library called `pandas`. Stay tuned!
+141. Later in the semester we will talk about how to read JSON data into Python and convert it to a tabular data structure (called a data frame in Python), using a library called `pandas`. Stay tuned!
+
+<blockquote>Q13: Create a string of JSON data and write it to a CSV file. Include code + comments.</blockquote>
 
 ## Additional JSON Lab Notebook Questions
 
-Q12: Navigate to an open data portal and download a JSON file. 
+Q14: Navigate to an open data portal and download a JSON file. 
 
 Some options that can get you started:
 - [Data.gov](https://www.data.gov/)
@@ -990,18 +1031,18 @@ Open the data in a spreadsheet program and/or text editor.
 
 Describe what are you seeing. How can we start to make sense of this data? What documentation is available?
 
-Q13: Write code + comments that accomplish the following tasks:
+Q15: Write code + comments that accomplish the following tasks:
 - Load the JSON data into Python
 - Convert to a Python value
 
-Steps 84-86 in the lab procedure provide sample code and additional considerations for loading a JSON file in Python.
+LAB STEPS in the lab procedure provide sample code and additional considerations for loading a JSON file in Python.
 
 - In the JSON example in the lab, we loaded a single string of JSON, which means we use the `json.loads()` function. 
 - When loading a JSON file (or file-like object), we would need to use the `json.load()` argument.
 
-Q14: What challenges did you encounter for Q12 and Q13? How did you address or solve them? 
+Q16: What challenges did you encounter for Q12 and Q13? How did you address or solve them? 
 
-Q15: Include a link to your Replit project.
+Q17: Include a link to your Replit project.
 
 # Lab Notebook Questions
 
@@ -1069,7 +1110,7 @@ Q13: Write code + comments that accomplish the following tasks:
 - Load the JSON data into Python
 - Convert to a Python value
 
-Steps 84-86 in the lab procedure provide sample code and additional considerations for loading a JSON file in Python.
+LAB STEPS in the lab procedure provide sample code and additional considerations for loading a JSON file in Python.
 
 - In the JSON example in the lab, we loaded a single string of JSON, which means we use the `json.loads()` function. 
 - When loading a JSON file (or file-like object), we would need to use the `json.load()` argument.
