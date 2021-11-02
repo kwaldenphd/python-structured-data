@@ -1021,7 +1021,7 @@ with open('output.json', 'w') as json_file:
 
 141. Later in the semester we will talk about how to read JSON data into Python and convert it to a tabular data structure (called a data frame in Python), using a library called `pandas`. Stay tuned!
 
-<blockquote>Q13: Create a string of JSON data and write it to a CSV file. Include code + comments.</blockquote>
+<blockquote>Q13: Create a string of JSON data and write it to a JSON file. Include code + comments.</blockquote>
 
 ## Additional JSON Lab Notebook Questions
 
@@ -1104,7 +1104,7 @@ Q11: What challenges did you encounter for Q9 and Q10? How did you address or so
 
 Q12: Decipher what we're seeing in the JSON here. What are some of the name/value pairs, and how are they organized in this data object?
 
-Q13: Create a string of JSON data and write it to a CSV file. Include code + comments.
+Q13: Create a string of JSON data and write it to a JSON file. Include code + comments.
 
 Q14: Navigate to an open data portal and download a JSON file. 
 
