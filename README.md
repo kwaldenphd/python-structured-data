@@ -679,7 +679,7 @@ outputWriter.writerow(['spam', 'eggs', 'bacon', 'ham'])
 outputWriter.writerow(['Hello, world!', 'eggs', 'bacon', 'ham'])
 
 # write a third row
-outputWriter.writerow(['1, 2, 3.141592, 4])
+outputWriter.writerow([1, 2, 3.141592, 4])
 
 # close the output file
 outputFile.close()
