@@ -18,6 +18,20 @@ By the end of this lab, students will be able to:
 - Write data from Python to a JSON file
 - Read a JSON file into Python using the JSON module
 
+<table>
+ <tr><td>
+<img src="https://elearn.southampton.ac.uk/wp-content/blogs.dir/sites/64/2021/04/PanPan.png" alt="Panopto logo" width="50"/></td>
+  <td><a href="https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=912a69c8-befa-4463-a8c6-ad8201619aa9">Lab overview</a></td>
+  </tr>
+  </table>
+  
+<table>
+ <tr><td>
+<img src="https://elearn.southampton.ac.uk/wp-content/blogs.dir/sites/64/2021/04/PanPan.png" alt="Panopto logo" width="50"/></td>
+<td><a href="https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?pid=c9fd5091-8129-45fe-ac92-ae300130ea0f">Lecture/live coding playlist</a></td>
+  </tr>
+  </table>
+  
 ## Acknowledgements
 
 Peer review and editing on the CSV and XLSX portions of this lab was provided by Spring 2021 graduate teaching assistant [Aidan Draper](https://github.com/adraper2).
@@ -31,6 +45,9 @@ Information and exercises in this lab are adapted from:
 - Wes McKinney, Chapter 6 "Data Loading, Storage, and File Formats" from [*Python for Data Analysis*](https://www.oreilly.com/library/view/python-for-data/9781491957653/) (O'Reilly, 2018): 169-193
 
 # Table of Contents
+
+- [Lecture and Live Coding](#lecture-and-live-coding)
+- [Lab Notebook Template](#lab-notebook-template)
 - [Data](#data)
 - [CSV](#csv-data-in-python)
   * [What is a `.csv` file?](#what-is-a-csv-file)
@@ -57,6 +74,38 @@ Information and exercises in this lab are adapted from:
   * [Writing to JSON from Python](#writing-to-json-from-python)
   * [Additional JSON Lab Notebook Questions](#additional-json-lab-notebook-questions)
 - [Lab Notebook Questions](#lab-notebook-questions)
+
+[Link to lab procedure as a Jupyter Notebook](https://drive.google.com/file/d/1OMuQkkJoKkUlNNHl27BmXNe4uWnPHnyu/view?usp=sharing)
+
+# Lecture and Live Coding
+
+Throughout this lab, you will see a Panopto icon at the start of select sections.
+
+This icon indicates there is lecture/live coding asynchronous content that accompanies this section of the lab. 
+
+You can click the link in the figure caption to access these materials (ND users only).
+
+Example:
+
+<table>
+ <tr><td>
+<img src="https://elearn.southampton.ac.uk/wp-content/blogs.dir/sites/64/2021/04/PanPan.png" alt="Panopto logo" width="50"/></td>
+  <td><a href="https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=912a69c8-befa-4463-a8c6-ad8201619aa9">Lab overview</a></td>
+  </tr>
+  </table>
+  
+<table>
+ <tr><td>
+<img src="https://elearn.southampton.ac.uk/wp-content/blogs.dir/sites/64/2021/04/PanPan.png" alt="Panopto logo" width="50"/></td>
+<td><a href="https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?pid=c9fd5091-8129-45fe-ac92-ae300130ea0f">Lecture/live coding playlist</a></td>
+  </tr>
+  </table>
+
+# Lab Notebook Template
+
+Lab notebook template:
+- [`.py` file](https://drive.google.com/file/d/1Dacp329cBMosmJvJcD10qSavgHpP3rYN/view?usp=sharing)
+- [Jupyter Notebook](https://colab.research.google.com/drive/1sL-GUG-NtBguee6NaYoazgPQmdKxmWpV?usp=sharing)
 
 # Data
 
