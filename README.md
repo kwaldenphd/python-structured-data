@@ -21,14 +21,14 @@ By the end of this lab, students will be able to:
 <table>
  <tr><td>
 <img src="https://elearn.southampton.ac.uk/wp-content/blogs.dir/sites/64/2021/04/PanPan.png" alt="Panopto logo" width="50"/></td>
-  <td><a href="https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=912a69c8-befa-4463-a8c6-ad8201619aa9">Lab overview</a></td>
+  <td><a href="https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=762d6791-024a-46bf-a5a1-add301722b86">Lab overview</a></td>
   </tr>
   </table>
   
 <table>
  <tr><td>
 <img src="https://elearn.southampton.ac.uk/wp-content/blogs.dir/sites/64/2021/04/PanPan.png" alt="Panopto logo" width="50"/></td>
-<td><a href="https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?pid=c9fd5091-8129-45fe-ac92-ae300130ea0f">Lecture/live coding playlist</a></td>
+<td><a href="https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?pid=4c2b0eb8-f898-40be-ac96-add30171600e">Lecture/live coding playlist</a></td>
   </tr>
   </table>
   
@@ -90,14 +90,14 @@ Example:
 <table>
  <tr><td>
 <img src="https://elearn.southampton.ac.uk/wp-content/blogs.dir/sites/64/2021/04/PanPan.png" alt="Panopto logo" width="50"/></td>
-  <td><a href="https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=912a69c8-befa-4463-a8c6-ad8201619aa9">Lab overview</a></td>
+  <td><a href="https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=762d6791-024a-46bf-a5a1-add301722b86">Lab overview</a></td>
   </tr>
   </table>
   
 <table>
  <tr><td>
 <img src="https://elearn.southampton.ac.uk/wp-content/blogs.dir/sites/64/2021/04/PanPan.png" alt="Panopto logo" width="50"/></td>
-<td><a href="https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?pid=c9fd5091-8129-45fe-ac92-ae300130ea0f">Lecture/live coding playlist</a></td>
+<td><a href="https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?pid=4c2b0eb8-f898-40be-ac96-add30171600e">Lecture/live coding playlist</a></td>
   </tr>
   </table>
 
@@ -122,6 +122,13 @@ You can also access them [via Google Drive](https://drive.google.com/drive/folde
 # `.csv` data in Python
 
 ## What is a `.csv` file? 
+
+<table>
+ <tr><td>
+<img src="https://elearn.southampton.ac.uk/wp-content/blogs.dir/sites/64/2021/04/PanPan.png" alt="Panopto logo" width="50"/></td>
+  <td><a href="https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=0076f2aa-1167-4e86-8d1f-add3013f6d6d">What is a CSV</a></td>
+  </tr>
+  </table>
 
 1. CSV stands for "comma-separated values." CSV files are tabular data structures (i.e. a spreadsheet), stored in a plain-text format.
 
@@ -160,6 +167,13 @@ You can also access them [via Google Drive](https://drive.google.com/drive/folde
 11. Specifically, we will be focusing on a few key Python functions for working with files.
 - `open()`
 - `write()`
+
+<table>
+ <tr><td>
+<img src="https://elearn.southampton.ac.uk/wp-content/blogs.dir/sites/64/2021/04/PanPan.png" alt="Panopto logo" width="50"/></td>
+  <td><a href="https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=19e7779b-344a-42d6-84c8-add30142fe8d">File Methods: Open and Write</a></td>
+  </tr>
+  </table>
 
 ### `open()`
 
@@ -253,7 +267,7 @@ open(file_name.extension, access_mode)
  ```Python
  # creates new CSV file without write privileges
  f = open("new_file.csv", "x")
- ```
+```
  
 21. If you these examples, you will see a newly-created file appear in your environment or project workspace. 
 
@@ -304,6 +318,13 @@ f.close()
 - [Python open() Function](https://www.w3schools.com/python/ref_func_open.asp)
 
 ### `open()`, `write()`, and `CSV` files
+
+<table>
+ <tr><td>
+<img src="https://elearn.southampton.ac.uk/wp-content/blogs.dir/sites/64/2021/04/PanPan.png" alt="Panopto logo" width="50"/></td>
+  <td><a href="https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=83ea18fa-8a66-49ad-a583-add30148f6d4">File Methods: Open, Write, and CSV Files</a></td>
+  </tr>
+  </table>
 
 30. A couple quick reminders: `CSV` stands for comma-separated values, and `CSV` files are the plain-text, machine-readable file type for tabular data (table data, or data in a spreadsheet structure)
 
@@ -376,7 +397,7 @@ Parameter, Name, Description
 ```Python
  # create new CSV file with write privileges
  f = open("new_file.csv", "w")
- ```
+```
  
 46. The next step is to create the `writer` object using the `csv.writer()` function.
 
@@ -429,6 +450,13 @@ f.close()
 50. Check out `new_file.csv` to see the newly-created file with rows of data.
 
 ## Reading a `.csv` file into Python
+
+<table>
+ <tr><td>
+<img src="https://elearn.southampton.ac.uk/wp-content/blogs.dir/sites/64/2021/04/PanPan.png" alt="Panopto logo" width="50"/></td>
+  <td><a href="https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=1bf35b7c-81c2-4e5e-a754-add3014d8c3c">File Methods: Reading a CSV File Into Python</a></td>
+  </tr>
+  </table>
 
 51. To read data from a `.csv` file into Python, we will use the `csv` module.
 
@@ -506,6 +534,13 @@ for row in exampleReader:
 
 ## Other delimiters
 
+<table>
+ <tr><td>
+<img src="https://elearn.southampton.ac.uk/wp-content/blogs.dir/sites/64/2021/04/PanPan.png" alt="Panopto logo" width="50"/></td>
+  <td><a href="https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=59159f47-4764-4422-b65b-add301517243">Other Delimiters</a></td>
+  </tr>
+  </table>
+
 70. But what happens if you need to load in structured data that uses another delimiter, not a comma? 
 
 71. Remember when we opened a `.csv` file in a plain-text editor, the value fields are separated by a comma.
@@ -559,6 +594,13 @@ for row in read_tsv:
 <blockquote>Q4: Modify the code provided above to load the example.txt file provided in this lab.</blockquote>
 
 ## Escape characters
+
+<table>
+ <tr><td>
+<img src="https://elearn.southampton.ac.uk/wp-content/blogs.dir/sites/64/2021/04/PanPan.png" alt="Panopto logo" width="50"/></td>
+  <td><a href="https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=59159f47-4764-4422-b65b-add301517243">Escape Characters</a></td>
+  </tr>
+  </table>
 
 76. But what happens if the values in your dataset include the same character that's being used as a delimiter?
 
@@ -657,6 +699,13 @@ with open('MY-FILE-NAME.csv', 'rt') as f:
   
 # Reading in `.csv` files using dictionaries
 
+<table>
+ <tr><td>
+<img src="https://elearn.southampton.ac.uk/wp-content/blogs.dir/sites/64/2021/04/PanPan.png" alt="Panopto logo" width="50"/></td>
+  <td><a href="https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=b1d40bd6-1199-4368-a467-add30156e3be">Reading in a CSV File Using Dictionaries</a></td>
+  </tr>
+  </table>
+
 92. For `.csv` files that contain header rows, we might want to connect the header row values with subsequent row values.
 
 93. We can do this by reading the `.csv` file as a dictionary, rather than a list containing row sub-lists.
@@ -708,6 +757,13 @@ for row in exampleDictReader2:
 <blockquote>Q6: Describe in your own words how csv_DictReader interacts with structured data.</blockquote>
 
 # Writing to a `.csv` file
+
+<table>
+ <tr><td>
+<img src="https://elearn.southampton.ac.uk/wp-content/blogs.dir/sites/64/2021/04/PanPan.png" alt="Panopto logo" width="50"/></td>
+  <td><a href="https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=a4deb213-a407-4a84-91dd-add3015a5d6f">Writing to a CSV File</a></td>
+  </tr>
+  </table>
 
 101. We can create a `writer` object using the `csv.writer()` function to write data to a `.csv` file.
 
@@ -778,6 +834,13 @@ outputFile.close()
 
 ## Additional CSV Lab Notebook Questions
 
+<table>
+ <tr><td>
+<img src="https://elearn.southampton.ac.uk/wp-content/blogs.dir/sites/64/2021/04/PanPan.png" alt="Panopto logo" width="50"/></td>
+  <td><a href="https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=783c4603-b270-48eb-9d09-add3015e7721">Lab Notebook Questions 9-11</a></td>
+  </tr>
+  </table>
+
 Q9: Navigate to an open data portal and download a `.csv` file. 
 
 A few places to start:
@@ -799,6 +862,14 @@ Q10: Write code + comments that load the data in Python using the two different 
 Q11: What challenges did you encounter for Q9 and Q10? How did you address or solve them? 
 
 # JSON
+
+<table>
+ <tr><td>
+<img src="https://elearn.southampton.ac.uk/wp-content/blogs.dir/sites/64/2021/04/PanPan.png" alt="Panopto logo" width="50"/></td>
+  <td><a href="https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=590176fc-855a-4537-8d4e-add30162fb87">JSON Data in Python</a></td>
+  </tr>
+  </table>
+
 
 ## What is JSON and why are we learning about it
 
@@ -1074,6 +1145,13 @@ with open('output.json', 'w') as json_file:
 
 ## Additional JSON Lab Notebook Questions
 
+<table>
+ <tr><td>
+<img src="https://elearn.southampton.ac.uk/wp-content/blogs.dir/sites/64/2021/04/PanPan.png" alt="Panopto logo" width="50"/></td>
+  <td><a href="https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=39ca985f-224f-4e6d-9f8a-add3016c37a8">Lab Notebook Questions 14-16</a></td>
+  </tr>
+  </table>
+
 Q14: Navigate to an open data portal and download a JSON file. 
 
 Some options that can get you started:
@@ -1101,6 +1179,10 @@ Q16: What challenges did you encounter for Q14 and Q15? How did you address or s
 Q17: Include a link to your Replit project.
 
 # Lab Notebook Questions
+
+Lab notebook template:
+- [`.py` file](https://drive.google.com/file/d/1Dacp329cBMosmJvJcD10qSavgHpP3rYN/view?usp=sharing)
+- [Jupyter Notebook](https://colab.research.google.com/drive/1sL-GUG-NtBguee6NaYoazgPQmdKxmWpV?usp=sharing)
 
 Q1: Open the `example.xlsx` file in a text editor. Describe what you see.
 
@@ -1170,7 +1252,7 @@ Q15: Write code + comments that accomplish the following tasks:
 - Load the JSON data into Python
 - Convert to a Python value
 
-LAB STEPS in the lab procedure provide sample code and additional considerations for loading a JSON file in Python.
+The lab procedure provides sample code and additional considerations for loading a JSON file in Python.
 
 - In the JSON example in the lab, we loaded a single string of JSON, which means we use the `json.loads()` function. 
 - When loading a JSON file (or file-like object), we would need to use the `json.load()` argument.
