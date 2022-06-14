@@ -479,7 +479,7 @@ exampleReader = csv.reader(exampleFile)
 exampleData = list(exampleReader)
 
 # output list rows
-exampleData
+print(exampleData)
 ```
 
 54. You'll notice that the `exampleData` output is a list of lists, or a list that contains sub-lists. 
