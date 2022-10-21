@@ -97,9 +97,9 @@ Before we start loading data files in Python, let's talk more about how programm
 From Busbee and Braunschweig's "[File Input and Output](https://press.rebus.community/programmingfundamentals/chapter/file-input-and-output/)," in *Programming Fundamentals*:
 
 <blockquote>"A computer file is a computer resource for recording data discretely in a computer storage device. Just as words can be written to paper, so can information be written to a computer file. 
-<br>
+<br><br>
 "There are different types of computer files, designed for different purposes. A file may be designed to store a picture, a written message, a video, a computer program, or a wide variety of other kinds of data. Some types of files can store several types of information at once.
-<br>
+<br><br>
 "By using computer programs, a person can open, read, change, and close a computer file. Computer files may be reopened, modified, and copied an arbitrary number of times."</blockquote>
 
 To break that down:
@@ -248,7 +248,7 @@ For more on file handling methods in Python:
 <table>
  <tr><td>
 <img src="https://github.com/kwaldenphd/internet/blob/main/images/clipboard.png?raw=true" alt="Clipboard icon" width="50"/></td>
-  <td><a href="https://docs.google.com/forms/d/e/1FAIpQLSc6SKZMpaS62tTYi6_gVNnpXNKtpWsFwAMKxCsRoJywyPqERg/viewform?usp=sf_link">Built-in Functions in Python Comprehension Check</a></td>
+  <td><a href="https://docs.google.com/forms/d/e/1FAIpQLSettmkYgldWFwWb7taUc2aRVD7r5wHRwz_G9bQOE9KC8SgeiA/viewform?usp=sf_link">File I/O in Python Comprehension Check</a></td>
   </tr>
   </table>
 
