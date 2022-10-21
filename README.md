@@ -305,13 +305,6 @@ Q1C: Open the `example.xlsx` file in a spreadsheet program. Save the file as a `
 
 ### `.csv` Files in Python
 
-<table>
- <tr><td>
-<img src="https://elearn.southampton.ac.uk/wp-content/blogs.dir/sites/64/2021/04/PanPan.png" alt="Panopto logo" width="50"/></td>
-  <td><a href="https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=83ea18fa-8a66-49ad-a583-add30148f6d4">File Methods: Open, Write, and CSV Files</a></td>
-  </tr>
-  </table>
-
 To recap: `CSV` stands for comma-separated values, and `CSV` files are the plain-text, machine-readable file type for tabular data (table data, or data in a spreadsheet structure)
 
 For example, a table that looks like this in a spreadsheet program like Excel or Google Sheets:
