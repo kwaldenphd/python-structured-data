@@ -41,12 +41,9 @@ When building this lab, the author consulted the following materials:
 
 [Click here](https://colab.research.google.com/drive/18YBJg-hvbohdMlfhLVU1TZBHho-YRYqF?usp=sharing) to access this lab procedure as a Jupyter Notebook.
 
-## Lecture & Live Coding
-
-
 ## Key Concepts
 
-[Click here]() for a full list of key concepts and definitions from this lab.
+[Click here](https://github.com/kwaldenphd/python-structured-data/blob/draft/key-concepts.md) for a full list of key concepts and definitions from this lab.
 
 ## Lab Notebook Template
 
@@ -113,13 +110,6 @@ To break that down:
 We will be focusing on a few key Python functions for working with files.
 - `open()`
 - `write()`
-
-<table>
- <tr><td>
-<img src="https://elearn.southampton.ac.uk/wp-content/blogs.dir/sites/64/2021/04/PanPan.png" alt="Panopto logo" width="50"/></td>
-  <td><a href="https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=19e7779b-344a-42d6-84c8-add30142fe8d">File Methods: Open and Write</a></td>
-  </tr>
-  </table>
 
 ### `open()`
 
@@ -255,6 +245,13 @@ For more on file handling methods in Python:
 
 ## Comprehension Check
 
+<table>
+ <tr><td>
+<img src="https://github.com/kwaldenphd/internet/blob/main/images/clipboard.png?raw=true" alt="Clipboard icon" width="50"/></td>
+  <td><a href="https://docs.google.com/forms/d/e/1FAIpQLSc6SKZMpaS62tTYi6_gVNnpXNKtpWsFwAMKxCsRoJywyPqERg/viewform?usp=sf_link">Built-in Functions in Python Comprehension Check</a></td>
+  </tr>
+  </table>
+
 What is NOT one of the core file handling tasks in programming language
 
 Describe access modes
@@ -267,7 +264,8 @@ Correct syntax for writing to a file
 
 # Structured Data
 
-DIAGRAM
+<table>
+<tr><td>LINEAR ARRAY IMAGE</td><td>ASSOCIATIVE ARRAY IMAGE</td></tr></table>
 
 In this lab, we're going to look at aspects of `I/O` that have to do with reading and writing files, with a focus on two key data structures:
 - Tabular data, or data stored as a table consisting of rows and columns
@@ -298,11 +296,11 @@ Given these limitations, especially compared to the way we often interact with s
 
 ### Application
 
-Q1: Open the `example.xlsx` file in a text editor. Describe what you see.
+Q1A: Open the `example.xlsx` file in a text editor. Describe what you see.
 
-Q2: How does your answer to Q1 compare to what you see when you open the `example.csv` file in a text editor?
+Q1B: How does your answer to Q1A compare to what you see when you open the `example.csv` file in a text editor?
 
-Q3: Open the `example.xlsx` file in a spreadsheet program. Save the file as a `.csv` format. What happens? Or what happens when you open the newly-created `.csv` file in a spreadsheet program or text editor?
+Q1C: Open the `example.xlsx` file in a spreadsheet program. Save the file as a `.csv` format. What happens? Or what happens when you open the newly-created `.csv` file in a spreadsheet program or text editor?
 
 ### `.csv` Files in Python
 
@@ -573,11 +571,11 @@ Note that the order of the key-value pairs in the dictionaries created manually 
 
 ### Application
 
-Q7: Create a small list data structure and write it to a CSV file. Include code + comments.
+Q2A: Create a small list data structure and write it to a CSV file. Answer to this question includes program + comments that document process and explain your code.
 
-Q8: Create a small dictionary and write it to a CSV file. Include code + comments.
+Q2B: Create a small dictionary and write it to a CSV file. Answer to this question includes program + comments that document process and explain your code.
 
-QXA: Navigate to an open data portal and download a `.csv` file. 
+Q3A: Navigate to an open data portal and download a `.csv` file. 
 
 A few places to start:
 - [Data.gov](https://www.data.gov/)
@@ -591,11 +589,13 @@ Open the data in a spreadsheet program and/or text editor.
 - What do you see?
 - How can we start to make sense of the data based on available documentation?
 
-QXB: Write code + comments that load the data in Python using the two different approaches highlighted in this lab:
+Q3B: Write two programs that load the data in Python using the two different approaches highlighted in this lab:
 - Lists and sublists (steps 51-60, or steps 61-69 for loading the file using a for loop)
 - Dictionaries (steps 92-98, and steps 99-100 cover how to deal with a file that does not include a header row)
 
-QXC: What challenges did you encounter for Q9 and Q10? How did you address or solve them? 
+Answer to this question includes program + comments that document process and explain your code.
+
+Q3C: What challenges did you encounter? How did you address or solve them? 
 
 # Delimiters & Escape Characters 
 
@@ -684,7 +684,7 @@ with open('MY-FILE-NAME.csv', 'rt') as f:
 
 ## Application
 
-Q5: Describe the concept of escape characters or quote characters in your own words. Describe a situation in which escape characters would be needed, and how you would address that challenge using Python syntax.
+Q4: Describe the concept of escape characters or quote characters in your own words. Describe a situation in which escape characters would be needed, and how you would address that challenge using Python syntax.
 
 # JavaScript Object Notation
 
@@ -748,7 +748,7 @@ For example, take a look at sample JSON data from Twitter's API:
 }
 ```
 
-<blockquote>Q12: Decipher what we're seeing in the JSON here. What are some of the name/value pairs, and how are they organized in this object?</blockquote>
+<blockquote>Q5: Decipher what we're seeing in the JSON here. What are some of the name/value pairs, and how are they organized in this object?</blockquote>
 
 ## Reading JSON into Python
 
@@ -902,8 +902,10 @@ for item in info:
   print('Attribute', item['x'])
 ```
 
+In this example, we loaded a single string of JSON, which means we use the `loads()` function. When loading a JSON file (or file-like object), we would need to use the `load()` argument.
+
 For more on working with dictionaries in Python:
-- [Elements of Computing I lab](https://github.com/kwaldenphd/python-lab6/blob/master/README.md#working-with-dictionaries)
+- [Elements of Computing I lab](https://github.com/kwaldenphd/python-data-structures#dictionaries)
 - [W3 Schools tutorial](https://www.w3schools.com/python/python_dictionaries.asp)
 
 ## Writing to JSON from Python
@@ -948,31 +950,27 @@ Later in the semester we will talk about how to read JSON data into Python and c
   </tr>
 </table>
 
-QX: Create a string of JSON data and write it to a JSON file. Include code + comments.
+Q6: Create a string of JSON data and write it to a JSON file. Answer to this question includes program + comments that document process and explain your code.
 
-QXA: Navigate to an open data portal and download a JSON file. 
+Q7A: Navigate to an open data portal and download a JSON file. 
 
 Some options that can get you started:
 - [Data.gov](https://www.data.gov/)
 - [City of Chicago Data Portal](https://data.cityofchicago.org/)
 - [City of South Bend Open Data](https://data-southbend.opendata.arcgis.com/)
 
-These open data portals are catalogs of datasets- you will need to explore the websites to identify and then download a specific dataset.
+These open data portals are catalogs of datasets- you will need to explore the websites to identify and then download a specific dataset. Open the data in a spreadsheet program and/or text editor. Describe what are you seeing. How can we start to make sense of this data? What documentation is available?
 
-Open the data in a spreadsheet program and/or text editor.
-
-Describe what are you seeing. How can we start to make sense of this data? What documentation is available?
-
-QXB: Write code + comments that accomplish the following tasks:
+Q7B: Write programs that accomplish the following tasks:
 - Load the JSON data into Python
 - Convert to a Python value
 
 The previous sections of the lab procedure provide sample code and additional considerations for loading a JSON file in Python.
+- NOTE: In the JSON example in the lab, we loaded a single string of JSON, which means we use the `loads()` function. When loading a JSON file (or file-like object), we would need to use the `load()` argument.
 
-- In the JSON example in the lab, we loaded a single string of JSON, which means we use the `json.loads()` function. 
-- When loading a JSON file (or file-like object), we would need to use the `json.load()` argument.
+Answer to this question includes program + comments that document process and explain your code.
 
-QXC: What challenges did you encounter for Q14 and Q15? How did you address or solve them? 
+Q7C: What challenges did you encounter? How did you address or solve them? 
 
 ## How to submit this lab (and show your work)
 
