@@ -1,4 +1,4 @@
-# Structured Data & File Methods in Python
+# Structured Data & File I/O in Python
 
 <a href="http://creativecommons.org/licenses/by-nc/4.0/" rel="license"><img style="border-width: 0;" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" alt="Creative Commons License" /></a>This tutorial was written by Katherine Walden and is licensed under a <a href="http://creativecommons.org/licenses/by-nc/4.0/" rel="license">Creative Commons Attribution-NonCommercial 4.0 International License</a>.
 
@@ -39,19 +39,19 @@ When building this lab, the author consulted the following materials:
 - [How to Submit This Lab (and show your work)](#how-to-submit-this-lab-and-show-your-work)
 - [Lab Notebook Questions](#lab-notebook-questions)
 
-[Click here](https://colab.research.google.com/drive/18YBJg-hvbohdMlfhLVU1TZBHho-YRYqF?usp=sharing) to access this lab procedure as a Jupyter Notebook.
+[Click here](https://colab.research.google.com/drive/1V39jWVaHQUH07xlu8ADqHkrZDnFCWCTC?usp=sharing) to access this lab procedure as a Jupyter Notebook.
 
 ## Key Concepts
 
-[Click here](https://github.com/kwaldenphd/python-structured-data/blob/draft/key-concepts.md) for a full list of key concepts and definitions from this lab.
+[Click here](https://github.com/kwaldenphd/python-structured-data/blob/main/key-concepts.md) for a full list of key concepts and definitions from this lab.
 
 ## Lab Notebook Template
 
-[Click here]() to make a copy of the Replit template for this lab.
+[Click here](https://replit.com/team/eoc-f22/Structured-Data-and-File-IO-in-Python) to make a copy of the Replit template for this lab.
 
 Lab notebook template:
-- [`.py` file](https://drive.google.com/file/d/1Dacp329cBMosmJvJcD10qSavgHpP3rYN/view?usp=sharing)
-- [Jupyter Notebook](https://colab.research.google.com/drive/1sL-GUG-NtBguee6NaYoazgPQmdKxmWpV?usp=sharing)
+- [`.py` file](https://drive.google.com/file/d/1ZlulPt8G57dZSvKgcmoZCF7x4uX5YjcD/view?usp=sharing)
+- [Jupyter Notebook](https://colab.research.google.com/drive/1w6rrEM6I69TIdm-WpSDrEMgMC26bTzdj?usp=sharing)
 
 ## How to submit this lab (and show your work)
 
@@ -981,11 +981,11 @@ What gets submitted as the lab notebook is the `Lab_Notebook_Walden.py` file.
 
 # Lab Notebook Questions
 
-[Click here](https://replit.com/team/eoc-f22/Functions-in-Python) to make a copy of the Replit template for this lab.
+[Click here](https://replit.com/team/eoc-f22/Structured-Data-and-File-IO-in-Python) to make a copy of the Replit template for this lab.
 
-Alternatives:
-- [`.py` template](https://drive.google.com/file/d/1nn0IVlZRSe6oXmhnh5nqNCAKKPQi5t5j/view?usp=sharing) (Google Drive, ND users)
-- [Jupyter Notebook, `.ipynb`](https://colab.research.google.com/drive/1EltssZ7B1PKv8FBQM55yc7AeyDyEi3Ma?usp=sharing) (Google Colab, ND users)
+Lab notebook template:
+- [`.py` file](https://drive.google.com/file/d/1ZlulPt8G57dZSvKgcmoZCF7x4uX5YjcD/view?usp=sharing)
+- [Jupyter Notebook](https://colab.research.google.com/drive/1w6rrEM6I69TIdm-WpSDrEMgMC26bTzdj?usp=sharing)
 
 Q1A: Open the `example.xlsx` file in a text editor. Describe what you see.
 
