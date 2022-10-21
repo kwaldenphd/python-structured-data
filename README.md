@@ -265,7 +265,7 @@ Correct syntax for writing to a file
 # Structured Data
 
 <table>
-<tr><td><p align="center"><img src="https://github.com/kwaldenphd/python-structured-data/blob/draft/images/One_Dimensional_Array.jpg?raw=true" width="500"></p></td><td><p align="center"><img src="https://github.com/kwaldenphd/python-structured-data/blob/draft/images/Associative_Arrays.png?raw=true" width="500"></p></td></tr>
+<tr><td><p align="center"><img src="https://github.com/kwaldenphd/python-structured-data/blob/main/images/One_Dimensional_Array.jpg?raw=true" width="500"></p></td><td><p align="center"><img src="https://github.com/kwaldenphd/python-structured-data/blob/main/images/Associative_Arrays.png?raw=true" width="500"></p></td></tr>
 	<tr><td align="center">Linear Array</td><td align="center">Associative Array</td></tr></table>
 
 In this lab, we're going to look at aspects of `I/O` that have to do with reading and writing files, with a focus on two key data structures:
@@ -278,7 +278,7 @@ We can connect these two types of data structures back to the concepts of linear
 
 ## Delimited Data
 
-<p align="center"><img src="https://github.com/kwaldenphd/python-structured-data/blob/draft/images/table_diagram.png?raw=true" width="1000"></p>
+<p align="center"><img src="https://github.com/kwaldenphd/python-structured-data/blob/main/images/table_diagram.png?raw=true" width="1000"></p>
 
 "A delimited file is a sequential file with column delimiters. Each delimited file is a stream of records, which consists of fields that are ordered by column. Each record contains fields for one row. Within each row, individual fields are separated by column delimiters. All fields must be delimited character strings, non-delimited character strings, or external numeric values. Delimited character strings can contain column delimiters and can also contain character string delimiters when two successive character string delimiters are used to represent one character." (IBM, "[Delimited File Format](https://www.ibm.com/docs/en/db2-for-zos/11?topic=utilities-delimited-file-format)", 5 February 2022)
 
@@ -682,7 +682,7 @@ Q4: Describe the concept of escape characters or quote characters in your own wo
 
 # JavaScript Object Notation
 
-<p align="center"><img src="https://github.com/kwaldenphd/python-structured-data/blob/draft/images/JSONSample.jpg?raw=true" width="500"></p>
+<p align="center"><img src="https://github.com/kwaldenphd/python-structured-data/blob/main/images/JSONSample.jpg?raw=true" width="500"></p>
 
 JavaScript Object Notation (JSON) is as popular way to format data as a single (purportedly human-readable) string. JavaScript programs use JSON data structures, but we can frequently encounter JSON data outside of a JavaScript environment.
 
