@@ -938,13 +938,6 @@ Later in the semester we will talk about how to read JSON data into Python and c
 
 ## Application
 
-<table>
- <tr><td>
-<img src="https://elearn.southampton.ac.uk/wp-content/blogs.dir/sites/64/2021/04/PanPan.png" alt="Panopto logo" width="50"/></td>
-  <td><a href="https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=39ca985f-224f-4e6d-9f8a-add3016c37a8">Lab Notebook Questions 14-16</a></td>
-  </tr>
-</table>
-
 Q6: Create a string of JSON data and write it to a JSON file. Answer to this question includes program + comments that document process and explain your code.
 
 Q7A: Navigate to an open data portal and download a JSON file. 
