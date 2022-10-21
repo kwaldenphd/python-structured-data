@@ -584,8 +584,8 @@ Open the data in a spreadsheet program and/or text editor.
 - How can we start to make sense of the data based on available documentation?
 
 Q3B: Write two programs that load the data in Python using the two different approaches highlighted in this lab:
-- Lists and sublists (steps 51-60, or steps 61-69 for loading the file using a for loop)
-- Dictionaries (steps 92-98, and steps 99-100 cover how to deal with a file that does not include a header row)
+- Lists and sublists
+- Dictionaries
 
 Answer to this question includes program + comments that document process and explain your code.
 
@@ -1012,8 +1012,8 @@ Open the data in a spreadsheet program and/or text editor.
 - How can we start to make sense of the data based on available documentation?
 
 Q3B: Write two programs that load the data in Python using the two different approaches highlighted in this lab:
-- Lists and sublists (steps 51-60, or steps 61-69 for loading the file using a for loop)
-- Dictionaries (steps 92-98, and steps 99-100 cover how to deal with a file that does not include a header row)
+- Lists and sublists
+- Dictionaries
 
 Answer to this question includes program + comments that document process and explain your code.
 
@@ -1022,7 +1022,6 @@ Q3C: What challenges did you encounter? How did you address or solve them?
 Q4: Describe the concept of escape characters or quote characters in your own words. Describe a situation in which escape characters would be needed, and how you would address that challenge using Python syntax.
 
 Q5: Decipher what we're seeing in the JSON here. What are some of the name/value pairs, and how are they organized in this object?
-
 
 ```JSON
 {
