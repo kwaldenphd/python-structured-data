@@ -278,7 +278,7 @@ We can connect these two types of data structures back to the concepts of linear
 
 ## Delimited Data
 
-<p align="center"><img src="https://github.com/kwaldenphd/python-structured-data/blob/draft/images/table_diagram.png?raw=true" width="100"></p>
+<p align="center"><img src="https://github.com/kwaldenphd/python-structured-data/blob/draft/images/table_diagram.png?raw=true" width="1000"></p>
 
 "A delimited file is a sequential file with column delimiters. Each delimited file is a stream of records, which consists of fields that are ordered by column. Each record contains fields for one row. Within each row, individual fields are separated by column delimiters. All fields must be delimited character strings, non-delimited character strings, or external numeric values. Delimited character strings can contain column delimiters and can also contain character string delimiters when two successive character string delimiters are used to represent one character." (IBM, "[Delimited File Format](https://www.ibm.com/docs/en/db2-for-zos/11?topic=utilities-delimited-file-format)", 5 February 2022)
 
