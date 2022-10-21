@@ -265,7 +265,8 @@ Correct syntax for writing to a file
 # Structured Data
 
 <table>
-<tr><td><p align="center"><img src="https://github.com/kwaldenphd/python-structured-data/blob/draft/images/One_Dimensional_Array.jpg?raw=true" width="500"></p></td><td><p align="center"><img src="https://github.com/kwaldenphd/python-structured-data/blob/draft/images/Associative_Arrays.png?raw=true" width="500"></p></td></tr></table>
+<tr><td><p align="center"><img src="https://github.com/kwaldenphd/python-structured-data/blob/draft/images/One_Dimensional_Array.jpg?raw=true" width="500"></p></td><td><p align="center"><img src="https://github.com/kwaldenphd/python-structured-data/blob/draft/images/Associative_Arrays.png?raw=true" width="500"></p></td></tr>
+	<tr><td align="center">Linear Array</td><td align="center">Associative Array</td></tr></table>
 
 In this lab, we're going to look at aspects of `I/O` that have to do with reading and writing files, with a focus on two key data structures:
 - Tabular data, or data stored as a table consisting of rows and columns
@@ -993,3 +994,94 @@ Alternatives:
 - [`.py` template](https://drive.google.com/file/d/1nn0IVlZRSe6oXmhnh5nqNCAKKPQi5t5j/view?usp=sharing) (Google Drive, ND users)
 - [Jupyter Notebook, `.ipynb`](https://colab.research.google.com/drive/1EltssZ7B1PKv8FBQM55yc7AeyDyEi3Ma?usp=sharing) (Google Colab, ND users)
 
+Q1A: Open the `example.xlsx` file in a text editor. Describe what you see.
+
+Q1B: How does your answer to Q1A compare to what you see when you open the `example.csv` file in a text editor?
+
+Q1C: Open the `example.xlsx` file in a spreadsheet program. Save the file as a `.csv` format. What happens? Or what happens when you open the newly-created `.csv` file in a spreadsheet program or text editor?
+
+Q2A: Create a small list data structure and write it to a CSV file. Answer to this question includes program + comments that document process and explain your code.
+
+Q2B: Create a small dictionary and write it to a CSV file. Answer to this question includes program + comments that document process and explain your code.
+
+Q3A: Navigate to an open data portal and download a `.csv` file. 
+
+A few places to start:
+- [Data.gov](https://www.data.gov/)
+- [City of Chicago Data Portal](https://data.cityofchicago.org/)
+- [City of South Bend Open Data](https://data-southbend.opendata.arcgis.com/)
+- [Sports Reference](https://www.sports-reference.com/)
+
+These open data portals are catalogs of datasets- you will need to explore the websites to identify and then download a specific dataset.
+
+Open the data in a spreadsheet program and/or text editor. 
+- What do you see?
+- How can we start to make sense of the data based on available documentation?
+
+Q3B: Write two programs that load the data in Python using the two different approaches highlighted in this lab:
+- Lists and sublists (steps 51-60, or steps 61-69 for loading the file using a for loop)
+- Dictionaries (steps 92-98, and steps 99-100 cover how to deal with a file that does not include a header row)
+
+Answer to this question includes program + comments that document process and explain your code.
+
+Q3C: What challenges did you encounter? How did you address or solve them? 
+
+Q4: Describe the concept of escape characters or quote characters in your own words. Describe a situation in which escape characters would be needed, and how you would address that challenge using Python syntax.
+
+Q5: Decipher what we're seeing in the JSON here. What are some of the name/value pairs, and how are they organized in this object?
+
+
+```JSON
+{
+  "created_at": "Thu Apr 06 15:24:15 +0000 2017",
+  "id_str": "850006245121695744",
+  "text": "1\/ Today we\u2019re sharing our vision for the future of the Twitter API platform!\nhttps:\/\/t.co\/XweGngmxlP",
+  "user": {
+    "id": 2244994945,
+    "name": "Twitter Dev",
+    "screen_name": "TwitterDev",
+    "location": "Internet",
+    "url": "https:\/\/dev.twitter.com\/",
+    "description": "Your official source for Twitter Platform news, updates & events. Need technical help? Visit https:\/\/twittercommunity.com\/ \u2328\ufe0f #TapIntoTwitter"
+  },
+  "place": {   
+  },
+  "entities": {
+    "hashtags": [      
+    ],
+    "urls": [
+      {
+        "url": "https:\/\/t.co\/XweGngmxlP",
+        "unwound": {
+          "url": "https:\/\/cards.twitter.com\/cards\/18ce53wgo4h\/3xo1c",
+          "title": "Building the Future of the Twitter API Platform"
+        }
+      }
+    ],
+    "user_mentions": [     
+    ]
+  }
+}
+```
+
+Q6: Create a string of JSON data and write it to a JSON file. Answer to this question includes program + comments that document process and explain your code.
+
+Q7A: Navigate to an open data portal and download a JSON file. 
+
+Some options that can get you started:
+- [Data.gov](https://www.data.gov/)
+- [City of Chicago Data Portal](https://data.cityofchicago.org/)
+- [City of South Bend Open Data](https://data-southbend.opendata.arcgis.com/)
+
+These open data portals are catalogs of datasets- you will need to explore the websites to identify and then download a specific dataset. Open the data in a spreadsheet program and/or text editor. Describe what are you seeing. How can we start to make sense of this data? What documentation is available?
+
+Q7B: Write programs that accomplish the following tasks:
+- Load the JSON data into Python
+- Convert to a Python value
+
+The previous sections of the lab procedure provide sample code and additional considerations for loading a JSON file in Python.
+- NOTE: In the JSON example in the lab, we loaded a single string of JSON, which means we use the `loads()` function. When loading a JSON file (or file-like object), we would need to use the `load()` argument.
+
+Answer to this question includes program + comments that document process and explain your code.
+
+Q7C: What challenges did you encounter? How did you address or solve them? 
