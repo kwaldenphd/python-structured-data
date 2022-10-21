@@ -109,6 +109,7 @@ To break that down:
 
 We will be focusing on a few key Python functions for working with files.
 - `open()`
+- `read()`
 - `write()`
 
 ### `open()`
