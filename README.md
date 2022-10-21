@@ -729,7 +729,7 @@ with open('MY-FILE-NAME.csv', 'rt') as f:
 
 ## Application
 
-Q4: Modify the code provided below to load the example.txt file provided in this lab.
+Q4: Modify the code provided below to load the example.txt file provided in this lab. Answer to this question includes program + comments that document process and explain your code.
 
 ```Python
 # import csv module
@@ -1080,7 +1080,7 @@ Answer to this question includes program + comments that document process and ex
 
 Q3C: What challenges did you encounter? How did you address or solve them? 
 
-Q4: Modify the code provided below to load the example.txt file provided in this lab.
+Q4: Modify the code provided below to load the example.txt file provided in this lab. Answer to this question includes program + comments that document process and explain your code.
 
 ```Python
 # import csv module
