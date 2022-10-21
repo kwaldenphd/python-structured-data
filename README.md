@@ -594,6 +594,56 @@ Q3C: What challenges did you encounter? How did you address or solve them?
 
 # Delimiters & Escape Characters 
 
+## Other delimiters
+
+What happens if you need to load in structured data that uses another delimiter, not a comma? Remember when we opened a `.csv` file in a plain-text editor, the value fields are separated by a comma.
+
+But commas are not the only possible delimiter. Tabs, spaces, pipes, or other characters can be used to separate or delimit fields in a dataset.
+
+<table>
+	<tr>
+		<td>Delimiter Name</td>
+		<td>Symbol</td>
+		<td>Python Expression</td>
+	</tr>
+	<tr>
+		<td>Tab</td>
+		<td><code>\t</code></td>
+		<td><code>delimiter = "\t"</code></td>
+	</tr>
+	<tr>
+		<td>Space</td>
+		<td><code> </code></td>
+		<td><code>delimiter = " "</code></td>
+	</tr>
+	<tr>
+		<td>Pipe</td>
+		<td><code>|</code></td>
+		<td><code>delimiter = "|"</code></td>
+	</tr>
+	</table>
+
+The `csv` module includes a range of formatting parameters, known as a `Dialect` class. The `Dialect` class includes a range of methods you can use to specify alternate delimiters and (as we'll discover shortly), handle situations like special characters, line breaks, etc.
+
+The `delimiter` attribute in the `Dialect` class lets us specify what delimiter is being used in the data we want to load. An example we'll come back to in application questions for this section of the lab:
+
+```Python
+# import csv module
+import csv
+
+# load tab-separated value file
+tsv_file = open(FILE NAME)
+
+# create a reader object and specify the new delimiter
+read_tsv = csv.reader(tsv_file, delimiter=SPECIFY DELIMITER HERE)
+
+# use a for loop to read in the data
+for row in read_tsv:
+  print(row)
+```
+
+## Escape Characters
+
 But what happens if the values in your dataset include the same character that's being used as a delimiter? For example, let's say you have address data in the following structure:
 
 Name | Age | Address
@@ -679,7 +729,24 @@ with open('MY-FILE-NAME.csv', 'rt') as f:
 
 ## Application
 
-Q4: Describe the concept of escape characters or quote characters in your own words. Describe a situation in which escape characters would be needed, and how you would address that challenge using Python syntax.
+Q4: Modify the code provided below to load the example.txt file provided in this lab.
+
+```Python
+# import csv module
+import csv
+
+# load tab-separated value file
+tsv_file = open(FILE NAME)
+
+# create a reader object and specify the new delimiter
+read_tsv = csv.reader(tsv_file, delimiter=SPECIFY DELIMITER HERE)
+
+# use a for loop to read in the data
+for row in read_tsv:
+  print(row)
+```
+
+Q5: Describe the concept of escape characters or quote characters in your own words. Describe a situation in which escape characters would be needed, and how you would address that challenge using Python syntax.
 
 # JavaScript Object Notation
 
@@ -743,7 +810,7 @@ For example, take a look at sample JSON data from Twitter's API:
 }
 ```
 
-<blockquote>Q5: Decipher what we're seeing in the JSON here. What are some of the name/value pairs, and how are they organized in this object?</blockquote>
+<blockquote>Q6: Decipher what we're seeing in the JSON here. What are some of the name/value pairs, and how are they organized in this object?</blockquote>
 
 ## Reading JSON into Python
 
@@ -938,9 +1005,9 @@ Later in the semester we will talk about how to read JSON data into Python and c
 
 ## Application
 
-Q6: Create a string of JSON data and write it to a JSON file. Answer to this question includes program + comments that document process and explain your code.
+Q7: Create a string of JSON data and write it to a JSON file. Answer to this question includes program + comments that document process and explain your code.
 
-Q7A: Navigate to an open data portal and download a JSON file. 
+Q8A: Navigate to an open data portal and download a JSON file. 
 
 Some options that can get you started:
 - [Data.gov](https://www.data.gov/)
@@ -949,7 +1016,7 @@ Some options that can get you started:
 
 These open data portals are catalogs of datasets- you will need to explore the websites to identify and then download a specific dataset. Open the data in a spreadsheet program and/or text editor. Describe what are you seeing. How can we start to make sense of this data? What documentation is available?
 
-Q7B: Write programs that accomplish the following tasks:
+Q8B: Write programs that accomplish the following tasks:
 - Load the JSON data into Python
 - Convert to a Python value
 
@@ -958,7 +1025,7 @@ The previous sections of the lab procedure provide sample code and additional co
 
 Answer to this question includes program + comments that document process and explain your code.
 
-Q7C: What challenges did you encounter? How did you address or solve them? 
+Q8C: What challenges did you encounter? How did you address or solve them? 
 
 ## How to submit this lab (and show your work)
 
@@ -1013,9 +1080,26 @@ Answer to this question includes program + comments that document process and ex
 
 Q3C: What challenges did you encounter? How did you address or solve them? 
 
-Q4: Describe the concept of escape characters or quote characters in your own words. Describe a situation in which escape characters would be needed, and how you would address that challenge using Python syntax.
+Q4: Modify the code provided below to load the example.txt file provided in this lab.
 
-Q5: Decipher what we're seeing in the JSON here. What are some of the name/value pairs, and how are they organized in this object?
+```Python
+# import csv module
+import csv
+
+# load tab-separated value file
+tsv_file = open(FILE NAME)
+
+# create a reader object and specify the new delimiter
+read_tsv = csv.reader(tsv_file, delimiter=SPECIFY DELIMITER HERE)
+
+# use a for loop to read in the data
+for row in read_tsv:
+  print(row)
+```
+
+Q5: Describe the concept of escape characters or quote characters in your own words. Describe a situation in which escape characters would be needed, and how you would address that challenge using Python syntax.
+
+Q6: Decipher what we're seeing in the JSON here. What are some of the name/value pairs, and how are they organized in this object?
 
 ```JSON
 {
@@ -1050,9 +1134,9 @@ Q5: Decipher what we're seeing in the JSON here. What are some of the name/value
 }
 ```
 
-Q6: Create a string of JSON data and write it to a JSON file. Answer to this question includes program + comments that document process and explain your code.
+Q7: Create a string of JSON data and write it to a JSON file. Answer to this question includes program + comments that document process and explain your code.
 
-Q7A: Navigate to an open data portal and download a JSON file. 
+Q8A: Navigate to an open data portal and download a JSON file. 
 
 Some options that can get you started:
 - [Data.gov](https://www.data.gov/)
@@ -1061,7 +1145,7 @@ Some options that can get you started:
 
 These open data portals are catalogs of datasets- you will need to explore the websites to identify and then download a specific dataset. Open the data in a spreadsheet program and/or text editor. Describe what are you seeing. How can we start to make sense of this data? What documentation is available?
 
-Q7B: Write programs that accomplish the following tasks:
+Q8B: Write programs that accomplish the following tasks:
 - Load the JSON data into Python
 - Convert to a Python value
 
@@ -1070,4 +1154,4 @@ The previous sections of the lab procedure provide sample code and additional co
 
 Answer to this question includes program + comments that document process and explain your code.
 
-Q7C: What challenges did you encounter? How did you address or solve them? 
+Q8C: What challenges did you encounter? How did you address or solve them? 
