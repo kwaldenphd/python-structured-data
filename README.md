@@ -265,7 +265,7 @@ Correct syntax for writing to a file
 # Structured Data
 
 <table>
-<tr><td>LINEAR ARRAY IMAGE</td><td>ASSOCIATIVE ARRAY IMAGE</td></tr></table>
+<tr><td><p align="center"><img src="https://github.com/kwaldenphd/python-structured-data/blob/draft/images/One_Dimensional_Array.jpg?raw=true" width="500"></p></td><td><p align="center"><img src="https://github.com/kwaldenphd/python-structured-data/blob/draft/images/Associative_Arrays.png?raw=true" width="500"></p></td></tr></table>
 
 In this lab, we're going to look at aspects of `I/O` that have to do with reading and writing files, with a focus on two key data structures:
 - Tabular data, or data stored as a table consisting of rows and columns
@@ -277,7 +277,7 @@ We can connect these two types of data structures back to the concepts of linear
 
 ## Delimited Data
 
-DIAGRAM
+<p align="center"><img src="https://github.com/kwaldenphd/python-structured-data/blob/draft/images/table_diagram.png?raw=true" width="100"></p>
 
 "A delimited file is a sequential file with column delimiters. Each delimited file is a stream of records, which consists of fields that are ordered by column. Each record contains fields for one row. Within each row, individual fields are separated by column delimiters. All fields must be delimited character strings, non-delimited character strings, or external numeric values. Delimited character strings can contain column delimiters and can also contain character string delimiters when two successive character string delimiters are used to represent one character." (IBM, "[Delimited File Format](https://www.ibm.com/docs/en/db2-for-zos/11?topic=utilities-delimited-file-format)", 5 February 2022)
 
@@ -688,13 +688,13 @@ Q4: Describe the concept of escape characters or quote characters in your own wo
 
 # JavaScript Object Notation
 
-DIAGRAM
+<p align="center"><img src="https://github.com/kwaldenphd/python-structured-data/blob/draft/images/JSONSample.jpg?raw=true" width="500"></p>
 
 JavaScript Object Notation (JSON) is as popular way to format data as a single (purportedly human-readable) string. JavaScript programs use JSON data structures, but we can frequently encounter JSON data outside of a JavaScript environment.
 
 Websites that make machine-readable data available via an application programming interface (API- more on these in an upcoming lab) often provide that data in a JSON format. Examples include Twitter, Wikipedia, Data.gov, etc. Most live data connections available via an API are provided in a JSON format.
 
-JSON structure can vary WIDELY depending on the specific data provider, but this lab will cover some basic elements of working with JSON in Python. The easiest way to think of JSON data as a plain-text data format made up of something like key-value pairs, like we've encountered previously in working with dictionaries (as a type of associative array).
+JSON structures can vary WIDELY depending on the specific data provider, but this lab will cover some basic elements of working with JSON in Python. The easiest way to think of JSON data as a plain-text data format made up of something like key-value pairs, like we've encountered previously in working with dictionaries (as a type of associative array).
 
 Example JSON string: `stringOfJsonData = '{"name": Zophie", "isCat": true, "miceCaught": 0, "felineIQ": null}'`. From looking at the example string, we can see field names or keys (`name`, `isCat`, `miceCaught`, `felineIQ`) and values for those fields.
 
