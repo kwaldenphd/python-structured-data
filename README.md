@@ -20,7 +20,7 @@ This lab provides an overview of fundamental programming concepts in the areas o
 <table>
  <tr><td>
 <img src="https://elearn.southampton.ac.uk/wp-content/blogs.dir/sites/64/2021/04/PanPan.png" alt="Panopto logo" width="50"/></td>
-<td><a href="https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?pid=4c2b0eb8-f898-40be-ac96-add30171600e">Lecture/live coding playlist</a></td>
+<td><a href="https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?pid=d6f4dc20-0976-42ef-b453-af36012ed588">Lecture/live coding playlist</a></td>
   </tr>
   </table>
 
@@ -76,7 +76,7 @@ Example:
 <table>
  <tr><td>
 <img src="https://elearn.southampton.ac.uk/wp-content/blogs.dir/sites/64/2021/04/PanPan.png" alt="Panopto logo" width="50"/></td>
-<td><a href="https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?pid=4c2b0eb8-f898-40be-ac96-add30171600e">Lecture/live coding playlist</a></td>
+<td><a href="https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?pid=d6f4dc20-0976-42ef-b453-af36012ed588">Lecture/live coding playlist</a></td>
   </tr>
   </table>
 
