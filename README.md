@@ -10,6 +10,20 @@ This lab provides an overview of fundamental programming concepts in the areas o
 - Working with delimited and name-value data structures in the Python programming environment, with a focus on the `csv` + `json` modules and `list` + `dictionary` data structures
 - File I/O and file methods/access modes, with a focus on Python workflows
 
+<table>
+ <tr><td>
+<img src="https://elearn.southampton.ac.uk/wp-content/blogs.dir/sites/64/2021/04/PanPan.png" alt="Panopto logo" width="50"/></td>
+  <td><a href="https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=304f6392-3cee-4ba6-8da5-af36013a4191">Lab overview</a></td>
+  </tr>
+  </table>
+  
+<table>
+ <tr><td>
+<img src="https://elearn.southampton.ac.uk/wp-content/blogs.dir/sites/64/2021/04/PanPan.png" alt="Panopto logo" width="50"/></td>
+<td><a href="https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?pid=4c2b0eb8-f898-40be-ac96-add30171600e">Lecture/live coding playlist</a></td>
+  </tr>
+  </table>
+
 ## Acknowledgements
 
 Peer review and editing on the CSV portion of this lab was provided by Spring 2021 graduate teaching assistant [Aidan Draper](https://github.com/adraper2).
@@ -23,6 +37,7 @@ When building this lab, the author consulted the following materials:
 - Wes McKinney, Chapter 6 "Data Loading, Storage, and File Formats" from [*Python for Data Analysis*](https://www.oreilly.com/library/view/python-for-data/9781491957653/) (O'Reilly, 2018): 169-193
 
 # Table of Contents
+- [Lecture & Live Coding](#lecture--live-coding)
 - [Key Terms](#key-terms)
 - [Lab Notebook Template](#lab-notebook-template)
 - [Data](#data)
@@ -40,6 +55,30 @@ When building this lab, the author consulted the following materials:
 - [Lab Notebook Questions](#lab-notebook-questions)
 
 [Click here](https://colab.research.google.com/drive/1V39jWVaHQUH07xlu8ADqHkrZDnFCWCTC?usp=sharing) to access this lab procedure as a Jupyter Notebook.
+
+# Lecture & Live Coding
+
+Throughout this lab, you will see a Panopto icon at the start of select sections.
+
+This icon indicates there is lecture/live coding asynchronous content that accompanies this section of the lab. 
+
+You can click the link in the figure caption to access these materials (ND users only).
+
+Example:
+
+<table>
+ <tr><td>
+<img src="https://elearn.southampton.ac.uk/wp-content/blogs.dir/sites/64/2021/04/PanPan.png" alt="Panopto logo" width="50"/></td>
+  <td><a href="https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=304f6392-3cee-4ba6-8da5-af36013a4191">Lab overview</a></td>
+  </tr>
+  </table>
+  
+<table>
+ <tr><td>
+<img src="https://elearn.southampton.ac.uk/wp-content/blogs.dir/sites/64/2021/04/PanPan.png" alt="Panopto logo" width="50"/></td>
+<td><a href="https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?pid=4c2b0eb8-f898-40be-ac96-add30171600e">Lecture/live coding playlist</a></td>
+  </tr>
+  </table>
 
 ## Key Concepts
 
@@ -80,6 +119,13 @@ You can also access them [via Google Drive](https://drive.google.com/drive/folde
 
 # Overview
 
+<table>
+ <tr><td>
+<img src="https://elearn.southampton.ac.uk/wp-content/blogs.dir/sites/64/2021/04/PanPan.png" alt="Panopto logo" width="50"/></td>
+  <td><a href="https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=304f6392-3cee-4ba6-8da5-af36013a4191">Lab overview</a></td>
+  </tr>
+  </table>
+
 In programming languages and computing more broadly, `I/O` stands for `Input` and `Output`. 
 
 We've seen `I/O` at work in previous labs, where we provided inputs to the computer (using a CPU simulator or working at the terminal), a task or operation was performed, and there was an endpoint or output for that process. A concrete example would be the assembly language program we wrote for Lab #2: How Comptuters Work (Hardware). We wrote assembly language instructions which served as inputs for the fetch-execute cycle, and the final output for the program was a data value stored in main memory.
@@ -91,6 +137,13 @@ In this lab, we're going to look at aspects of `I/O` that have to do with readin
 - Data stored as name-value pairs, specifically in the JavaScript Object Notation (`.json`) format
 
 # File I/O & Access Modes
+
+<table>
+ <tr><td>
+<img src="https://elearn.southampton.ac.uk/wp-content/blogs.dir/sites/64/2021/04/PanPan.png" alt="Panopto logo" width="50"/></td>
+  <td><a href="https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=73668810-b5ed-4fc2-b606-af36012da392">File I/O in Python</a></td>
+  </tr>
+  </table>
 
 Before we start loading data files in Python, let's talk more about how programming languages handle creating, reading, and writing files.
 
@@ -279,6 +332,13 @@ We can connect these two types of data structures back to the concepts of linear
 
 ## Delimited Data
 
+<table>
+ <tr><td>
+<img src="https://elearn.southampton.ac.uk/wp-content/blogs.dir/sites/64/2021/04/PanPan.png" alt="Panopto logo" width="50"/></td>
+  <td><a href="https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=e87a9417-2ac4-47ed-ab74-af36012dc605">CSV Files</a></td>
+  </tr>
+  </table>
+
 <p align="center"><img src="https://github.com/kwaldenphd/python-structured-data/blob/main/images/table_diagram.png?raw=true" width="1000"></p>
 
 "A delimited file is a sequential file with column delimiters. Each delimited file is a stream of records, which consists of fields that are ordered by column. Each record contains fields for one row. Within each row, individual fields are separated by column delimiters. All fields must be delimited character strings, non-delimited character strings, or external numeric values. Delimited character strings can contain column delimiters and can also contain character string delimiters when two successive character string delimiters are used to represent one character." (IBM, "[Delimited File Format](https://www.ibm.com/docs/en/db2-for-zos/11?topic=utilities-delimited-file-format)", 5 February 2022)
@@ -305,6 +365,13 @@ Q1B: How does your answer to Q1A compare to what you see when you open the `exam
 Q1C: Open the `example.xlsx` file in a spreadsheet program. Save the file as a `.csv` format. What happens? Or what happens when you open the newly-created `.csv` file in a spreadsheet program or text editor?
 
 ### `.csv` Files in Python
+
+<table>
+ <tr><td>
+<img src="https://elearn.southampton.ac.uk/wp-content/blogs.dir/sites/64/2021/04/PanPan.png" alt="Panopto logo" width="50"/></td>
+  <td><a href="https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=daa7977b-0124-4031-bd4c-af36012de8a0">Reading a CSV File into Python</a></td>
+  </tr>
+  </table>
 
 To recap: `CSV` stands for comma-separated values, and `CSV` files are the plain-text, machine-readable file type for tabular data (table data, or data in a spreadsheet structure)
 
@@ -347,6 +414,13 @@ import csv
 <blockquote>Remember Python includes modules, packages, and libraries we can import and use in our programs. A module is a Python file that typically includes specialized functions and variables. Modules typically have <code>.py</code> file extensions. A single or simple directory of modules is called a package. Packages are typically a simple directory with multiple modules.</blockquote>
 
 #### `open` & `write`
+
+<table>
+ <tr><td>
+<img src="https://elearn.southampton.ac.uk/wp-content/blogs.dir/sites/64/2021/04/PanPan.png" alt="Panopto logo" width="50"/></td>
+  <td><a href="https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=8fb9b7e3-5ed0-42d0-bfc3-af36012e4924">Writing to a CSV File into Python</a></td>
+  </tr>
+  </table>
 
 We can create a file using the `open()` function covered in a previous section of the lab.
 
@@ -406,6 +480,13 @@ f.close()
 Check out `new_file.csv` to see the newly-created file with rows of data.
 
 #### `read`
+
+<table>
+ <tr><td>
+<img src="https://elearn.southampton.ac.uk/wp-content/blogs.dir/sites/64/2021/04/PanPan.png" alt="Panopto logo" width="50"/></td>
+  <td><a href="https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=daa7977b-0124-4031-bd4c-af36012de8a0">Reading a CSV File into Python</a></td>
+  </tr>
+  </table>
 
 We'll also use the `csv` module to read or load an existing `.csv` file into Python. The `csv` module allows us to create a `reader` object that iterates over lines in a `.csv` file.
 
@@ -505,6 +586,13 @@ for row in exampleDictReader2:
 
 #### `write`
 
+<table>
+ <tr><td>
+<img src="https://elearn.southampton.ac.uk/wp-content/blogs.dir/sites/64/2021/04/PanPan.png" alt="Panopto logo" width="50"/></td>
+  <td><a href="https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=8fb9b7e3-5ed0-42d0-bfc3-af36012e4924">Writing to a CSV File into Python</a></td>
+  </tr>
+  </table>
+
 To write data to a `.csv` file in Python, we can create a `writer` object using the `csv.writer()` function to write data to a `.csv` file.
 
 ```Python
@@ -570,6 +658,13 @@ Q2A: Create a small list data structure and write it to a CSV file. Answer to th
 
 Q2B: Create a small dictionary and write it to a CSV file. Answer to this question includes program + comments that document process and explain your code.
 
+<table>
+ <tr><td>
+<img src="https://elearn.southampton.ac.uk/wp-content/blogs.dir/sites/64/2021/04/PanPan.png" alt="Panopto logo" width="50"/></td>
+  <td><a href="https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=75282aad-8ad0-4b99-be00-af36012e6021">Lab Notebook Question 3</a></td>
+  </tr>
+  </table>
+
 Q3A: Navigate to an open data portal and download a `.csv` file. 
 
 A few places to start:
@@ -593,6 +688,13 @@ Answer to this question includes program + comments that document process and ex
 Q3C: What challenges did you encounter? How did you address or solve them? 
 
 # Delimiters & Escape Characters 
+
+<table>
+ <tr><td>
+<img src="https://elearn.southampton.ac.uk/wp-content/blogs.dir/sites/64/2021/04/PanPan.png" alt="Panopto logo" width="50"/></td>
+  <td><a href="https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=7a0e11d5-7d94-407f-88bf-af36012e2496">Delimiters & Escape Characters</a></td>
+  </tr>
+  </table>
 
 ## Other delimiters
 
@@ -749,6 +851,13 @@ for row in read_tsv:
 Q5: Describe the concept of escape characters or quote characters in your own words. Describe a situation in which escape characters would be needed, and how you would address that challenge using Python syntax.
 
 # JavaScript Object Notation
+
+<table>
+ <tr><td>
+<img src="https://elearn.southampton.ac.uk/wp-content/blogs.dir/sites/64/2021/04/PanPan.png" alt="Panopto logo" width="50"/></td>
+  <td><a href="https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=ce1a1c2b-8fcb-4901-9bb5-af36012e81fe">JavaScript Object Notation Files</a></td>
+  </tr>
+  </table>
 
 <p align="center"><img src="https://github.com/kwaldenphd/python-structured-data/blob/main/images/JSONSample.jpg?raw=true" width="500"></p>
 
@@ -1006,6 +1115,13 @@ Later in the semester we will talk about how to read JSON data into Python and c
 ## Application
 
 Q7: Create a string of JSON data and write it to a JSON file. Answer to this question includes program + comments that document process and explain your code.
+
+<table>
+ <tr><td>
+<img src="https://elearn.southampton.ac.uk/wp-content/blogs.dir/sites/64/2021/04/PanPan.png" alt="Panopto logo" width="50"/></td>
+  <td><a href="https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=f8dbe6b1-eeef-4703-a6a9-af36012ea21d">Lab Notebook Question 8</a></td>
+  </tr>
+  </table>
 
 Q8A: Navigate to an open data portal and download a JSON file. 
 
