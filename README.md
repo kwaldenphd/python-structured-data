@@ -4,7 +4,7 @@
 
 ## Lab Overview & Goals
 
-This lab provides an overview of fundamental programming concepts in the areas of file I/O and working with structured data, with a focus on Python syntax. Topics covered include:
+This first part of this lab provides an overview of fundamental programming concepts in the areas of file I/O and working with structured data, with a focus on Python syntax. Topics covered include:
 - Delimited (`.csv`, `.tsv`) and name-value (`.json`, `.xml`) data structures
 - Escape characters in relation to delimited data structures
 - Working with delimited and name-value data structures in the Python programming environment, with a focus on the `csv` + `json` modules and `list` + `dictionary` data structures
@@ -23,6 +23,17 @@ This lab provides an overview of fundamental programming concepts in the areas o
 <td><a href="https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?pid=d6f4dc20-0976-42ef-b453-af36012ed588">Lecture/live coding playlist</a></td>
   </tr>
   </table>
+
+This second part of this lab covers the core components of `pandas`, including `Series` and `DataFrame` objects. It covers how to manually create and interact with `Series` and `DataFrame` objects in the Python programming environment. It covers loading a structured data file (CSV and JSON) as a `DataFrame`, and sorting, selecting, and filtering the resulting `DataFrame`. The lab also covers common data parsing and wrangling challenges like duplicate entries and missing data.
+
+By the end of this lab, students will be able to;
+- Understand the basic components of `Series` and `DataFrame` objects in `pandas`
+- Manually create `Series` and `DataFrame` objects in Python using `pandas`
+- Load a structured data file as a `DataFrame` in Python using `pandas`
+- Interact with a `DataFrame` using sorting, selecting, and filtering operations
+- Remove duplicate rows from a `DataFrame`
+- Understand how to approach common `DataFrame` parsing and loading errors using `pandas`
+- Understand the basic components of how to handle missing values in a `DataFrame`
 
 ## Acknowledgements
 
@@ -1765,58 +1776,11 @@ If working in Google Colaboratory, submit the link to your notebook (checking sh
 
 LAB NOTEBOOK TEMPLATE
 
-Q1A: Open the `example.xlsx` file in a text editor. Describe what you see.
+Q1A: Create a small list data structure and write it to a CSV file. Answer to this question includes program + comments that document process and explain your code.
 
-Q1B: How does your answer to Q1A compare to what you see when you open the `example.csv` file in a text editor?
+Q1B: Create a small dictionary and write it to a CSV file. Answer to this question includes program + comments that document process and explain your code.
 
-Q1C: Open the `example.xlsx` file in a spreadsheet program. Save the file as a `.csv` format. What happens? Or what happens when you open the newly-created `.csv` file in a spreadsheet program or text editor?
-
-Q2A: Create a small list data structure and write it to a CSV file. Answer to this question includes program + comments that document process and explain your code.
-
-Q2B: Create a small dictionary and write it to a CSV file. Answer to this question includes program + comments that document process and explain your code.
-
-Q3A: Navigate to an open data portal and download a `.csv` file. 
-
-A few places to start:
-- [Data.gov](https://www.data.gov/)
-- [City of Chicago Data Portal](https://data.cityofchicago.org/)
-- [City of South Bend Open Data](https://data-southbend.opendata.arcgis.com/)
-- [Sports Reference](https://www.sports-reference.com/)
-
-These open data portals are catalogs of datasets- you will need to explore the websites to identify and then download a specific dataset.
-
-Open the data in a spreadsheet program and/or text editor. 
-- What do you see?
-- How can we start to make sense of the data based on available documentation?
-
-Q3B: Write two programs that load the data in Python using the two different approaches highlighted in this lab:
-- Lists and sublists
-- Dictionaries
-
-Answer to this question includes program + comments that document process and explain your code.
-
-Q3C: What challenges did you encounter? How did you address or solve them? 
-
-Q4: Modify the code provided below to load the example.txt file provided in this lab. Answer to this question includes program + comments that document process and explain your code.
-
-```Python
-# import csv module
-import csv
-
-# load tab-separated value file
-tsv_file = open(FILE NAME)
-
-# create a reader object and specify the new delimiter
-read_tsv = csv.reader(tsv_file, delimiter=SPECIFY DELIMITER HERE)
-
-# use a for loop to read in the data
-for row in read_tsv:
-  print(row)
-```
-
-Q5: Describe the concept of escape characters or quote characters in your own words. Describe a situation in which escape characters would be needed, and how you would address that challenge using Python syntax.
-
-Q6: Decipher what we're seeing in the JSON here. What are some of the name/value pairs, and how are they organized in this object?
+Q2: Decipher what we're seeing in the JSON here. What are some of the name/value pairs, and how are they organized in this object?
 
 ```JSON
 {
@@ -1851,24 +1815,48 @@ Q6: Decipher what we're seeing in the JSON here. What are some of the name/value
 }
 ```
 
-Q7: Create a string of JSON data and write it to a JSON file. Answer to this question includes program + comments that document process and explain your code.
+Q3: Create a string of JSON data and write it to a JSON file. Answer to this question includes program + comments that document process and explain your code.
 
-Q8A: Navigate to an open data portal and download a JSON file. 
+Q4: Create your own `Series` object. Write code the accomplishes the following tasks. Your answer for these items should include a Python program + comments that document process and explain your code.
+- Assign unique index attributes for each series value
+- Access a series value(s) using the index label
+- Perform at least two unique arithmetic operations on the Series
+- Test for null values in your series
 
-Some options that can get you started:
-- [Data.gov](https://www.data.gov/)
-- [City of Chicago Data Portal](https://data.cityofchicago.org/)
-- [City of South Bend Open Data](https://data-southbend.opendata.arcgis.com/)
+Q5: Create your own small DataFrame. Write code that accomplishes the following tasks. Your answer for these items should include a Python program + comments that document process and explain your code.
+- Change the original column order
+- Select a specific column(s) using its index label or name attribute
+- Select a specific row(s) using its index label or index value
+- Remove a column from the DataFrame
+- Determine summary statistics for values in the DataFrame
 
-These open data portals are catalogs of datasets- you will need to explore the websites to identify and then download a specific dataset. Open the data in a spreadsheet program and/or text editor. Describe what are you seeing. How can we start to make sense of this data? What documentation is available?
+<blockquote>For the Q6 programs, you do not need to write code that actually loads an existing data file. That is, the lab does not provide data files that include these structures/attributes.
+<br>
+Write sample code that shows the syntax you would use to load a file with the structures/attributes described in the question.</blockquote>
 
-Q8B: Write programs that accomplish the following tasks:
-- Load the JSON data into Python
-- Convert to a Python value
+Q6A: Write code that loads in a structured data file that uses a pipe symbol (|) as a delimiter. Include code + comments.
+ 
+Q6B: Write code that loads in structured data file in which missing data values are represented by "?", "??", and "-" characters. Include code + comments.
 
-The previous sections of the lab procedure provide sample code and additional considerations for loading a JSON file in Python.
-- NOTE: In the JSON example in the lab, we loaded a single string of JSON, which means we use the `loads()` function. When loading a JSON file (or file-like object), we would need to use the `load()` argument.
+Q6C: Write code that ignores the last 6 rows of a structured data file. Include code + comments.
 
-Answer to this question includes program + comments that document process and explain your code.
+Q6D: Write code that parses a structured data file in which commas "," are used as a thousands separator. Include code + comments
 
-Q8C: What challenges did you encounter? How did you address or solve them? 
+Q7A: Using the DataFrame you created for Q5, write code that executes AT LEAST FOUR of the following tasks. Your answer for these items should include a Python program + comments that document process and explain your code.
+- Sorts a column by ascending values
+- Sorts a column by descending values
+- Selects a specific column in the DataFrame
+- Creates a new DataFrame with select columns from existing DataFrame
+- Uses a comparison operator to filter rows in the DataFrame
+- Uses an isin statement to filter rows in the DataFrame
+- Selects specific rows and columns
+
+Q7B: Write your modified `DataFrame` from Q7A to a `.csv` file. Your answer for these items should include a Python program + comments that document process and explain your code.
+
+Q8A: Using the DataFrame you created for Q4 (or Q7), write code that executes AT LEAST ONE of the following tasks. Your answer for these items should include a Python program + comments that document process and explain your code.
+
+- Removes duplicate rows
+- Removes rows with missing values
+- Fills missing values using .fillna, ffill, or bfill
+
+Q8B: Write your modified `DataFrame` from Q8A to a `.csv` file. Your answer for these items should include a Python program + comments that document process and explain your code.
