@@ -117,12 +117,12 @@ If working in Google Colaboratory, submit the link to your notebook (checking sh
 ## Data
 
 You'll need four data files for this lab.
-- `example.csv`
-- `example.txt`
-- `example.xlsx`
-- `exampleWithHeader.csv`
+- `example.csv` ([GitHub](https://raw.githubusercontent.com/kwaldenphd/python-structured-data/main/data/example.csv), [Google Drive](https://drive.google.com/file/d/1loSl4xUf3ElVgWMfWai3SR3vpGhMK6MS/view?usp=drive_link))
+- `example.txt` ([GitHub](https://raw.githubusercontent.com/kwaldenphd/python-structured-data/main/data/example.txt), [Google Drive](https://drive.google.com/file/d/1Snl-QnDBz7X2qxf5SdXTd1b0Wc_4ysR5/view?usp=drive_link))
+- `example.xlsx` ([GitHub](https://github.com/kwaldenphd/python-structured-data/blob/main/data/example.xlsx), [Google Drive](https://docs.google.com/spreadsheets/d/1qh2ympB2aLcSDl-u8r6VD08xePTtsun7/edit?usp=drive_link))
+- `exampleWithHeader.csv` ([GitHub](https://raw.githubusercontent.com/kwaldenphd/python-structured-data/main/data/exampleWithHeader.csv), [Google Drive](https://drive.google.com/file/d/1lZwUzM3rPzzWqyl6RWquGB_Xtk2EPxlR/view?usp=drive_link))
 
-The lab procedure Jupyter Notebook as code to download these files. You can also access them [via Google Drive](https://drive.google.com/drive/folders/1Sp_N34753ONJRU2AFKcocQ2DhCEhyL-m?usp=sharing) (ND users only).
+The lab procedure Jupyter Notebook has code to download these files. You can also access them [via Google Drive](https://drive.google.com/drive/folders/1Sp_N34753ONJRU2AFKcocQ2DhCEhyL-m?usp=sharing) (ND users only).
 
 # Overview
 
