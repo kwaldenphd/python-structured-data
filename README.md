@@ -16,13 +16,6 @@ This first part of this lab provides an overview of fundamental programming conc
   <td><a href="https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=304f6392-3cee-4ba6-8da5-af36013a4191">Lab overview</a></td>
   </tr>
   </table>
-  
-<table>
- <tr><td>
-<img src="https://elearn.southampton.ac.uk/wp-content/blogs.dir/sites/64/2021/04/PanPan.png" alt="Panopto logo" width="50"/></td>
-<td><a href="https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?pid=d6f4dc20-0976-42ef-b453-af36012ed588">Lecture/live coding playlist</a></td>
-  </tr>
-  </table>
 
 This second part of this lab covers the core components of `pandas`, including `Series` and `DataFrame` objects. It covers how to manually create and interact with `Series` and `DataFrame` objects in the Python programming environment. It covers loading a structured data file (CSV and JSON) as a `DataFrame`, and sorting, selecting, and filtering the resulting `DataFrame`. The lab also covers common data parsing and wrangling challenges like duplicate entries and missing data.
 
@@ -86,13 +79,6 @@ Example:
  <tr><td>
 <img src="https://elearn.southampton.ac.uk/wp-content/blogs.dir/sites/64/2021/04/PanPan.png" alt="Panopto logo" width="50"/></td>
   <td><a href="https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=304f6392-3cee-4ba6-8da5-af36013a4191">Lab overview</a></td>
-  </tr>
-  </table>
-  
-<table>
- <tr><td>
-<img src="https://elearn.southampton.ac.uk/wp-content/blogs.dir/sites/64/2021/04/PanPan.png" alt="Panopto logo" width="50"/></td>
-<td><a href="https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?pid=d6f4dc20-0976-42ef-b453-af36012ed588">Lecture/live coding playlist</a></td>
   </tr>
   </table>
 
@@ -1661,7 +1647,16 @@ df.to_csv("df.csv", header=False, index=False)
 
 ## Application
 
-Q7A: Using the DataFrame you created for Q5, write code that executes AT LEAST FOUR of the following tasks. Your answer for these items should include a Python program + comments that document process and explain your code.
+Q7A: Load a structured data file as a `DataFrame`. You're welcome to use your own data file, the file from Thursday's in-class work, or the `sample-data.csv` file provided with this lab ([GitHub](https://github.com/kwaldenphd/football-structured-data/blob/main/background.md#football-rosters), [Google Drive](https://drive.google.com/file/d/1uDNxiBx2gVRmIPR3Ka3-jLguNkcl1LqC/view?usp=sharing)).
+- [Click here](https://github.com/kwaldenphd/football-structured-data/blob/main/background.md#football-rosters) for more background on the sample data.
+
+Q7B: Using the DataFrame you created for Q7A, write code that accomplishes the following tasks. Your answer for these items should include a Python program + comments that document process and explain your code.
+- Shows the first five rows
+- Shows the last five rows
+- Checks the data types for each column
+- Returns a technical summary for the DataFrame
+
+Q7C: Using the DataFrame you created for Q7A, write code that executes AT LEAST FOUR (4) of the following tasks. Your answer for these items should include a Python program + comments that document process and explain your code.
 - Sorts a column by ascending values
 - Sorts a column by descending values
 - Selects a specific column in the DataFrame
@@ -1669,8 +1664,6 @@ Q7A: Using the DataFrame you created for Q5, write code that executes AT LEAST F
 - Uses a comparison operator to filter rows in the DataFrame
 - Uses an isin statement to filter rows in the DataFrame
 - Selects specific rows and columns
-
-Q7B: Write your modified `DataFrame` from Q7A to a `.csv` file. Your answer for these items should include a Python program + comments that document process and explain your code.
 
 # Other `DataFrame` Tasks
 
@@ -1747,7 +1740,7 @@ df.fillna(method='bfill')
 
 ## Application
 
-Q8A: Using the DataFrame you created for Q4 (or Q7), write code that executes AT LEAST ONE of the following tasks. Your answer for these items should include a Python program + comments that document process and explain your code.
+Q8A: Using the DataFrame you created for Q7, write code that executes AT LEAST ONE of the following tasks. Your answer for these items should include a Python program + comments that document process and explain your code.
 
 - Removes duplicate rows
 - Removes rows with missing values
@@ -1840,9 +1833,18 @@ Q6B: Write code that loads in structured data file in which missing data values 
 
 Q6C: Write code that ignores the last 6 rows of a structured data file. Include code + comments.
 
-Q6D: Write code that parses a structured data file in which commas "," are used as a thousands separator. Include code + comments
+Q6D: Write code that parses a structured data file in which commas "," are used as a thousands separator. Include code + comments.
 
-Q7A: Using the DataFrame you created for Q5, write code that executes AT LEAST FOUR of the following tasks. Your answer for these items should include a Python program + comments that document process and explain your code.
+Q7A: Load a structured data file as a `DataFrame`. You're welcome to use your own data file, the file from Thursday's in-class work, or the `sample-data.csv` file provided with this lab ([GitHub](https://github.com/kwaldenphd/football-structured-data/blob/main/background.md#football-rosters), [Google Drive](https://drive.google.com/file/d/1uDNxiBx2gVRmIPR3Ka3-jLguNkcl1LqC/view?usp=sharing)).
+- [Click here](https://github.com/kwaldenphd/football-structured-data/blob/main/background.md#football-rosters) for more background on the sample data.
+
+Q7B: Using the DataFrame you created for Q7A, write code that accomplishes the following tasks. Your answer for these items should include a Python program + comments that document process and explain your code.
+- Shows the first five rows
+- Shows the last five rows
+- Checks the data types for each column
+- Returns a technical summary for the DataFrame
+
+Q7C: Using the DataFrame you created for Q7A, write code that executes AT LEAST FOUR (4) of the following tasks. Your answer for these items should include a Python program + comments that document process and explain your code.
 - Sorts a column by ascending values
 - Sorts a column by descending values
 - Selects a specific column in the DataFrame
@@ -1851,9 +1853,7 @@ Q7A: Using the DataFrame you created for Q5, write code that executes AT LEAST F
 - Uses an isin statement to filter rows in the DataFrame
 - Selects specific rows and columns
 
-Q7B: Write your modified `DataFrame` from Q7A to a `.csv` file. Your answer for these items should include a Python program + comments that document process and explain your code.
-
-Q8A: Using the DataFrame you created for Q4 (or Q7), write code that executes AT LEAST ONE of the following tasks. Your answer for these items should include a Python program + comments that document process and explain your code.
+Q8A: Using the DataFrame you created for Q7, write code that executes AT LEAST ONE of the following tasks. Your answer for these items should include a Python program + comments that document process and explain your code.
 
 - Removes duplicate rows
 - Removes rows with missing values
