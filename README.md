@@ -647,16 +647,7 @@ Q1B: Create a small dictionary and write it to a CSV file. Answer to this questi
   </tr>
   </table>
 
-# Delimiters & Escape Characters 
-
-<table>
- <tr><td>
-<img src="https://elearn.southampton.ac.uk/wp-content/blogs.dir/sites/64/2021/04/PanPan.png" alt="Panopto logo" width="50"/></td>
-  <td><a href="https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=7a0e11d5-7d94-407f-88bf-af36012e2496">Delimiters & Escape Characters</a></td>
-  </tr>
-  </table>
-
-## Other delimiters
+## Other Delimiters
 
 What happens if you need to load in structured data that uses another delimiter, not a comma? Remember when we opened a `.csv` file in a plain-text editor, the value fields are separated by a comma.
 
