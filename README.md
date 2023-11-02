@@ -65,7 +65,7 @@ Information and exercises in the pandas sections were developed in consultation 
 
 [Click here]() to access this lab procedure as a Jupyter Notebook.
 
-# Lecture & Live Coding
+## Lecture & Live Coding
 
 Throughout this lab, you will see a Panopto icon at the start of select sections.
 
@@ -122,7 +122,9 @@ You'll need four data files for this lab.
 - `example.xlsx` ([GitHub](https://github.com/kwaldenphd/python-structured-data/blob/main/data/example.xlsx), [Google Drive](https://docs.google.com/spreadsheets/d/1qh2ympB2aLcSDl-u8r6VD08xePTtsun7/edit?usp=drive_link))
 - `exampleWithHeader.csv` ([GitHub](https://raw.githubusercontent.com/kwaldenphd/python-structured-data/main/data/exampleWithHeader.csv), [Google Drive](https://drive.google.com/file/d/1lZwUzM3rPzzWqyl6RWquGB_Xtk2EPxlR/view?usp=drive_link))
 
-The lab procedure Jupyter Notebook has code to download these files. You can also access them [via Google Drive](https://drive.google.com/drive/folders/1Sp_N34753ONJRU2AFKcocQ2DhCEhyL-m?usp=sharing) (ND users only).
+You can also access them [via Google Drive](https://drive.google.com/drive/folders/1Sp_N34753ONJRU2AFKcocQ2DhCEhyL-m?usp=sharing) (ND users only).
+
+You'll need to download these files and put them in the same folder as your Jupyter Notebook (or upload them to Google Colab).
 
 # Overview
 
@@ -297,6 +299,12 @@ f.write(hello_world)
 
 # closes file
 f.close()
+```
+
+```Python
+# alternate workflow for the same program, using with open
+with open("new_file.txt", "w") as f:
+	f.write("Hello world!")
 ```
 
 We can open the `new_file.txt` file to see the newly-added content.
@@ -640,13 +648,6 @@ Q1A: Create a small list data structure and write it to a CSV file. Answer to th
 
 Q1B: Create a small dictionary and write it to a CSV file. Answer to this question includes program + comments that document process and explain your code.
 
-<table>
- <tr><td>
-<img src="https://elearn.southampton.ac.uk/wp-content/blogs.dir/sites/64/2021/04/PanPan.png" alt="Panopto logo" width="50"/></td>
-  <td><a href="https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=75282aad-8ad0-4b99-be00-af36012e6021">Lab Notebook Question 3</a></td>
-  </tr>
-  </table>
-
 ## Other Delimiters
 
 What happens if you need to load in structured data that uses another delimiter, not a comma? Remember when we opened a `.csv` file in a plain-text editor, the value fields are separated by a comma.
@@ -954,8 +955,6 @@ pythonValue = {'isCat': True, 'miceCaught': 0, 'name': 'Zophie', 'felineIQ': Non
 with open('output.json', 'w') as json_file:
 	json.dump(pythonValue, json_file)
 ```
-
-Later in the semester we will talk about how to read JSON data into Python and convert it to a tabular data structure (called a data frame in Python), using a library called `pandas`. Stay tuned!
 
 ## Application
 
@@ -1361,16 +1360,6 @@ titanic.info()
 
 `.info()` returns row numbers, the number of entries, column names, column data types, and the number of non-null values in each column. We can see from the `Non-Null Count` values that some columns do have null or missing values. `.info()` also tells us how much memory (RAM) is used to store this `DataFrame`.
 
-## Application
-
-Reuse your Q4 DataFrame, or load another data file as a DataFrame to use for this question.
-
-Write code accomplishes each of the following tasks. Your answer for these items should include a Python program + comments that document process and explain your code.
-- Shows the first five rows
-- Shows the last five rows
-- Checks the data types for each column
-- Returns a technical summary for the DataFrame
-
 ## Other Data Loading Challenges
 
 <table>
@@ -1614,7 +1603,7 @@ A few key takeaways:
 <table>
  <tr><td>
 <img src="https://elearn.southampton.ac.uk/wp-content/blogs.dir/sites/64/2021/04/PanPan.png" alt="Panopto logo" width="50"/></td>
-<td><a href="https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=bbd847e6-f649-43fb-ad8c-af3601480776">Selecting From DataFrame to Data File</a></td>
+<td><a href="https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=bbd847e6-f649-43fb-ad8c-af3601480776">From DataFrame to Data File</a></td>
   </tr>
   </table>
 
@@ -1739,7 +1728,7 @@ Q8A: Using the DataFrame you created for Q7, write code that executes AT LEAST O
 
 Q8B: Write your modified `DataFrame` from Q8A to a `.csv` file. Your answer for these items should include a Python program + comments that document process and explain your code.
 
-## How to submit this lab (and show your work)
+# How to submit this lab (and show your work)
 
 Moving forward, we're going to be submitting lab notebooks using the provide Jupyter Notebook template.
 - If working in JupyterLab (or another desktop IDE), download the `.ipynb` file to your local computer
@@ -1758,7 +1747,7 @@ If working in Google Colaboratory, submit the link to your notebook (checking sh
 
 # Lab Notebook Questions
 
-LAB NOTEBOOK TEMPLATE
+[Click here](https://colab.research.google.com/drive/1w6rrEM6I69TIdm-WpSDrEMgMC26bTzdj?usp=sharing) to access the lab notebook template as a Jupyter Notebook.
 
 Q1A: Create a small list data structure and write it to a CSV file. Answer to this question includes program + comments that document process and explain your code.
 
