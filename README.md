@@ -59,7 +59,6 @@ Information and exercises in the pandas sections were developed in consultation 
   * [Delimited Data](#delimited-data)
   * [JavaScript Object Notation](#javascript-object-notation)
 - [Pandas](#pandas)
-- [Putting It All Together](#putting-it-all-together)
 - [How to Submit This Lab (and show your work)](#how-to-submit-this-lab-and-show-your-work)
 - [Lab Notebook Questions](#lab-notebook-questions)
 
