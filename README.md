@@ -99,7 +99,7 @@ What folks will submit for this lab will include a Jupyter Notebook (`.ipynb`) f
 
 ## How to submit this lab (and show your work)
 
-Moving forward, we're going to be submitting lab notebooks using the provide Jupyter Notebook template ([link for this lab's template](https://colab.research.google.com/drive/1e5SDiIxZVpMU_t_uQqv3MeTC0hYBwEYE?usp=sharing)).
+Moving forward, we're going to be submitting lab notebooks using Jupyter Notebook templates.
 - If working in JupyterLab (or another desktop IDE), download the `.ipynb` file to your local computer
   * `File` - `Download` - `Download as .ipynb`
 - If working in Google Colaboratory, MAKE SURE you save a copy to your local drive. Otherwise your changes will not be saved.
