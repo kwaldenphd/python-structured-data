@@ -63,7 +63,7 @@ Information and exercises in the pandas sections were developed in consultation 
 - [How to Submit This Lab (and show your work)](#how-to-submit-this-lab-and-show-your-work)
 - [Lab Notebook Questions](#lab-notebook-questions)
 
-[Click here]() to access this lab procedure as a Jupyter Notebook.
+[Click here](https://colab.research.google.com/drive/1w6rrEM6I69TIdm-WpSDrEMgMC26bTzdj?usp=sharing) to access the lab notebook template as a Jupyter Notebook.
 
 ## Lecture & Live Coding
 
@@ -88,7 +88,7 @@ Example:
 
 ## Lab Notebook Template
 
-[Click here]() to access the lab notebook template as a Jupyter Notebook (Google CoLab, ND Users).
+[Click here](https://colab.research.google.com/drive/1w6rrEM6I69TIdm-WpSDrEMgMC26bTzdj?usp=sharing) to access the lab notebook template as a Jupyter Notebook.
 
 To download the notebok from Google Colaboratory (as a `.ipynb` file): 
 - `File` (top-left corner) -> `Download` -> `Download as .ipynb`
